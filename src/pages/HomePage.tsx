@@ -2,12 +2,10 @@ import React, { useState, useEffect, useRef } from 'react';
 import { ChevronRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { Typewriter } from 'react-simple-typewriter';
-import { auth, provider, signInWithPopup, signOut } from '../firebaseConfig';
 import '../index.css'; // Ensure you import your CSS file
 
 function HomePage() {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
-  const [user, setUser] = useState(null);
   const navigate = useNavigate();
   const vantaRef = useRef(null);
 
@@ -102,24 +100,6 @@ function HomePage() {
     }, 500);
   };
 
-  const handleLogin = async () => {
-    try {
-      const result = await signInWithPopup(auth, provider);
-      setUser(result.user);
-    } catch (error) {
-      console.error("Error signing in with Google: ", error);
-    }
-  };
-
-  const handleLogout = async () => {
-    try {
-      await signOut(auth);
-      setUser(null);
-    } catch (error) {
-      console.error("Error signing out: ", error);
-    }
-  };
-
   return (
     <div className="home-page" id="vanta-bg">
       {/* Hero Section */}
@@ -152,6 +132,45 @@ function HomePage() {
           </div>
           <div className="mt-8 text-2xl text-white">
             {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m {timeLeft.seconds}s
+          </div>
+        </div>
+      </section>
+
+      {/* Department Navigation */}
+      <section className="py-20 px-4 bg-black">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-12">Departments</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <button
+              onClick={() => handleLinkClick('/departments/cse')}
+              className="px-8 py-3 bg-gradient-to-r from-blue-600 to-green-600 rounded-full hover:from-blue-700 hover:to-green-700 transition-all"
+            >
+              CSE
+            </button>
+            <button
+              onClick={() => handleLinkClick('/departments/ece')}
+              className="px-8 py-3 bg-gradient-to-r from-blue-600 to-green-600 rounded-full hover:from-blue-700 hover:to-green-700 transition-all"
+            >
+              ECE
+            </button>
+            <button
+              onClick={() => handleLinkClick('/departments/eee')}
+              className="px-8 py-3 bg-gradient-to-r from-blue-600 to-green-600 rounded-full hover:from-blue-700 hover:to-green-700 transition-all"
+            >
+              EEE
+            </button>
+            <button
+              onClick={() => handleLinkClick('/departments/mech')}
+              className="px-8 py-3 bg-gradient-to-r from-blue-600 to-green-600 rounded-full hover:from-blue-700 hover:to-green-700 transition-all"
+            >
+              MECH
+            </button>
+            <button
+              onClick={() => handleLinkClick('/departments/civil')}
+              className="px-8 py-3 bg-gradient-to-r from-blue-600 to-green-600 rounded-full hover:from-blue-700 hover:to-green-700 transition-all"
+            >
+              CIVIL
+            </button>
           </div>
         </div>
       </section>
@@ -202,24 +221,6 @@ function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* Login Section */}
-      {/* <section className="py-20 px-4 bg-black">
-        <div className="max-w-6xl mx-auto text-center">
-          {user ? (
-            <div>
-              <p className="text-xl text-white">Welcome, {user.displayName}</p>
-              <button onClick={handleLogout} className="px-8 py-3 bg-red-600 rounded-full hover:bg-red-700 transition-all">
-                Logout
-              </button>
-            </div>
-          ) : (
-            <button onClick={handleLogin} className="px-8 py-3 bg-blue-600 rounded-full hover:bg-blue-700 transition-all">
-              Login with Google
-            </button>
-          )}
-        </div>
-      </section> */}
     </div>
   );
 }
