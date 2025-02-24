@@ -141,7 +141,7 @@ function App() {
             <div className="flex flex-col md:flex-row justify-between items-center gap-8">
               <div className="text-center md:text-left">
                 <h2 className="text-2xl font-bold mb-2">Tech Euphoria 2k25</h2>
-                <p> A National level Techno Cultural and Sports Symposium</p>
+                <p> A National level Technical and Cultural Symposium</p>
               </div>
               <div className="flex gap-6">
                 <a href="#" className="hover:text-purple-500 transition-colors">
