@@ -1,13 +1,18 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { ChevronRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { Typewriter } from 'react-simple-typewriter';
 import '../index.css'; // Ensure you import your CSS file
+import { useTheme } from '../ThemeContext';
 
 function HomePage() {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
   const navigate = useNavigate();
-  const vantaRef = useRef(null);
+  const { isDarkMode } = useTheme();
+  const sponsors = [
+    { name: 'Sponsor 1', logo: 'logo1.png', type: 'Gold' },
+    { name: 'Sponsor 2', logo: 'logo2.png', type: 'Silver' },
+    { name: 'Sponsor 3', logo: 'logo3.png', type: 'Bronze' },
+  ];
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -16,27 +21,6 @@ function HomePage() {
 
     return () => clearInterval(timer);
   }, []);
-
-  // useEffect(() => {
-  //   if (!vantaRef.current) {
-  //     vantaRef.current = DOTS({
-  //       el: "#vanta-bg",
-  //       mouseControls: true,
-  //       touchControls: true,
-  //       gyroControls: false,
-  //       minHeight: 200.00,
-  //       minWidth: 200.00,
-  //       scale: 1.00,
-  //       scaleMobile: 1.00,
-  //       color: 0x2b20ff,
-  //       color2: 0x402579,
-  //       THREE: THREE
-  //     });
-  //   }
-  //   return () => {
-  //     if (vantaRef.current) vantaRef.current.destroy();
-  //   };
-  // }, []);
 
   function calculateTimeLeft() {
     const eventDate = new Date('March 20, 2025 10:00:00').getTime();
@@ -57,47 +41,8 @@ function HomePage() {
     return timeLeft;
   }
 
-  const highlightedEvents = [
-    {
-      name: "Hackathon",
-      description: "24-hour coding challenge to solve real-world problems",
-      prize: "₹50,000"
-    },
-    {
-      name: "Project Expo",
-      description: "Showcase your innovative projects",
-      prize: "₹25,000"
-    },
-    {
-      name: "Paper Presentation",
-      description: "Present your research papers on emerging technologies",
-      prize: "₹20,000"
-    }
-  ];
-
-  const sponsors = [
-    {
-      name: "TechCorp",
-      logo: "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80",
-      type: "Title Sponsor"
-    },
-    {
-      name: "InnovateX",
-      logo: "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80",
-      type: "Gold Sponsor"
-    },
-    {
-      name: "FutureLabs",
-      logo: "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80",
-      type: "Silver Sponsor"
-    }
-  ];
-
   const handleLinkClick = (path) => {
-    document.body.classList.add('fade-out');
-    setTimeout(() => {
-      navigate(path);
-    }, 500);
+    navigate(path);
   };
 
   return (
@@ -131,84 +76,21 @@ function HomePage() {
             </button>
           </div>
           <div className="mt-8 text-2xl text-white">
-            {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m {timeLeft.seconds}s
+            <span>{timeLeft.days}d </span>
+            <span>{timeLeft.hours}h </span>
+            <span>{timeLeft.minutes}m </span>
+            <span>{timeLeft.seconds}s</span>
           </div>
         </div>
       </section>
-
-      {/* Department Navigation */}
-      <section className="py-20 px-4 bg-black">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-12">Departments</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <button
-              onClick={() => handleLinkClick('/departments/cse')}
-              className="px-8 py-3 bg-gradient-to-r from-blue-600 to-green-600 rounded-full hover:from-blue-700 hover:to-green-700 transition-all"
-            >
-              CSE
-            </button>
-            <button
-              onClick={() => handleLinkClick('/departments/ece')}
-              className="px-8 py-3 bg-gradient-to-r from-blue-600 to-green-600 rounded-full hover:from-blue-700 hover:to-green-700 transition-all"
-            >
-              ECE
-            </button>
-            <button
-              onClick={() => handleLinkClick('/departments/eee')}
-              className="px-8 py-3 bg-gradient-to-r from-blue-600 to-green-600 rounded-full hover:from-blue-700 hover:to-green-700 transition-all"
-            >
-              EEE
-            </button>
-            <button
-              onClick={() => handleLinkClick('/departments/mech')}
-              className="px-8 py-3 bg-gradient-to-r from-blue-600 to-green-600 rounded-full hover:from-blue-700 hover:to-green-700 transition-all"
-            >
-              MECH
-            </button>
-            <button
-              onClick={() => handleLinkClick('/departments/civil')}
-              className="px-8 py-3 bg-gradient-to-r from-blue-600 to-green-600 rounded-full hover:from-blue-700 hover:to-green-700 transition-all"
-            >
-              CIVIL
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* Highlighted Events */}
-      {/* <section className="py-20 px-4 bg-gradient-to-b from-black to-blue-900">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex justify-between items-center mb-12">
-            <h2 className="text-4xl font-bold">Featured Events</h2>
-            <button
-              onClick={() => handleLinkClick('/events')}
-              className="flex items-center text-blue-500 hover:text-blue-400"
-            >
-              View All Events <ChevronRight className="w-5 h-5 ml-2" />
-            </button>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {highlightedEvents.map((event) => (
-              <div key={event.name} className="group p-6 bg-gradient-to-br from-blue-900/50 to-black rounded-xl hover:from-blue-800/50 transition-all">
-                <h3 className="text-xl font-semibold mb-3">{event.name}</h3>
-                <p className="text-gray-400 mb-4">{event.description}</p>
-                <div className="flex justify-between items-center">
-                  <span className="text-blue-500">Prize: {event.prize}</span>
-                  <ChevronRight className="w-5 h-5 text-blue-500 group-hover:translate-x-2 transition-transform" />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section> */}
 
       {/* Sponsors Section */}
-      <section className="py-20 px-4 bg-black">
+      <section className={`py-20 px-4 ${isDarkMode ? 'bg-black' : 'bg-white'}`}>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Our Sponsors</h2>
+          <h2 className={`text-4xl font-bold mb-12 text-center ${isDarkMode ? 'text-white' : 'text-black'}`}>Our Sponsors</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {sponsors.map((sponsor) => (
-              <div key={sponsor.name} className="bg-gradient-to-br from-blue-900/50 to-black rounded-xl p-8 text-center">
+              <div key={sponsor.name} className={`rounded-xl p-8 text-center ${isDarkMode ? 'bg-gradient-to-br from-blue-900/50 to-black text-white' : 'bg-gradient-to-br from-blue-200/50 to-white text-black'}`}>
                 <img 
                   src={sponsor.logo} 
                   alt={sponsor.name} 
