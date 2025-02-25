@@ -11,60 +11,105 @@ const Mech = () => {
 
   const events = [
     {
-      name: 'Lathe Skills Battle',
-      image: 'lathe_skills_battle.jpg',
-      caption: 'Lathe operation competition',
-      description: 'Test your lathe skills through written exams and practical challenges in a team-based competition.',
-      rules: '1. Teams of 5 members.\n2. Best 5 teams selected after the first written test (MCQs, 10 marks).\n3. Final competition will be conducted individually from the best team.\n4. Winners will be announced from the final team.',
-      coordinator: 'John Doe',
-      phone: '123-456-7890'
+      "name": "Lathe Skills Battle",
+      "image": "lathe_skills_battle.jpg",
+      "caption": "Lathe operation competition",
+      "description": "Test your lathe skills through written exams and practical challenges in a team-based competition.",
+      "rules": [
+        "Teams of 5 members.",
+        "Best 5 teams selected after the first written test (MCQs, 10 marks).",
+        "Final competition will be conducted individually from the best team.",
+        "Winners will be announced from the final team."
+      ],
+      "Student_Coordinator": "John Doe",
+      "Faculty_Coordinator": ["1. Mr. S.Chandrasekhar – 8897805920",
+      "2. Mr. P.Mohanakrishna – 9603620513"],
+     
     },
     {
-      name: 'CAD Clash',
-      image: 'cad_clash.jpg',
-      caption: 'CAD design competition',
-      description: 'Demonstrate your CAD design skills in a system-provided environment using CAD software.',
-      rules: '1. Maximum 4 members per group.\n2. Screening in the first round based on time and accuracy.\n3. Theme of drawing announced at the contest start.\n4. Final round for shortlisted teams.',
-      coordinator: 'Jane Smith',
-      phone: '987-654-3210'
+      "name": "CAD Clash",
+      "image": "cad_clash.jpg",
+      "caption": "CAD design competition",
+      "description": "Demonstrate your CAD design skills in a system-provided environment using CAD software.",
+      "rules": [
+        "Maximum 4 members per group.",
+        "Screening in the first round based on time and accuracy.",
+        "Theme of drawing announced at the contest start.",
+        "Final round for shortlisted teams."
+      ],
+      "Student_Coordinator": "Jane Smith",
+      "Faculty coordinator": ["1. Mr. T.S.S.R.Krishna – 6303526702",
+"2. Mr. Sk.Arief – 6305080838",
+"3. Mr. K.Suchendra Kumar – 8367294989"],
+    
     },
     {
-      name: 'Brainstorm Technical Challenge',
-      image: 'brainstorm_technical_challenge.jpg',
-      caption: 'Mechanical Engineering technical quiz',
-      description: 'Test your knowledge in a technical quiz focused on Mechanical Engineering concepts.',
-      rules: '1. Team strength: 3 members (from 1st, 2nd, and 3rd year).\n2. Questions will be multiple-choice, covering Mechanical Engineering topics.',
-      coordinator: 'Michael Lee',
-      phone: '555-123-9876'
+      "name": "Brainstorm Technical Challenge",
+      "image": "brainstorm_technical_challenge.jpg",
+      "caption": "Mechanical Engineering technical quiz",
+      "description": "Test your knowledge in a technical quiz focused on Mechanical Engineering concepts.",
+      "rules": [
+        "Team strength: 3 members (from 1st, 2nd, and 3rd year).",
+        "Questions will be multiple-choice, covering Mechanical Engineering topics."
+      ],
+      "Student_Coordinator": "Jane Smith",
+      "Faculty coordinator": ["1. Mr. D.V.N.Prabhakar – 7013290220",
+        "2. Mr. M.Chaitanya – 9493008633",
+       " 3. Mr. V.Ravi Kumar – 9885406640"],
+   
     },
     {
-      name: 'Poster Presentation',
-      image: 'poster_presentation.jpg',
-      caption: 'Creative poster competition',
-      description: 'Present your research or project in a poster format and defend it in front of judges.',
-      rules: '1. Maximum 2 participants per team.\n2. All team members must present.\n3. Poster size: A1 or 3 x 4 feet for flex.\n4. Presentation time: 10 minutes, with 3 minutes for questions.',
-      coordinator: 'Emily Johnson',
-      phone: '654-321-0987'
+      "name": "Poster Presentation",
+      "image": "poster_presentation.jpg",
+      "caption": "Creative poster competition",
+      "description": "Present your research or project in a poster format and defend it in front of judges.",
+      "rules": [
+        "Maximum 2 participants per team.",
+        "All team members must present.",
+        "Poster size: A1 or 3 x 4 feet for flex.",
+        "Presentation time: 10 minutes, with 3 minutes for questions."
+      ],
+      "Student_Coordinator": "Jane Smith",
+      "Faculty coordinator": ["1. Dr. K.Bala Subrahmanyam – 9985513184",
+       " 2. Mr. M.D.Nagendra Prasad - 9494045671"],
+      
     },
     {
-      name: 'Paper Presentation',
-      image: 'paper_presentation.jpg',
-      caption: 'Research paper presentation competition',
-      description: 'Present your research paper with structured slides on key research elements.',
-      rules: '1. Maximum 2 participants per team.\n2. All team members must present.\n3. Paper structure: \n   • Paper ID, Title, Author\'s Name, Affiliation – 1 slide.\n   • Introduction and Literature Survey – 2 slides.\n   • Materials, Methodology, Experimentation – 3 to 4 slides.\n   • Results and Discussion – 3 to 4 slides.\n   • Conclusion – 1 slide.\n   • Reference – 1 slide.\n   • Total slides: 10 to 13 maximum.',
-      coordinator: 'Alice Williams',
-      phone: '789-456-1230'
+      "name": "Paper Presentation",
+      "image": "paper_presentation.jpg",
+      "caption": "Research paper presentation competition",
+      "description": "Present your research paper with structured slides on key research elements.",
+      "rules": [
+        "Maximum 2 participants per team.",
+        "All team members must present.",
+        "Paper structure: Paper ID, Title, Author's Name, Affiliation – 1 slide.",
+        "Introduction and Literature Survey – 2 slides.",
+        "Materials, Methodology, Experimentation – 3 to 4 slides.",
+        "Results and Discussion – 3 to 4 slides.",
+        "Conclusion – 1 slide.",
+        "Reference – 1 slide.",
+        "Total slides: 10 to 13 maximum."
+      ],
+      "Student_Coordinator": "Jane Smith",
+      "Faculty coordinator": ["1. Dr. D.Ashok – 9989026624",
+        "2. Mr. M.V.S.S.D.S.S.Pavan – 9000115586"],
+
     },
     {
-      name: 'General Guidelines',
-      image: 'general_guidelines.jpg',
-      caption: 'General rules for participants',
-      description: 'Important guidelines for all participants to follow during the competitions.',
-      rules: '1. All participants must wear their college ID card.\n2. Only registered candidates are allowed to participate. No spot registrations.\n3. Only qualified participants can move to the next level.\n4. Mobiles and smart watches are strictly prohibited.\n5. Judges\' decision is final.',
-      coordinator: 'Event Organizer',
-      phone: '123-654-7890'
+      "name": "General Guidelines",
+      "image": "general_guidelines.jpg",
+      "caption": "General rules for participants",
+      "description": "Important guidelines for all participants to follow during the competitions.",
+      "rules": [
+        "All participants must wear their college ID card.",
+        "Only registered candidates are allowed to participate. No spot registrations.",
+        "Only qualified participants can move to the next level.",
+        "Mobiles and smart watches are strictly prohibited.",
+        "Judges' decision is final."
+      ]
     }
-  ];
+  ]
+  ;
 
   const handleRegister = () => {
     navigate('/register/mech');
@@ -119,8 +164,18 @@ const Mech = () => {
           <p className="mb-2"><strong>Caption:</strong> {selectedEvent.caption}</p>
           <p className="mb-2"><strong>Description:</strong> {selectedEvent.description}</p>
           <p className="mb-2"><strong>Rules:</strong> {selectedEvent.rules}</p>
-          <p className="mb-2"><strong>Coordinator:</strong> {selectedEvent.coordinator}</p>
-          <p className="mb-2"><strong>Phone:</strong> {selectedEvent.phone}</p>
+          <ul className="list-disc list-inside mb-4">
+            {selectedEvent.rules.map((rule, index) => (
+              <li key={index}>{rule}</li>
+            ))}
+          </ul>
+          <p className="mb-2"><strong>Student_Coordinator:</strong> {selectedEvent.Student_Coordinator}</p>
+          <p className="mb-2"><strong>Faculty_Coordinator:</strong> {selectedEvent.Faculty_Coordinator}</p>
+          <ul className="list-disc list-inside mb-4">
+            {selectedEvent.Faculty_Coordinator.map((rule, index) => (
+              <li key={index}>{rule}</li>
+            ))}
+          </ul>
           <div className="flex justify-end mt-4">
             <button
               onClick={handleRegister}
