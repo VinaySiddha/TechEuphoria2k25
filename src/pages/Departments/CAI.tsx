@@ -22,8 +22,8 @@ const CAI = () => {
         "Use of any programming language is allowed",
         "No plagiarism"
       ],
-      "coordinator": "Not mentioned",
-      "phone": "Not mentioned"
+      "student": "P. Kalyan Kumar",
+      "faculty": "Mr. B V V Bhargav"
     },
     {
       "name": "Glitch Hunt 2.0",
@@ -36,8 +36,8 @@ const CAI = () => {
         "No plagiarism",
         "Any programming language can be used"
       ],
-      "coordinator": "Not mentioned",
-      "phone": "Not mentioned"
+      "student": "M. Lavanya",
+      "faculty": "Mr. V Rama Narayana "
     },
     {
       "name": "Battle of Minds",
@@ -49,8 +49,8 @@ const CAI = () => {
         "Participants must adhere to time limits",
         "No external help is allowed"
       ],
-      "coordinator": "Not mentioned",
-      "phone": "Not mentioned"
+      "student": "E. Tirupati Rao",
+      "faculty": "Mrs. M Kiranmai"
     },
     {
       "name": "NextZen AI",
@@ -62,8 +62,8 @@ const CAI = () => {
         "Work must be original and relevant to the given theme",
         "Judging is based on creativity, AI utilization, and coherence"
       ],
-      "coordinator": "Not mentioned",
-      "phone": "Not mentioned"
+      "student": "K. Poojitha",
+      "faculty": "Mr. P V V Satyanarayana"
     },
     {
       "name": "The Fun Fiesta",
@@ -76,8 +76,8 @@ const CAI = () => {
         "Participants must follow instructions and game rules",
         "Winners are decided based on performance"
       ],
-      "coordinator": "Not mentioned",
-      "phone": "Not mentioned"
+      "student": "M. Usha Sri",
+      "faculty": "Mrs.V Radha"
     }
   ];
   
@@ -139,8 +139,8 @@ const CAI = () => {
               <li key={index}>{rule}</li>
             ))}
           </ul>
-          <p className="mb-2"><strong>Coordinator:</strong> {selectedEvent.coordinator}</p>
-          <p className="mb-2"><strong>Phone:</strong> {selectedEvent.phone}</p>
+          <p className="mb-2"><strong>Faculty Coordinator:</strong> {selectedEvent.faculty}</p>
+          <p className="mb-2"><strong>Student Coordinator:</strong> {selectedEvent.student}</p>
           <div className="flex justify-end mt-4">
             <button
               onClick={handleRegister}
