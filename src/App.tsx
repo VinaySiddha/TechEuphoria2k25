@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { Calendar, Home, Image, Users2, Hotel, Sun, Moon, Instagram, Twitter, Github, Linkedin } from 'lucide-react';
+import { Calendar, Home, Image, Users2, FileText, Sun, Moon, Instagram, Twitter, Github, Linkedin } from 'lucide-react';
 import HomePage from './pages/HomePage';
 import EventsPage from './pages/EventsPage';
-import StayPage from './pages/RulesPage';
+import RulesPage from './pages/RulesPage';
 import GalleryPage from './pages/GalleryPage';
 import TeamPage from './pages/TeamPage';
 import DepartmentsPage from './pages/DepartmentsPage';
@@ -23,7 +23,7 @@ function App() {
   const navItems = [
     { name: 'Home', icon: Home, path: '/' },
     { name: 'Events', icon: Calendar, path: '/events' },
-    { name: 'Stay', icon: Hotel, path: '/stay' },
+    { name: 'Rules', icon: FileText, path: '/rules' },
     { name: 'Gallery', icon: Image, path: '/gallery' },
     { name: 'Team', icon: Users2, path: '/team' },
   ];
@@ -103,7 +103,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/events" element={<EventsPage />} />
-            <Route path="/stay" element={<StayPage />} />
+            <Route path="/rules" element={<RulesPage />} />
             <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/team" element={<TeamPage />} />
             <Route path="/departments" element={<DepartmentsPage />} />

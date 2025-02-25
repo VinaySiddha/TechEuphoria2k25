@@ -11,34 +11,105 @@ const ECE = () => {
 
   const events = [
     {
-      name: 'Hackathon',
-      image: 'hackathon.jpg',
-      caption: '24-hour coding challenge',
-      description: 'Solve real-world problems in a 24-hour coding marathon.',
-      rules: '1. Team size: 2-4 members.\n2. No plagiarism.\n3. Use of any programming language is allowed.',
-      coordinator: 'John Doe',
-      phone: '123-456-7890'
+      "name": "Py-Craft",
+      "image": "py_craft.jpg",
+      "caption": "Hack with Python",
+      "description": "A Python-based hackathon where participants solve coding challenges using Python.",
+      "rules": [
+        "Team size is 3 members",
+        "Team members should be from the same college",
+        "Use of electronic gadgets and web browsing is not allowed",
+        "Violation of any rules will lead to elimination",
+        "Evaluator's decision is final"
+      ],
+      "student": "Not mentioned",
+      "faculty": [
+        "Dr. M. Thamarai",
+        "Dr. S. Kamesh",
+        "Dr. B. Murali Krishna"
+      ]
     },
     {
-      name: 'Project Expo',
-      image: 'project_expo.jpg',
-      caption: 'Showcase your innovative projects',
-      description: 'Present your innovative projects to a panel of judges.',
-      rules: '1. Individual or team participation.\n2. Projects must be original.\n3. Presentation time: 10 minutes.',
-      coordinator: 'Jane Smith',
-      phone: '987-654-3210'
+      "name": "InnoEX",
+      "image": "project_expo.jpg",
+      "caption": "Project Expo",
+      "description": "A showcase of innovative projects where students present their ideas through models, charts, and demonstrations.",
+      "rules": [
+        "Team size: Maximum of 4 members",
+        "Prepare a visual representation (chart, diagram, or infographic)",
+        "Bring a project kit with necessary materials and tools",
+        "Students can bring their own equipment",
+        "All team members must be from the same college",
+        "Complete registration before the deadline"
+      ],
+      "student": "Not mentioned",
+      "faculty": [
+        "Dr. K. N. H. Srinivas",
+        "Dr. T. D. N. S. S. Sarveswara Rao",
+        "Sri M. Venkata Suman",
+        "Sri P. V. V. Rajesh",
+        "Sri V. Anil Kumar",
+        "Sri B. Chanti"
+      ]
     },
     {
-      name: 'Paper Presentation',
-      image: 'paper_presentation.jpg',
-      caption: 'Present your research papers',
-      description: 'Present your research papers on emerging technologies.',
-      rules: '1. Individual participation.\n2. Papers must be original.\n3. Presentation time: 15 minutes.',
-      coordinator: 'Alice Johnson',
-      phone: '555-123-4567'
+      "name": "Circuithon",
+      "image": "circuit_building.jpg",
+      "caption": "Circuit Innovation & Building",
+      "description": "A challenge where participants innovate and build electronic circuits using available components.",
+      "rules": [
+        "Team size: 3 members",
+        "Participants must adhere to safety guidelines while handling components",
+        "Participants should maintain integrity and respect fellow participants",
+        "Judges' decisions are final"
+      ],
+      "student": "Not mentioned",
+      "faculty": [
+        "Dr. Purnima K Sharma",
+        "Sri T. Sreenivasu",
+        "Smt. M. Neelima",
+        "Dr. B. Ashok Kumar"
+      ]
     },
+    {
+      "name": "HackTrick",
+      "image": "hdl_design.jpg",
+      "caption": "Design with HDL",
+      "description": "A competition focused on designing and coding digital circuits using HDL (VHDL/Verilog).",
+      "rules": [
+        "Team size: 3 members",
+        "Use of electronic gadgets is strictly prohibited",
+        "Malpractice will lead to disqualification",
+        "Evaluator's decision is final"
+      ],
+      "student": "Not mentioned",
+      "faculty": [
+        "Dr. S. V. V. S. Satyanarayana",
+        "Smt. Y. Sujatha",
+        "Sri P. Gopala Reddy",
+        "Sri K. Naga Raju"
+      ]
+    },
+    {
+      "name": "Brain Storming",
+      "image": "quiz.jpg",
+      "caption": "Technical Quiz",
+      "description": "A competitive quiz event testing participants' knowledge in various technical domains.",
+      "rules": [
+        "Each team should have a maximum of 4 members",
+        "Preferably 1 member from each year, with no more than 2 members from the same year",
+        "Complete registration before the deadline"
+      ],
+      "student": "Not mentioned",
+      "faculty": [
+        "Dr. K. Baboji",
+        "Sri R. Ram Prasad",
+        "Sri P. Naga Raju",
+        "Sri Ch. V. Naga Bhaskar"
+      ]
+    }
   ];
-
+  
   const handleRegister = () => {
     navigate('/register/ece');
   };
@@ -56,8 +127,8 @@ const ECE = () => {
   return (
     <div className={`min-h-screen ${isDarkMode ? 'bg-gradient-to-b from-gray-900 to-black' : 'bg-gradient-to-b from-white to-gray-200'} py-20 px-4`}>
       <div className="max-w-6xl mx-auto">
-        <h1 className={`text-4xl font-bold mb-12 text-center ${isDarkMode ? 'text-white' : 'text-black'}`}>Computer Science and Engineering</h1>
-        <p className={`text-lg mb-8 text-center ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>Welcome to the CSE department page. Here are the events you can participate in:</p>
+        <h1 className={`text-4xl font-bold mb-12 text-center ${isDarkMode ? 'text-white' : 'text-black'}`}>Electronics and Communication Engineering</h1>
+        <p className={`text-lg mb-8 text-center ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>Welcome to the ECE department page. Here are the events you can participate in:</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {events.map((event) => (
             <div key={event.name} className={`p-6 ${isDarkMode ? 'bg-gradient-to-br from-purple-900 to-black' : 'bg-gradient-to-br from-purple-200 to-white'} rounded-xl hover:from-purple-800 transition-all`}>
@@ -91,7 +162,19 @@ const ECE = () => {
           <h2 className="text-2xl font-bold mb-4">{selectedEvent.name}</h2>
           <p className="mb-2"><strong>Caption:</strong> {selectedEvent.caption}</p>
           <p className="mb-2"><strong>Description:</strong> {selectedEvent.description}</p>
-          <p className="mb-2"><strong>Rules:</strong> {selectedEvent.rules}</p>
+          <p className="mb-2"><strong>Rules:</strong></p>
+          <ul className="list-disc list-inside mb-4">
+            {selectedEvent.rules.map((rule, index) => (
+              <li key={index}>{rule}</li>
+            ))}
+          </ul>
+          <p className="mb-2"><strong>Faculty Coordinator:</strong></p>
+          <ul className="list-disc list-inside mb-4">
+            {selectedEvent.faculty.map((faculty, index) => (
+              <li key={index}>{faculty}</li>
+            ))}
+          </ul>
+          <p className="mb-2"><strong>Student Coordinator:</strong> {selectedEvent.student}</p>
           <div className="flex justify-end mt-4">
             <button
               onClick={handleRegister}

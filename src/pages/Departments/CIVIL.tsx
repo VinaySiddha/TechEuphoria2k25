@@ -11,34 +11,87 @@ const Civil = () => {
 
   const events = [
     {
-      name: 'Hackathon',
-      image: 'hackathon.jpg',
-      caption: '24-hour coding challenge',
-      description: 'Solve real-world problems in a 24-hour coding marathon.',
-      rules: '1. Team size: 2-4 members.\n2. No plagiarism.\n3. Use of any programming language is allowed.',
-      coordinator: 'John Doe',
-      phone: '123-456-7890'
+      "name": "Light Power Challenge",
+      "image": "light_power.jpg",
+      "caption": "Be Lite and Strong",
+      "description": "A technical event where participants prepare a concrete mix design using lightweight materials. The cubes are tested for compressive strength, and the one with the highest strength and least weight wins.",
+      "rules": [
+        "Cube size: 100mm x 100mm x 100mm or 150mm x 150mm x 150mm",
+        "Team size: 2-3 members",
+        "Minimum 3 cubes must be prepared",
+        "Density of concrete must be less than 1800 kg/m³",
+        "Participants must bring their cubes, mix proportion, and properties of materials used"
+      ],
+      "student": [
+        "Gubbala Jaya Kishore - 9866422388",
+        "Jaya Sai Venkata Vamsi Putta - 7780323661"
+      ],
+      "faculty": [
+        "V. L. D. Prasad Reddy - 9553246231"
+      ]
     },
     {
-      name: 'Project Expo',
-      image: 'project_expo.jpg',
-      caption: 'Showcase your innovative projects',
-      description: 'Present your innovative projects to a panel of judges.',
-      rules: '1. Individual or team participation.\n2. Projects must be original.\n3. Presentation time: 10 minutes.',
-      coordinator: 'Jane Smith',
-      phone: '987-654-3210'
+      "name": "Brick Blitz",
+      "image": "brick_blitz.jpg",
+      "caption": "Spot Event - Brick Arts",
+      "description": "Participants are required to create a model using bricks. Guidelines and rules will be provided just before the event.",
+      "rules": [
+        "Participants are limited to 3 members per team",
+        "Event-related rules will be announced 5 minutes before the event"
+      ],
+      "student": [
+        "Masabattula Rishendra Sai - 9346068685",
+        "Saride Prasanth - 8885019667"
+      ],
+      "faculty": [
+        "Mr. M. Prem Kumar Raju - 8978769373"
+      ]
     },
     {
-      name: 'Paper Presentation',
-      image: 'paper_presentation.jpg',
-      caption: 'Present your research papers',
-      description: 'Present your research papers on emerging technologies.',
-      rules: '1. Individual participation.\n2. Papers must be original.\n3. Presentation time: 15 minutes.',
-      coordinator: 'Alice Johnson',
-      phone: '555-123-4567'
+      "name": "Unveiling Ideas",
+      "image": "unveiling_ideas.jpg",
+      "caption": "Applications of AI in Infrastructure",
+      "description": "A poster presentation event focused on AI applications in infrastructure. Participants must create a well-structured and readable presentation.",
+      "rules": [
+        "Sheet size restricted to A0",
+        "Team size: Maximum of 2 members",
+        "Important information should be readable from 10 feet away",
+        "Title should be short and draw interest",
+        "Word count should be between 300 to 500 words",
+        "Text should be clear and concise",
+        "Evaluation is based on content coverage and delivery",
+        "Hand-drawn art is preferred over printed data",
+        "Cell phones are not allowed"
+      ],
+      "student": [
+        "Vemula Samuel Raju - 6301114169",
+        "Gandireddy Hemanth - 6300229412"
+      ],
+      "faculty": [
+        "Mrs. B. Rohitha - 9676944675"
+      ]
     },
+    {
+      "name": "STAAD Mastery",
+      "image": "staad_mastery.jpg",
+      "caption": "STAAD Pro Proficiency Test",
+      "description": "A spot event to test participants' proficiency in STAAD Pro software. The challenge involves modeling, analysis, and design within a time limit.",
+      "rules": [
+        "Software/tool used: STAAD Pro",
+        "Individual participation",
+        "Time limit: 1 hour for modeling, analysis, and design, plus 15 minutes for queries",
+        "Design model will be announced at the time of the event"
+      ],
+      "student": [
+        "Bolla Ravi Teja - 7095337142",
+        "Midatani Sindhusha Naga Sri - 7337586784"
+      ],
+      "faculty": [
+        "Mr. E. Hanuman Sai Gupta - 7989196435"
+      ]
+    }
   ];
-
+  
   const handleRegister = () => {
     navigate('/register/civil');
   };
@@ -56,8 +109,8 @@ const Civil = () => {
   return (
     <div className={`min-h-screen ${isDarkMode ? 'bg-gradient-to-b from-gray-900 to-black' : 'bg-gradient-to-b from-white to-gray-200'} py-20 px-4`}>
       <div className="max-w-6xl mx-auto">
-        <h1 className={`text-4xl font-bold mb-12 text-center ${isDarkMode ? 'text-white' : 'text-black'}`}>Computer Science and Engineering</h1>
-        <p className={`text-lg mb-8 text-center ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>Welcome to the CSE department page. Here are the events you can participate in:</p>
+        <h1 className={`text-4xl font-bold mb-12 text-center ${isDarkMode ? 'text-white' : 'text-black'}`}>Civil Engineering</h1>
+        <p className={`text-lg mb-8 text-center ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>Welcome to the Civil Engineering department page. Here are the events you can participate in:</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {events.map((event) => (
             <div key={event.name} className={`p-6 ${isDarkMode ? 'bg-gradient-to-br from-purple-900 to-black' : 'bg-gradient-to-br from-purple-200 to-white'} rounded-xl hover:from-purple-800 transition-all`}>
@@ -91,7 +144,24 @@ const Civil = () => {
           <h2 className="text-2xl font-bold mb-4">{selectedEvent.name}</h2>
           <p className="mb-2"><strong>Caption:</strong> {selectedEvent.caption}</p>
           <p className="mb-2"><strong>Description:</strong> {selectedEvent.description}</p>
-          <p className="mb-2"><strong>Rules:</strong> {selectedEvent.rules}</p>
+          <p className="mb-2"><strong>Rules:</strong></p>
+          <ul className="list-disc list-inside mb-4">
+            {selectedEvent.rules.map((rule, index) => (
+              <li key={index}>{rule}</li>
+            ))}
+          </ul>
+          <p className="mb-2"><strong>Student Coordinators:</strong></p>
+          <ul className="list-disc list-inside mb-4">
+            {selectedEvent.student.map((student, index) => (
+              <li key={index}>{student}</li>
+            ))}
+          </ul>
+          <p className="mb-2"><strong>Faculty Coordinators:</strong></p>
+          <ul className="list-disc list-inside mb-4">
+            {selectedEvent.faculty.map((faculty, index) => (
+              <li key={index}>{faculty}</li>
+            ))}
+          </ul>
           <div className="flex justify-end mt-4">
             <button
               onClick={handleRegister}

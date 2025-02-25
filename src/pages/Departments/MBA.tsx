@@ -11,32 +11,100 @@ const MBA = () => {
 
   const events = [
     {
-      name: 'Hackathon',
-      image: 'hackathon.jpg',
-      caption: '24-hour coding challenge',
-      description: 'Solve real-world problems in a 24-hour coding marathon.',
-      rules: '1. Team size: 2-4 members.\n2. No plagiarism.\n3. Use of any programming language is allowed.',
-      coordinator: 'John Doe',
-      phone: '123-456-7890'
+      "name": "YUKTI - A Business Quiz",
+      "image": "yukti_quiz.jpg",
+      "caption": "Business Knowledge Challenge",
+      "description": "A quiz competition testing participants' knowledge of business concepts, current affairs, and industry trends.",
+      "rules": [
+        "Team size: 3 members",
+        "Preliminary round: 20 questions",
+        "Top 5 teams qualify for the final round",
+        "Final round includes corporate knowledge, advertising, bidding, and trivia"
+      ],
+      "student": [
+        "P. Indu Siri Latha - 93907 32242",
+        "K. Prema Jyothi Sri - 88854 42873"
+      ],
+      "faculty": [
+        "Mr. K. Pavan Kumar - 96187 36969",
+        "Mr. P. Bharat Kumar - 80746 57330"
+      ]
     },
     {
-      name: 'Project Expo',
-      image: 'project_expo.jpg',
-      caption: 'Showcase your innovative projects',
-      description: 'Present your innovative projects to a panel of judges.',
-      rules: '1. Individual or team participation.\n2. Projects must be original.\n3. Presentation time: 10 minutes.',
-      coordinator: 'Jane Smith',
-      phone: '987-654-3210'
+      "name": "BUDDING LEADER - Young Manager",
+      "image": "budding_leader.jpg",
+      "caption": "Managerial Skills Test",
+      "description": "An event designed to identify students with leadership and management skills.",
+      "rules": [
+        "Professional dress code required",
+        "Competition includes analytical tests, personality assessment, group discussion, and interview",
+        "Judges' decision is final"
+      ],
+      "student": [
+        "G. Vineela Gayathri - 70139 10077",
+        "K. Jyothika - 93926 35552"
+      ],
+      "faculty": [
+        "Mrs. K. Lalitha Bhavani - 93918 38261",
+        "Mrs. P. Devi - 96664 92665"
+      ]
     },
     {
-      name: 'Paper Presentation',
-      image: 'paper_presentation.jpg',
-      caption: 'Present your research papers',
-      description: 'Present your research papers on emerging technologies.',
-      rules: '1. Individual participation.\n2. Papers must be original.\n3. Presentation time: 15 minutes.',
-      coordinator: 'Alice Johnson',
-      phone: '555-123-4567'
+      "name": "CARBON COPY – Simulation Game",
+      "image": "carbon_copy.jpg",
+      "caption": "Business Simulation",
+      "description": "A real-world business simulation where teams handle organizational challenges.",
+      "rules": [
+        "Team size: 3 members",
+        "Abstract submission required (max 1000 words)",
+        "Presentation time: 10 minutes"
+      ],
+      "student": [
+        "K. Lakshmi Durga - 88856 45402",
+        "D. Santhi Priya - 95021 79586"
+      ],
+      "faculty": [
+        "Mrs. K. Lalitha Bhavani - 93918 38261",
+        "Ms. P. Bala Jyothi - 90144 74347"
+      ]
     },
+    {
+      "name": "DALAL STREET - The Game of Bulls and Bears",
+      "image": "dalal_street.jpg",
+      "caption": "Stock Market Simulation",
+      "description": "A stock market trading simulation where participants manage portfolios and maximize wealth.",
+      "rules": [
+        "Team size: 3 members",
+        "Round 1: Preliminary objective test",
+        "Round 2: Live stock trading simulation"
+      ],
+      "student": [
+        "P. Dinesh - 92988 06672",
+        "G. Satya Sri - 93464 27481"
+      ],
+      "faculty": [
+        "R. V. Rajashekar - 94904 99479",
+        "Dr. K. Rambabu - 79810 53998"
+      ]
+    },
+    {
+      "name": "MASTER MINDS - Market Makers",
+      "image": "master_minds.jpg",
+      "caption": "Marketing Strategy Challenge",
+      "description": "A marketing competition where teams create and present strategies based on the 4Ps of marketing.",
+      "rules": [
+        "Team size: 3 members",
+        "Preliminary quiz: 20 questions",
+        "Top 9 teams qualify for the marketing strategy phase"
+      ],
+      "student": [
+        "S. Pujitha - 90595 91366",
+        "A. Surya Kalyani - 70932 77012"
+      ],
+      "faculty": [
+        "Dr. S. Krishna Murthy Naidu - 98663 62674"
+      ]
+    }
   ];
 
   const handleRegister = () => {
@@ -56,8 +124,8 @@ const MBA = () => {
   return (
     <div className={`min-h-screen ${isDarkMode ? 'bg-gradient-to-b from-gray-900 to-black' : 'bg-gradient-to-b from-white to-gray-200'} py-20 px-4`}>
       <div className="max-w-6xl mx-auto">
-        <h1 className={`text-4xl font-bold mb-12 text-center ${isDarkMode ? 'text-white' : 'text-black'}`}>Computer Science and Engineering</h1>
-        <p className={`text-lg mb-8 text-center ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>Welcome to the CSE department page. Here are the events you can participate in:</p>
+        <h1 className={`text-4xl font-bold mb-12 text-center ${isDarkMode ? 'text-white' : 'text-black'}`}>Master of Business Administration</h1>
+        <p className={`text-lg mb-8 text-center ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>Welcome to the MBA department page. Here are the events you can participate in:</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {events.map((event) => (
             <div key={event.name} className={`p-6 ${isDarkMode ? 'bg-gradient-to-br from-purple-900 to-black' : 'bg-gradient-to-br from-purple-200 to-white'} rounded-xl hover:from-purple-800 transition-all`}>
@@ -88,10 +156,29 @@ const MBA = () => {
           className={`modal ${isDarkMode ? 'bg-gradient-to-b from-gray-900 to-black text-white' : 'bg-gradient-to-b from-white to-gray-200 text-black'} p-8 rounded-lg shadow-lg max-w-lg mx-auto`}
           overlayClassName="modal-overlay flex items-center justify-center fixed inset-0 bg-black bg-opacity-50"
         >
-          <h2 className="text-2xl font-bold mb-4">{selectedEvent.name}</h2>
-          <p className="mb-2"><strong>Caption:</strong> {selectedEvent.caption}</p>
-          <p className="mb-2"><strong>Description:</strong> {selectedEvent.description}</p>
-          <p className="mb-2"><strong>Rules:</strong> {selectedEvent.rules}</p>
+          <div className="max-h-[80vh] overflow-y-auto p-4">
+            <h2 className="text-2xl font-bold mb-4">{selectedEvent.name}</h2>
+            <p className="mb-2"><strong>Caption:</strong> {selectedEvent.caption}</p>
+            <p className="mb-2"><strong>Description:</strong> {selectedEvent.description}</p>
+            <p className="mb-2"><strong>Rules:</strong></p>
+            <ul className="list-disc list-inside mb-4">
+              {selectedEvent.rules.map((rule, index) => (
+                <li key={index}>{rule}</li>
+              ))}
+            </ul>
+            <p className="mb-2"><strong>Student Coordinators:</strong></p>
+            <ul className="list-disc list-inside mb-4">
+              {selectedEvent.student.map((student, index) => (
+                <li key={index}>{student}</li>
+              ))}
+            </ul>
+            <p className="mb-2"><strong>Faculty Coordinators:</strong></p>
+            <ul className="list-disc list-inside mb-4">
+              {selectedEvent.faculty.map((faculty, index) => (
+                <li key={index}>{faculty}</li>
+              ))}
+            </ul>
+          </div>
           <div className="flex justify-end mt-4">
             <button
               onClick={handleRegister}

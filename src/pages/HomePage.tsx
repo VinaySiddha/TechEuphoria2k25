@@ -17,31 +17,13 @@ function HomePage() {
     { name: 'Sponsor 3', logo: 'logo3.png', type: 'Bronze' },
   ];
 
-  // useEffect(() => {
-  //   const vantaEffect = BIRDS({
-  //     el: vantaRef.current,
-  //     THREE,
-  //     mouseControls: true,
-  //     touchControls: true,
-  //     gyroControls: false,
-  //     minHeight: 200.00,
-  //     minWidth: 200.00,
-  //     scale: 1.00,
-  //     scaleMobile: 1.00,
-  //   });
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
 
-  //   return () => {
-  //     if (vantaEffect) vantaEffect.destroy();
-  //   };
-  // }, []);
-
-  // useEffect(() => {
-  //   const timer = setInterval(() => {
-  //     setTimeLeft(calculateTimeLeft());
-  //   }, 1000);
-
-  //   return () => clearInterval(timer);
-  // }, []);
+    return () => clearInterval(timer);
+  }, []);
 
   function calculateTimeLeft() {
     const eventDate = new Date('March 20, 2025 10:00:00').getTime();
@@ -83,7 +65,7 @@ function HomePage() {
             />
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-gray-300">
-            A National level Techno Cultural and Sports Symposium
+          A National level Technical and Cultural Symposium
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
             <button className="px-8 py-3 bg-gradient-to-r from-blue-600 to-green-600 rounded-full hover:from-blue-700 hover:to-green-700 transition-all">

@@ -11,34 +11,106 @@ const EEE = () => {
 
   const events = [
     {
-      name: 'Hackathon',
-      image: 'hackathon.jpg',
-      caption: '24-hour coding challenge',
-      description: 'Solve real-world problems in a 24-hour coding marathon.',
-      rules: '1. Team size: 2-4 members.\n2. No plagiarism.\n3. Use of any programming language is allowed.',
-      coordinator: 'John Doe',
-      phone: '123-456-7890'
+      "name": "Innovation Showcase",
+      "image": "innovation_showcase.jpg",
+      "caption": "Project Competition",
+      "description": "A project competition for Electrical and Electronics students to showcase their innovative ideas.",
+      "rules": [
+        "Report on 20/03/2025 at 9:30 AM",
+        "Projects displayed on 20-03-2025 and 21-03-2025",
+        "Winners announced on 22-03-2025",
+        "Team size: Max 4 members",
+        "Judges' decision is final"
+      ],
+      "student": [
+        "Y. Praveen - 8466800143",
+        "T. Monika - 9550862675"
+      ],
+      "faculty": [
+        "Mr. V.S. Aditya - 9492033208",
+        "Mr. Jewaliddin Shaik - 8333057507"
+      ]
     },
     {
-      name: 'Project Expo',
-      image: 'project_expo.jpg',
-      caption: 'Showcase your innovative projects',
-      description: 'Present your innovative projects to a panel of judges.',
-      rules: '1. Individual or team participation.\n2. Projects must be original.\n3. Presentation time: 10 minutes.',
-      coordinator: 'Jane Smith',
-      phone: '987-654-3210'
+      "name": "Escape Room",
+      "image": "escape_room.jpg",
+      "caption": "Problem-Solving Challenge",
+      "description": "A puzzle-based challenge where teams solve clues to escape within a time limit.",
+      "rules": [
+        "Report on 20/03/2025 at 9:30 AM",
+        "Each team: 4 members",
+        "No external help allowed",
+        "Fastest team wins"
+      ],
+      "student": [
+        "S.R. Satyendra Reddy - 8074433491",
+        "B. Geetha Sri - 9640503134"
+      ],
+      "faculty": [
+        "Mr. S. Krishna - 9490931733",
+        "Mr. T. Mani Sagar - 7013215011"
+      ]
     },
     {
-      name: 'Paper Presentation',
-      image: 'paper_presentation.jpg',
-      caption: 'Present your research papers',
-      description: 'Present your research papers on emerging technologies.',
-      rules: '1. Individual participation.\n2. Papers must be original.\n3. Presentation time: 15 minutes.',
-      coordinator: 'Alice Johnson',
-      phone: '555-123-4567'
+      "name": "Battle of Brains",
+      "image": "battle_of_brains.jpg",
+      "caption": "Technical Quiz",
+      "description": "A quiz competition testing knowledge in current affairs and electrical engineering.",
+      "rules": [
+        "Report on 20/03/2025 at 9:30 AM",
+        "Max 2 members per team",
+        "Judges' decision is final"
+      ],
+      "student": [
+        "N. Varshini - 7396671393",
+        "P. Durga Prasad - 8096269617"
+      ],
+      "faculty": [
+        "Mrs. G. Jaji Sudha - 8500060878",
+        "Mrs. Sk. Shameera Begum - 9490433786"
+      ]
     },
+    {
+      "name": "Circuit Clash",
+      "image": "circuit_clash.jpg",
+      "caption": "Circuit Troubleshooting",
+      "description": "A hands-on circuit competition where participants debug and design circuits.",
+      "rules": [
+        "Report on 20/03/2025 at 9:30 AM",
+        "Top 5 teams advance to the final round",
+        "Phase-2 on 21/03/2025"
+      ],
+      "student": [
+        "M. Mounica - 9398112559",
+        "N. Jaya Raju - 7702708791"
+      ],
+      "faculty": [
+        "Mr. D. Dhana Prasad - 9032525399",
+        "Mr. Y. Purna Naga Sai Teja - 7386049693"
+      ]
+    },
+    {
+      "name": "Word Sudoku",
+      "image": "word_sudoku.jpg",
+      "caption": "Logical Word Puzzle",
+      "description": "A crossword and word sudoku event testing logic and vocabulary.",
+      "rules": [
+        "Report on 20/03/2025 at 9:30 AM",
+        "Phase-1 on 20/03/2025",
+        "Phase-2 on 21/03/2025"
+      ],
+      "student": [
+        "M. Navyesh Kumar - 8919113478",
+        "P. Nirmala - 8019724895"
+      ],
+      "faculty": [
+        "Mr. K. Bhuvan Prasad - 9398690143",
+        "Mr. K. Sai Krishna - 8886442490"
+      ]
+    }
   ];
-
+  
+  
   const handleRegister = () => {
     navigate('/register/eee');
   };
@@ -56,8 +128,8 @@ const EEE = () => {
   return (
     <div className={`min-h-screen ${isDarkMode ? 'bg-gradient-to-b from-gray-900 to-black' : 'bg-gradient-to-b from-white to-gray-200'} py-20 px-4`}>
       <div className="max-w-6xl mx-auto">
-        <h1 className={`text-4xl font-bold mb-12 text-center ${isDarkMode ? 'text-white' : 'text-black'}`}>Computer Science and Engineering</h1>
-        <p className={`text-lg mb-8 text-center ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>Welcome to the CSE department page. Here are the events you can participate in:</p>
+        <h1 className={`text-4xl font-bold mb-12 text-center ${isDarkMode ? 'text-white' : 'text-black'}`}>Electrical and Electronics Engineering</h1>
+        <p className={`text-lg mb-8 text-center ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>Welcome to the EEE department page. Here are the events you can participate in:</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {events.map((event) => (
             <div key={event.name} className={`p-6 ${isDarkMode ? 'bg-gradient-to-br from-purple-900 to-black' : 'bg-gradient-to-br from-purple-200 to-white'} rounded-xl hover:from-purple-800 transition-all`}>
@@ -85,13 +157,32 @@ const EEE = () => {
           isOpen={modalIsOpen}
           onRequestClose={closeModal}
           contentLabel="Event Details"
-          className={`modal ${isDarkMode ? 'bg-gradient-to-b from-gray-900 to-black text-white' : 'bg-gradient-to-b from-white to-gray-200 text-black'} p-8 rounded-lg shadow-lg max-w-lg mx-auto`}
+          className={`modal ${isDarkMode ? 'bg-gradient-to-b from-gray-900 to-black text-white' : 'bg-gradient-to-b from-white to-gray-200 text-black'} p-8 rounded-lg shadow-lg max-w-2xl mx-auto`}
           overlayClassName="modal-overlay flex items-center justify-center fixed inset-0 bg-black bg-opacity-50"
         >
-          <h2 className="text-2xl font-bold mb-4">{selectedEvent.name}</h2>
-          <p className="mb-2"><strong>Caption:</strong> {selectedEvent.caption}</p>
-          <p className="mb-2"><strong>Description:</strong> {selectedEvent.description}</p>
-          <p className="mb-2"><strong>Rules:</strong> {selectedEvent.rules}</p>
+          <div className="max-h-[80vh] overflow-y-auto p-4">
+            <h2 className="text-2xl font-bold mb-4">{selectedEvent.name}</h2>
+            <p className="mb-2"><strong>Caption:</strong> {selectedEvent.caption}</p>
+            <p className="mb-2"><strong>Description:</strong> {selectedEvent.description}</p>
+            <p className="mb-2"><strong>Rules:</strong></p>
+            <ul className="list-disc list-inside mb-4">
+              {selectedEvent.rules.map((rule, index) => (
+                <li key={index}>{rule}</li>
+              ))}
+            </ul>
+            <p className="mb-2"><strong>Student Coordinators:</strong></p>
+            <ul className="list-disc list-inside mb-4">
+              {selectedEvent.student.map((student, index) => (
+                <li key={index}>{student}</li>
+              ))}
+            </ul>
+            <p className="mb-2"><strong>Faculty Coordinators:</strong></p>
+            <ul className="list-disc list-inside mb-4">
+              {selectedEvent.faculty.map((faculty, index) => (
+                <li key={index}>{faculty}</li>
+              ))}
+            </ul>
+          </div>
           <div className="flex justify-end mt-4">
             <button
               onClick={handleRegister}
