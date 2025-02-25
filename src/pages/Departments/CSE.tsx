@@ -43,7 +43,7 @@ const CSE = () => {
     navigate('/register/cse');
   };
 
-  const openModal = (event: React.SetStateAction<null>) => {
+  const openModal = (event) => {
     setSelectedEvent(event);
     setModalIsOpen(true);
   };
@@ -92,6 +92,8 @@ const CSE = () => {
           <p className="mb-2"><strong>Caption:</strong> {selectedEvent.caption}</p>
           <p className="mb-2"><strong>Description:</strong> {selectedEvent.description}</p>
           <p className="mb-2"><strong>Rules:</strong> {selectedEvent.rules}</p>
+          <p className="mb-2"><strong>Coordinator:</strong> {selectedEvent.coordinator}</p>
+          <p className="mb-2"><strong>Phone:</strong> {selectedEvent.phone}</p>
           <button
             onClick={handleRegister}
             className="px-4 py-2 bg-green-600 text-white rounded-full hover:bg-green-700 transition-all"
