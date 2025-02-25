@@ -23,7 +23,7 @@ const Mech = () => {
       ],
       "Student_Coordinator": "John Doe",
       "Faculty_Coordinator": ["1. Mr. S.Chandrasekhar – 8897805920",
-      "2. Mr. P.Mohanakrishna – 9603620513"],
+      "2. Mr. P.Mohanakrishna – 9603620513"]
      
     },
     {
@@ -40,7 +40,7 @@ const Mech = () => {
       "Student_Coordinator": "Jane Smith",
       "Faculty coordinator": ["1. Mr. T.S.S.R.Krishna – 6303526702",
 "2. Mr. Sk.Arief – 6305080838",
-"3. Mr. K.Suchendra Kumar – 8367294989"],
+"3. Mr. K.Suchendra Kumar – 8367294989"]
     
     },
     {
@@ -55,7 +55,7 @@ const Mech = () => {
       "Student_Coordinator": "Jane Smith",
       "Faculty coordinator": ["1. Mr. D.V.N.Prabhakar – 7013290220",
         "2. Mr. M.Chaitanya – 9493008633",
-       " 3. Mr. V.Ravi Kumar – 9885406640"],
+       " 3. Mr. V.Ravi Kumar – 9885406640"]
    
     },
     {
@@ -71,7 +71,7 @@ const Mech = () => {
       ],
       "Student_Coordinator": "Jane Smith",
       "Faculty coordinator": ["1. Dr. K.Bala Subrahmanyam – 9985513184",
-       " 2. Mr. M.D.Nagendra Prasad - 9494045671"],
+       " 2. Mr. M.D.Nagendra Prasad - 9494045671"]
       
     },
     {
@@ -92,7 +92,7 @@ const Mech = () => {
       ],
       "Student_Coordinator": "Jane Smith",
       "Faculty coordinator": ["1. Dr. D.Ashok – 9989026624",
-        "2. Mr. M.V.S.S.D.S.S.Pavan – 9000115586"],
+        "2. Mr. M.V.S.S.D.S.S.Pavan – 9000115586"]
 
     },
     {
