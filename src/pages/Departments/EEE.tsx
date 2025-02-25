@@ -40,7 +40,7 @@ const EEE = () => {
   ];
 
   const handleRegister = () => {
-    navigate('/register/cse');
+    navigate('/register/eee');
   };
 
   const openModal = (event) => {

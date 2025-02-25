@@ -40,7 +40,7 @@ const Civil = () => {
   ];
 
   const handleRegister = () => {
-    navigate('/register/cse');
+    navigate('/register/civil');
   };
 
   const openModal = (event) => {

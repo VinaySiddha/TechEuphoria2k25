@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useTheme } from '../../ThemeContext';
 import Modal from 'react-modal';
 
-const AIML = () => {
+const CAI = () => {
   const navigate = useNavigate();
   const { isDarkMode } = useTheme();
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -40,7 +40,7 @@ const AIML = () => {
   ];
 
   const handleRegister = () => {
-    navigate('/register/cse');
+    navigate('/register/cai');
   };
 
   const openModal = (event) => {
@@ -112,4 +112,4 @@ const AIML = () => {
   );
 };
 
-export default AIML;
+export default CAI;

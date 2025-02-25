@@ -108,11 +108,11 @@ function App() {
             <Route path="/team" element={<TeamPage />} />
             <Route path="/departments" element={<DepartmentsPage />} />
             <Route path="/departments/cse" element={<CSE />} />
-            <Route path="/departments/aiml" element={<AIML />} />
+            <Route path="/departments/cai" element={<AIML />} />
             <Route path="/departments/civil" element={<Civil />} />
             <Route path="/departments/ece" element={<ECE />} />
             <Route path="/departments/eee" element={<EEE />} />
-            <Route path="/departments/PHARM" element={<PHARM />} />
+            <Route path="/departments/pharm" element={<PHARM />} />
             <Route path="/departments/mech" element={<Mech />} />
             <Route path="/departments/mba" element={<MBA />} />
 

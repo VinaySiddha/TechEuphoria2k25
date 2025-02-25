@@ -40,7 +40,7 @@ const Mech = () => {
   ];
 
   const handleRegister = () => {
-    navigate('/register/cse');
+    navigate('/register/mech');
   };
 
   const openModal = (event) => {

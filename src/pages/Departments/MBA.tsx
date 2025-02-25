@@ -40,7 +40,7 @@ const MBA = () => {
   ];
 
   const handleRegister = () => {
-    navigate('/register/cse');
+    navigate('/register/mba');
   };
 
   const openModal = (event) => {

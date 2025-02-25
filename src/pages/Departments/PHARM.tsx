@@ -40,7 +40,7 @@ const PHARM = () => {
   ];
 
   const handleRegister = () => {
-    navigate('/register/cse');
+    navigate('/register/pharm');
   };
 
   const openModal = (event) => {
