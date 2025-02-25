@@ -1,14 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { Typewriter } from 'react-simple-typewriter';
-import * as THREE from 'three';
+// import * as THREE from 'three';
 // import BIRDS from './vanta/dist/vanta.birds.min';
 import '../index.css'; // Ensure you import your CSS file
 import { useTheme } from '../ThemeContext';
+import LoaderButton from '../components/LoaderButton';
 
 function HomePage() {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
-  const navigate = useNavigate();
   const { isDarkMode } = useTheme();
   const vantaRef = useRef(null);
   const sponsors = [
@@ -44,10 +43,6 @@ function HomePage() {
     return timeLeft;
   }
 
-  const handleLinkClick = (path) => {
-    navigate(path);
-  };
-
   return (
     <div ref={vantaRef} className="home-page" id="vanta-bg">
       {/* Hero Section */}
@@ -65,18 +60,21 @@ function HomePage() {
             />
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-gray-300">
-          A National level Technical and Cultural Symposium
+            A National level Technical and Cultural Symposium
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
-            <button className="px-8 py-3 bg-gradient-to-r from-blue-600 to-green-600 rounded-full hover:from-blue-700 hover:to-green-700 transition-all">
+            <LoaderButton
+              path="/register"
+              className="px-8 py-3 bg-gradient-to-r from-blue-600 to-green-600 rounded-full hover:from-blue-700 hover:to-green-700 transition-all"
+            >
               Register Now
-            </button>
-            <button
-              onClick={() => handleLinkClick('/events')}
+            </LoaderButton>
+            <LoaderButton
+              path="/events"
               className="px-8 py-3 border-2 border-white rounded-full hover:bg-white hover:text-black transition-all"
             >
               View Events
-            </button>
+            </LoaderButton>
           </div>
           <div className="mt-8 text-2xl text-white">
             <span>{timeLeft.days}d </span>
@@ -86,6 +84,17 @@ function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Sponsors Section
+      <section className={`py-20 px-4 ${isDarkMode ? 'bg-black' : 'bg-white'}`}>
+        <div className="max-w-6xl mx-auto">
+          <h2 className={`text-4xl font-bold mb-12 text-center ${isDarkMode ? 'text-white' : 'text-black'}`}>Our Sponsors</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <span>{timeLeft.minutes}m </span>
+            <span>{timeLeft.seconds}s</span>
+          </div>
+        </div>
+      </section> */}
 
       {/* Sponsors Section */}
       <section className={`py-20 px-4 ${isDarkMode ? 'bg-black' : 'bg-white'}`}>

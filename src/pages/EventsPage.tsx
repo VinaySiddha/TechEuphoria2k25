@@ -12,36 +12,41 @@ function EventsPage() {
       name: "Technical Events",
       description: "Showcase your technical skills",
       image: "https://cdn.mos.cms.futurecdn.net/HFUAjfbamNhbM8dsNSQW3D-970-80.jpg.webp",
-      time: "March 21, 2025, 10:00 AM"
+      time: "March 21, 2025, 10:00 AM",
+      path: "/departments" // Navigate to Departments page
     },
     {
       name: "Literary Events",
       description: "Showcase your literary talents",
       image: "https://teleanalysis.com/wp-content/uploads/2023/09/Literary-Analysis.png",
-      time: "March 21, 2025, 11:00 AM"
+      time: "March 21, 2025, 11:00 AM",
+      path: "/literary-events"
     },
     {
       name: "Cultural Events",
       description: "Showcase your cultural talents",
       image: "https://www.uudoon.in/campus-life/assets/images/Campus%20(1).jpg",
-      time: "March 21, 22 2025, 11:00 AM"
+      time: "March 21, 22 2025, 11:00 AM",
+      path: "/cultural-events"
     },
     {
       name: "Spot Events",
       description: "Showcase your spot talents",
       image: "https://media.licdn.com/dms/image/v2/C4E0BAQHegihUpj6k2Q/company-logo_200_200/company-logo_200_200/0/1679234583619?e=1748476800&v=beta&t=JByU7CWNkg8DFFU0VyOspF-VX3q1RioewAbStRSTWjs",
-      time: "March 21 2025, 10:00 AM"
+      time: "March 21 2025, 10:00 AM",
+      path: "/spot-events"
     },
     {
       name: "Stalls",
       description: "Showcase your innovative projects",
       image: "https://www.horsham.gov.uk/__data/assets/image/0009/128484/1000x666px-markets-image.png",
-      time: "March 20, 21 2025, 10:00 AM"
+      time: "March 20, 21 2025, 10:00 AM",
+      path: "/stalls"
     },
   ];
 
-  const handleLearnMore = () => {
-    navigate('/departments');
+  const handleLearnMore = (path) => {
+    navigate(path);
   };
 
   return (
@@ -56,7 +61,7 @@ function EventsPage() {
               <p className={`text-gray-400 mb-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>{event.description}</p>
               <p className={`text-gray-400 mb-4 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>{event.time}</p>
               <div className="flex justify-center items-center">
-                <button className="learn-more-button" onClick={handleLearnMore}>
+                <button className="learn-more-button" onClick={() => handleLearnMore(event.path)}>
                   Learn More
                 </button>
               </div>
