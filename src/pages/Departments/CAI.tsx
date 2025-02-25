@@ -98,7 +98,7 @@ const CAI = () => {
   return (
     <div className={`min-h-screen ${isDarkMode ? 'bg-gradient-to-b from-gray-900 to-black' : 'bg-gradient-to-b from-white to-gray-200'} py-20 px-4`}>
       <div className="max-w-6xl mx-auto">
-        <h1 className={`text-4xl font-bold mb-12 text-center ${isDarkMode ? 'text-white' : 'text-black'}`}>Computer Science and Engineering with Artifical Intelligence and Artificial Intelligence & Machine Learning</h1>
+        <h1 className={`text-4xl font-bold mb-12 text-center ${isDarkMode ? 'text-white' : 'text-black'}`}>Artifical Intelligence & Machine Learning</h1>
         <p className={`text-lg mb-8 text-center ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>Welcome to the CSE(AI) & AIML department page. Here are the events you can participate in:</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {events.map((event) => (
@@ -139,6 +139,8 @@ const CAI = () => {
               <li key={index}>{rule}</li>
             ))}
           </ul>
+          <p className="mb-2"><strong>Coordinator:</strong> {selectedEvent.coordinator}</p>
+          <p className="mb-2"><strong>Phone:</strong> {selectedEvent.phone}</p>
           <div className="flex justify-end mt-4">
             <button
               onClick={handleRegister}
