@@ -13,7 +13,9 @@ import Civil from './pages/Departments/CIVIL';
 import ECE from './pages/Departments/ECE';
 import EEE from './pages/Departments/EEE';
 import Mech from './pages/Departments/MECH';
+import PHARM from './pages/Departments/PHARM';
 import { useTheme } from './ThemeContext';
+import MBA from './pages/Departments/MBA';
 
 function App() {
   const { isDarkMode, toggleTheme } = useTheme();
@@ -110,7 +112,10 @@ function App() {
             <Route path="/departments/civil" element={<Civil />} />
             <Route path="/departments/ece" element={<ECE />} />
             <Route path="/departments/eee" element={<EEE />} />
+            <Route path="/departments/PHARM" element={<PHARM />} />
             <Route path="/departments/mech" element={<Mech />} />
+            <Route path="/departments/mba" element={<MBA />} />
+
           </Routes>
         </main>
 
