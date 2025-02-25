@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
 
-  base: "/TechEuphoria2k25",
+ // base: "/TechEuphoria2k25",
   base: "/",  // Adjust if neededz
   server: {
     host: "0.0.0.0",  // Allow external access
