@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Typewriter } from 'react-simple-typewriter';
+import * as THREE from 'three';
+// import BIRDS from './vanta/dist/vanta.birds.min';
 import '../index.css'; // Ensure you import your CSS file
 import { useTheme } from '../ThemeContext';
 
@@ -8,19 +10,38 @@ function HomePage() {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
   const navigate = useNavigate();
   const { isDarkMode } = useTheme();
+  const vantaRef = useRef(null);
   const sponsors = [
     { name: 'Sponsor 1', logo: 'logo1.png', type: 'Gold' },
     { name: 'Sponsor 2', logo: 'logo2.png', type: 'Silver' },
     { name: 'Sponsor 3', logo: 'logo3.png', type: 'Bronze' },
   ];
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft(calculateTimeLeft());
-    }, 1000);
+  // useEffect(() => {
+  //   const vantaEffect = BIRDS({
+  //     el: vantaRef.current,
+  //     THREE,
+  //     mouseControls: true,
+  //     touchControls: true,
+  //     gyroControls: false,
+  //     minHeight: 200.00,
+  //     minWidth: 200.00,
+  //     scale: 1.00,
+  //     scaleMobile: 1.00,
+  //   });
 
-    return () => clearInterval(timer);
-  }, []);
+  //   return () => {
+  //     if (vantaEffect) vantaEffect.destroy();
+  //   };
+  // }, []);
+
+  // useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     setTimeLeft(calculateTimeLeft());
+  //   }, 1000);
+
+  //   return () => clearInterval(timer);
+  // }, []);
 
   function calculateTimeLeft() {
     const eventDate = new Date('March 20, 2025 10:00:00').getTime();
@@ -46,7 +67,7 @@ function HomePage() {
   };
 
   return (
-    <div className="home-page" id="vanta-bg">
+    <div ref={vantaRef} className="home-page" id="vanta-bg">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="relative z-10 text-center px-4">

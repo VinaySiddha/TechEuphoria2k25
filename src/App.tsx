@@ -9,10 +9,10 @@ import TeamPage from './pages/TeamPage';
 import DepartmentsPage from './pages/DepartmentsPage';
 import CSE from './pages/Departments/CSE';
 import AIML from './pages/Departments/CAI';
-import CIVIL from './pages/Departments/CIVIL';
+import Civil from './pages/Departments/CIVIL';
 import ECE from './pages/Departments/ECE';
 import EEE from './pages/Departments/EEE';
-import MECH from './pages/Departments/MECH';
+import Mech from './pages/Departments/MECH';
 import { useTheme } from './ThemeContext';
 
 function App() {
