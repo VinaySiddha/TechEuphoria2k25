@@ -23,7 +23,7 @@ import { useTheme } from './ThemeContext';
 import darkModeLogo from './assets/images/white.png';
 import lightModeLogo from './assets/images/black.png';
 import lightModeLoaderGif from './assets/loaderB.gif'; // Import the dark mode loader GIF
-import  darkModeLoaderGif from './assets/LoaderW.gif'; // Import the light mode loader GIF
+import darkModeLoaderGif from './assets/LoaderW.gif'; // Import the light mode loader GIF
 import bgVideo from './assets/bg.mp4'; // Import the video file
 
 function AppContent() {
@@ -49,9 +49,6 @@ function AppContent() {
     { name: 'Team', icon: Users2, path: '/team' },
   ];
 
-  // const darkModeLogo = 'darkModeLogo'; // Replace with your dark mode logo URL
-  // const lightModeLogo = './src/assets/images/black.png'; // Replace with your light mode logo URL
-
   return (
     <div className={`min-h-screen ${isDarkMode ? 'bg-black text-white' : 'bg-white text-black'}`}>
       {loading && (
@@ -61,10 +58,10 @@ function AppContent() {
       )}
       {!loading && (
         <>
-          {/* <video autoPlay muted loop className="background-video">
+          <video autoPlay muted loop className="background-video">
             <source src={bgVideo} type="video/mp4" />
             Your browser does not support the video tag.
-          </video> */}
+          </video>
           {/* Desktop Navigation */}
           <nav className={`fixed w-full z-50 ${isDarkMode ? 'bg-black/90' : 'bg-white/90'} backdrop-blur-sm hidden md:block`}>
             <div className="max-w-6xl mx-auto px-4">
@@ -74,7 +71,7 @@ function AppContent() {
                   <img src={isDarkMode ? darkModeLogo : lightModeLogo} alt="Tech Euphoria 2K25" className="h-16 mr-2" />
                   <span className="text-2xl font-bold bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text">
                     TECH EUPHORIA 2K25
-                  </span> 
+                  </span>
                 </Link>
 
                 {/* Desktop Navigation */}
@@ -130,7 +127,7 @@ function AppContent() {
           </nav>
 
           {/* Main Content */}
-          <main className="pt-16 md:pt-0">
+          <main className="pt-16 md:pt-0 relative z-10">
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/events" element={<EventsPage />} />
@@ -154,7 +151,7 @@ function AppContent() {
           </main>
 
           {/* Footer */}
-          <footer className={`py-12 px-4 mb-16 md:mb-0 ${isDarkMode ? 'bg-black/80 text-gray-400' : 'bg-white/80 text-gray-700'}`}>
+          <footer className={`py-12 px-4 mb-16 md:mb-0 relative z-10 ${isDarkMode ? 'bg-black/80 text-gray-400' : 'bg-white/80 text-gray-700'}`}>
             <div className="max-w-6xl mx-auto">
               <div className="flex flex-col md:flex-row justify-between items-center gap-8">
                 <div className="text-center md:text-left">
