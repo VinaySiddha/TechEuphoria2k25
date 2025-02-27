@@ -99,19 +99,6 @@ const Mech = () => {
         "1. Dr. D.Ashok – 9989026624",
         "2. Mr. M.V.S.S.D.S.S.Pavan – 9000115586"
       ]
-    },
-    {
-      "name": "General Guidelines",
-      "image": "general_guidelines.jpg",
-      "caption": "General rules for participants",
-      "description": "Important guidelines for all participants to follow during the competitions.",
-      "rules": [
-        "All participants must wear their college ID card.",
-        "Only registered candidates are allowed to participate. No spot registrations.",
-        "Only qualified participants can move to the next level.",
-        "Mobiles and smart watches are strictly prohibited.",
-        "Judges' decision is final."
-      ]
     }
   ];
 
