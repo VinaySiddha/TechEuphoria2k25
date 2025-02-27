@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useTheme } from '../../ThemeContext';
 import Modal from 'react-modal';
 
-const MBA = () => {
+const CSE = () => {
   const navigate = useNavigate();
   const { isDarkMode } = useTheme();
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -88,7 +88,7 @@ const MBA = () => {
   ];
 
   const handleRegister = () => {
-    navigate('/register/mba');
+    navigate('/register/cse');
   };
 
   const openModal = (event) => {
