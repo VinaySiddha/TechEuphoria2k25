@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Loader from './Loader';
+import loaderGif from './assets/loader.gif';
 
 interface LoaderButtonProps {
   children: React.ReactNode;
@@ -16,12 +16,12 @@ const LoaderButton: React.FC<LoaderButtonProps> = ({ children, path, className }
     setLoading(true);
     setTimeout(() => {
       navigate(path);
-    }, 2000); // 3 seconds delay for the loader
+    }, 2000); // 2 seconds delay for the loader
   };
 
   return (
     <button onClick={handleClick} className={className}>
-      {loading ? <Loader /> : children}
+      {loading ? <img src={loaderGif} alt="Loading..." /> : children}
     </button>
   );
 };
