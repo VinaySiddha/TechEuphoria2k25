@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import loaderGif from './assets/loader.gif';
+import loaderGif from '../assets/loader.gif';
 
 interface LoaderButtonProps {
   children: React.ReactNode;
