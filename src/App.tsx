@@ -22,7 +22,8 @@ import StallsPage from './pages/StallsPage';
 import { useTheme } from './ThemeContext';
 import darkModeLogo from './assets/images/white.png';
 import lightModeLogo from './assets/images/black.png';
-import Loader from './components/Loader';
+import lightModeLoaderGif from './assets/loaderB.gif'; // Import the dark mode loader GIF
+import  darkModeLoaderGif from './assets/LoaderW.gif'; // Import the light mode loader GIF
 import bgVideo from './assets/bg.mp4'; // Import the video file
 
 function AppContent() {
@@ -53,14 +54,17 @@ function AppContent() {
 
   return (
     <div className={`min-h-screen ${isDarkMode ? 'bg-black text-white' : 'bg-white text-black'}`}>
-      {loading && <Loader />}
+      {loading && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+          <img src={isDarkMode ? darkModeLoaderGif : lightModeLoaderGif} alt="Loading..." className="w-24 h-24" />
+        </div>
+      )}
       {!loading && (
         <>
-        
-          <video autoPlay muted loop className="background-video">
+          {/* <video autoPlay muted loop className="background-video">
             <source src={bgVideo} type="video/mp4" />
             Your browser does not support the video tag.
-          </video>
+          </video> */}
           {/* Desktop Navigation */}
           <nav className={`fixed w-full z-50 ${isDarkMode ? 'bg-black/90' : 'bg-white/90'} backdrop-blur-sm hidden md:block`}>
             <div className="max-w-6xl mx-auto px-4">
