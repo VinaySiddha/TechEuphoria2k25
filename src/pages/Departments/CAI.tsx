@@ -22,8 +22,8 @@ const CAI = () => {
         "Use of any programming language is allowed",
         "No plagiarism"
       ],
-      "student": "P. Kalyan Kumar",
-      "faculty": "Mr. B V V Bhargav"
+      "student": "P. Kalyan Kumar - 6300808054",
+      "faculty": "Mr. B V V Bhargav - 8712291951"
     },
     {
       "name": "Glitch Hunt 2.0",
@@ -36,8 +36,8 @@ const CAI = () => {
         "No plagiarism",
         "Any programming language can be used"
       ],
-      "student": "M. Lavanya",
-      "faculty": "Mr. V Rama Narayana "
+      "student": "M. Lavanya -  7075291677",
+      "faculty": "Mr. V Rama Narayana -  "
     },
     {
       "name": "Battle of Minds",
@@ -49,8 +49,8 @@ const CAI = () => {
         "Participants must adhere to time limits",
         "No external help is allowed"
       ],
-      "student": "E. Tirupati Rao",
-      "faculty": "Mrs. M Kiranmai"
+      "student": "E. Tirupati Rao - 7569119235",
+      "faculty": "Mrs. M Kiranmai - 8310643105"
     },
     {
       "name": "NextZen AI",
@@ -62,8 +62,8 @@ const CAI = () => {
         "Work must be original and relevant to the given theme",
         "Judging is based on creativity, AI utilization, and coherence"
       ],
-      "student": "K. Poojitha",
-      "faculty": "Mr. P V V Satyanarayana"
+      "student": "K. Poojitha - 7671968916",
+      "faculty": "Mr. P V V Satyanarayana - 9491556136"
     },
     {
       "name": "The Fun Fiesta",
@@ -76,8 +76,8 @@ const CAI = () => {
         "Participants must follow instructions and game rules",
         "Winners are decided based on performance"
       ],
-      "student": "M. Usha Sri",
-      "faculty": "Mrs.V Radha"
+      "student": "M. Usha Sri - 9550852069",
+      "faculty": "Mrs.V Radha - 9177761656"
     }
   ];
   
