@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Loader from './Loader';
+import
 
 const LoaderButton = ({ children, path, className }) => {
   const [loading, setLoading] = useState(false);
@@ -10,7 +11,7 @@ const LoaderButton = ({ children, path, className }) => {
     setLoading(true);
     setTimeout(() => {
       navigate(path);
-    }, 1000); // 3 seconds delay for the loader
+    }, 2000); // 3 seconds delay for the loader
   };
 
   return (
