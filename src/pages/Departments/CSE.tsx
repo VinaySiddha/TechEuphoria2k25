@@ -104,8 +104,8 @@ const CSE = () => {
   return (
     <div className={`min-h-screen ${isDarkMode ? 'bg-gradient-to-b from-gray-900 to-black' : 'bg-gradient-to-b from-white to-gray-200'} py-20 px-4`}>
       <div className="max-w-6xl mx-auto">
-        <h1 className={`text-4xl font-bold mb-12 text-center ${isDarkMode ? 'text-white' : 'text-black'}`}>Master of Business Administration</h1>
-        <p className={`text-lg mb-8 text-center ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>Welcome to the MBA department page. Here are the events you can participate in:</p>
+        <h1 className={`text-4xl font-bold mb-12 text-center ${isDarkMode ? 'text-white' : 'text-black'}`}>Computer Science and Engineering</h1>
+        <p className={`text-lg mb-8 text-center ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>Welcome to the CSE department page. Here are the events you can participate in:</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {events.map((event) => (
             <div key={event.name} className={`p-6 ${isDarkMode ? 'bg-gradient-to-br from-purple-900 to-black' : 'bg-gradient-to-br from-purple-200 to-white'} rounded-xl hover:from-purple-800 transition-all`}>
@@ -146,18 +146,8 @@ const CSE = () => {
                 <li key={index}>{rule}</li>
               ))}
             </ul>
-            <p className="mb-2"><strong>Student Coordinators:</strong></p>
-            <ul className="list-disc list-inside mb-4">
-              {selectedEvent.student.map((student, index) => (
-                <li key={index}>{student}</li>
-              ))}
-            </ul>
-            <p className="mb-2"><strong>Faculty Coordinators:</strong></p>
-            <ul className="list-disc list-inside mb-4">
-              {selectedEvent.faculty.map((faculty, index) => (
-                <li key={index}>{faculty}</li>
-              ))}
-            </ul>
+            <p className="mb-2"><strong>Student Coordinator:</strong> {selectedEvent.student}</p>
+            <p className="mb-2"><strong>Faculty Coordinator:</strong> {selectedEvent.faculty}</p>
           </div>
           <div className="flex justify-end mt-4">
             <button
