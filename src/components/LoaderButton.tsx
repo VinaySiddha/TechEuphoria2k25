@@ -16,7 +16,7 @@ const LoaderButton: React.FC<LoaderButtonProps> = ({ children, path, className }
     setLoading(true);
     setTimeout(() => {
       navigate(path);
-    }, 2000); // 2 seconds delay for the loader
+    }, 3000); // 2 seconds delay for the loader
   };
 
   return (

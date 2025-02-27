@@ -35,7 +35,7 @@ function AppContent() {
     const handleComplete = () => setLoading(false);
 
     handleStart();
-    const timer = setTimeout(handleComplete, 1000); // Simulate a delay for the loader
+    const timer = setTimeout(handleComplete, 2000); // Simulate a delay for the loader
 
     return () => clearTimeout(timer);
   }, [location]);
