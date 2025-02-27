@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Loader from './Loader';
-import
 
-const LoaderButton = ({ children, path, className }) => {
+interface LoaderButtonProps {
+  children: React.ReactNode;
+  path: string;
+  className?: string;
+}
+
+const LoaderButton: React.FC<LoaderButtonProps> = ({ children, path, className }) => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
