@@ -62,7 +62,7 @@ function HomePage() {
           <p className="text-xl md:text-2xl mb-8 text-gray-300">
             A National level Technical and Cultural Symposium
           </p>
-          <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
+          {/* <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
             <LoaderButton
               path="/register"
               className="px-8 py-3 bg-gradient-to-r from-blue-600 to-green-600 rounded-full hover:from-blue-700 hover:to-green-700 transition-all"
@@ -75,7 +75,7 @@ function HomePage() {
             >
               View Events
             </LoaderButton>
-          </div>
+          </div> */}
           <div className="mt-8 text-2xl text-white">
             <span>{timeLeft.days}d </span>
             <span>{timeLeft.hours}h </span>
