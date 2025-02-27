@@ -50,7 +50,7 @@ function AppContent() {
   ];
 
   return (
-    <div className={`min-h-screen ${isDarkMode ? 'bg-black text-white' : 'bg-white text-black'}`}>
+    <div className="min-h-screen text-white">
       {loading && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
           <img src={isDarkMode ? darkModeLoaderGif : lightModeLoaderGif} alt="Loading..." className="w-24 h-24" />
@@ -63,7 +63,7 @@ function AppContent() {
             Your browser does not support the video tag.
           </video>
           {/* Desktop Navigation */}
-          <nav className={`fixed w-full z-50 ${isDarkMode ? 'bg-black/90' : 'bg-white/90'} backdrop-blur-sm hidden md:block`}>
+          <nav className="fixed w-full z-50 backdrop-blur-sm hidden md:block">
             <div className="max-w-6xl mx-auto px-4">
               <div className="flex justify-between items-center h-16">
                 {/* Logo */}
@@ -80,14 +80,14 @@ function AppContent() {
                     <Link
                       key={item.name}
                       to={item.path}
-                      className={`flex items-center space-x-2 ${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-700 hover:text-black'} transition-colors`}
+                      className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors"
                     >
                       <item.icon className="w-4 h-4" />
                       <span>{item.name}</span>
                     </Link>
                   ))}
                 </div>
-                <button onClick={toggleTheme} className={`flex items-center space-x-2 ${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-700 hover:text-black'} transition-colors`}>
+                <button onClick={toggleTheme} className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors">
                   {isDarkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
                   <span>{isDarkMode ? 'Light Mode' : 'Dark Mode'}</span>
                 </button>
@@ -96,7 +96,7 @@ function AppContent() {
           </nav>
 
           {/* Mobile Top Navigation */}
-          <nav className={`fixed top-0 left-0 right-0 ${isDarkMode ? 'bg-black/95' : 'bg-white/95'} backdrop-blur-sm md:hidden z-50`}>
+          <nav className="fixed top-0 left-0 right-0 backdrop-blur-sm md:hidden z-50">
             <div className="flex justify-between items-center p-2">
               <Link to="/" className="flex items-center justify-center w-full">
                 <img src={isDarkMode ? darkModeLogo : lightModeLogo} alt="Tech Euphoria 2K25" className="h-16 mr-2" />
@@ -104,20 +104,20 @@ function AppContent() {
                   TECH EUPHORIA 2K25
                 </span>
               </Link>
-              <button onClick={toggleTheme} className={`flex items-center space-x-2 ${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-700 hover:text-black'} transition-colors`}>
+              <button onClick={toggleTheme} className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors">
                 {isDarkMode ? <Sun className="w-6 h-6" /> : <Moon className="w-6 h-6" />}
               </button>
             </div>
           </nav>
 
           {/* Mobile Bottom Navigation */}
-          <nav className={`fixed bottom-0 left-0 right-0 ${isDarkMode ? 'bg-black/95' : 'bg-white/95'} backdrop-blur-sm md:hidden z-50`}>
+          <nav className="fixed bottom-0 left-0 right-0 backdrop-blur-sm md:hidden z-50">
             <div className="flex justify-around p-2">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   to={item.path}
-                  className={`flex flex-col items-center justify-center py-2 ${isDarkMode ? 'text-gray-400 hover:text-white' : 'text-gray-700 hover:text-black'} active:text-purple-500 transition-colors text-center`}
+                  className="flex flex-col items-center justify-center py-2 text-gray-400 hover:text-white active:text-purple-500 transition-colors text-center"
                 >
                   <item.icon className="w-6 h-6 mb-1" />
                   <span className="text-xs">{item.name}</span>
@@ -151,7 +151,7 @@ function AppContent() {
           </main>
 
           {/* Footer */}
-          <footer className={`py-12 px-4 mb-16 md:mb-0 relative z-10 ${isDarkMode ? 'bg-black/80 text-gray-400' : 'bg-white/80 text-gray-700'}`}>
+          <footer className="py-12 px-4 mb-16 md:mb-0 relative z-10 text-gray-400">
             <div className="max-w-6xl mx-auto">
               <div className="flex flex-col md:flex-row justify-between items-center gap-8">
                 <div className="text-center md:text-left">
