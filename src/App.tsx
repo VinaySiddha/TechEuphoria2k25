@@ -20,6 +20,8 @@ import CulturalEventsPage from './pages/CulturalEventsPage';
 import SpotEventsPage from './pages/SpotEventsPage';
 import StallsPage from './pages/StallsPage';
 import { useTheme } from './ThemeContext';
+import darkModeLogo from './assets/images/white.png';
+import lightModeLogo from './assets/images/black.png';
 import Loader from './components/Loader';
 import bgVideo from './assets/bg.mp4'; // Import the video file
 
@@ -46,14 +48,15 @@ function AppContent() {
     { name: 'Team', icon: Users2, path: '/team' },
   ];
 
-  const darkModeLogo = './src/assets/images/white.png'; // Replace with your dark mode logo URL
-  const lightModeLogo = './src/assets/images/black.png'; // Replace with your light mode logo URL
+  // const darkModeLogo = 'darkModeLogo'; // Replace with your dark mode logo URL
+  // const lightModeLogo = './src/assets/images/black.png'; // Replace with your light mode logo URL
 
   return (
     <div className={`min-h-screen ${isDarkMode ? 'bg-black text-white' : 'bg-white text-black'}`}>
       {loading && <Loader />}
       {!loading && (
         <>
+        
           <video autoPlay muted loop className="background-video">
             <source src={bgVideo} type="video/mp4" />
             Your browser does not support the video tag.
