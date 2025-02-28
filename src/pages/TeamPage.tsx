@@ -11,7 +11,7 @@ const teamMembers = [
     instagram: "https://instagram.com/vinay.siddha"
   },
   {
-    name: "M.Govardhana Subhash",
+    name: "Govardhana Subhash Meda",
     role: "Web Developer",
     image: img,
     instagram: "https://instagram.com/govardhana_subhash"

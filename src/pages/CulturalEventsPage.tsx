@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useTheme } from '../ThemeContext';
 import Modal from 'react-modal';
 
-const LiteraryEventsPage = () => {
+const CulturalEventsPage = () => {
   const navigate = useNavigate();
   const { isDarkMode } = useTheme();
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -112,7 +112,6 @@ const LiteraryEventsPage = () => {
       "faculty": "TBD"
     }
   ];
-  
 
   const handleRegister = () => {
     navigate('/register/literary');
@@ -160,8 +159,8 @@ const LiteraryEventsPage = () => {
           isOpen={modalIsOpen}
           onRequestClose={closeModal}
           contentLabel="Event Details"
-          className={`modal ${isDarkMode ? 'bg-gradient-to-b from-gray-900 to-black text-white' : 'bg-gradient-to-b from-white to-gray-200 text-black'} p-8 rounded-lg shadow-lg max-w-lg mx-auto`}
-          overlayClassName="modal-overlay flex items-center justify-center fixed inset-0 bg-black bg-opacity-50"
+          className={`modal ${isDarkMode ? 'bg-gradient-to-b from-gray-900 to-black text-white' : 'bg-gradient-to-b from-white to-gray-200 text-black'} p-8 rounded-lg shadow-lg max-w-lg mx-auto z-50`}
+          overlayClassName="modal-overlay flex items-center justify-center fixed inset-0 bg-black bg-opacity-50 z-40"
         >
           <h2 className="text-2xl font-bold mb-4">{selectedEvent.name}</h2>
           <p className="mb-2"><strong>Caption:</strong> {selectedEvent.caption}</p>
@@ -172,18 +171,8 @@ const LiteraryEventsPage = () => {
               <li key={index}>{rule}</li>
             ))}
           </ul>
-          <p className="mb-2"><strong>Student Coordinator:</strong></p>
-          <ul className="list-disc list-inside mb-4">
-            {selectedEvent.student.split(', ').map((coordinator, index) => (
-              <li key={index}>{coordinator}</li>
-            ))}
-          </ul>
-          <p className="mb-2"><strong>Faculty Coordinator:</strong></p>
-          <ul className="list-disc list-inside mb-4">
-            {selectedEvent.faculty.split(', ').map((coordinator, index) => (
-              <li key={index}>{coordinator}</li>
-            ))}
-          </ul>
+          <p className="mb-2"><strong>Student Coordinator:</strong> {selectedEvent.student}</p>
+          <p className="mb-2"><strong>Faculty Coordinator:</strong> {selectedEvent.faculty}</p>
           <div className="flex justify-end mt-4">
             <button
               onClick={handleRegister}
@@ -204,4 +193,4 @@ const LiteraryEventsPage = () => {
   );
 };
 
-export default LiteraryEventsPage;
+export default CulturalEventsPage;

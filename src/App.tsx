@@ -182,12 +182,16 @@ function AppContent() {
                   </a>
                 </div>
               </div>
-              <div className="mt-8 pt-8 border-t border-gray-300 text-center">
+              <div className="mt-4 pt-4 border-t border-gray-300 text-center"> {/* Adjusted margin-top and padding-top */}
                 <p>© 2025 Tech Euphoria. All rights reserved.</p>
                 <p>Sri Vasavi Engineering College, Pedatadepalli, Tadepalligudem</p>
-                <div className="flex justify-center items-center mt-4">
-                  <Code className="w-6 h-6 mr-2" />
-                  <p>Developed by Vinay Siddha and M.G.Subhash</p>
+                <div className="flex flex-col items-center mt-2"> {/* Adjusted for better visibility on mobile */}
+                  <div className="flex items-center">
+                    <Code className="w-6 h-6 mr-1" />
+                    <p>Developed by</p>
+                  </div>
+                  <p>Vinay Siddha and Govardhana Subhash M</p>
+                  <p>Feel free to contact us.</p>
                 </div>
               </div>
             </div>

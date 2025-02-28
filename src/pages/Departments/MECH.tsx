@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useTheme } from '../../ThemeContext';
 import Modal from 'react-modal';
 
-const PHARM = () => {
+const MECH = () => {
   const navigate = useNavigate();
   const { isDarkMode } = useTheme();
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -11,87 +11,93 @@ const PHARM = () => {
 
   const events = [
     {
-      "name": "Pharma Expo",
-      "image": "pharmaexpo.jpg",
-      "caption": "Pharmaceutical Innovations",
-      "description": "Students demonstrate new pharmaceutical technologies, including novel drug delivery systems, packaging innovations, and software applications used in the pharmaceutical industry.",
+      "name": "Lathe Skills Battle",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZknncF31WHD_GSk3RZSTpD83j8YQvFfdkKle_wFJHJRzOs33yruYv8jwBSNV4gg5iX_E&usqp=CAU",
+      "caption": "Lathe Skills Competition",
+      "description": "A technical competition testing skills in lathe machine operation.",
       "rules": [
-        "Use creative and innovative ideas through projects, objects, instruments, posters, or short videos.",
-        "Focus on a specific topic within pharma.",
-        "Speak clearly and concisely."
+        "Team size: 5 members",
+        "Written test on lathe with MCQs (10 marks, 10 minutes)",
+        "Top 5 teams will move to the next round based on test results",
+        "Final round: Individual competition to determine the winner"
       ],
-      "student": "B. Kedareswari - 8688821379, Navya Sri - 9182462278",
-      "faculty": "Dr. M. Srinivas - 9966759123"
+      "student": [],
+      "faculty": [
+        "Mr. S.Chandrasekhar - 8897805920",
+        "Mr. P.Mohanakrishna - 9603620513"
+      ]
     },
     {
-      "name": "Pharma Quiz",
-      "image": "pharmaquiz.jpg",
-      "caption": "Pharmacy Knowledge Challenge",
-      "description": "A quiz competition covering drug discovery, pharmacology, formulations, pharmacy laws, and current trends in the pharmaceutical industry.",
+      "name": "CAD Clash",
+      "image": "https://cdn.prod.website-files.com/5fcde6f56fdac5414b34eeb3/642272bf8acf0b0c2456091d_Autodesk%20and%20AutoCAD.png",
+      "caption": "CAD Drawing Challenge",
+      "description": "A CAD-based design competition testing time and accuracy of drawings.",
       "rules": [
-        "Multiple rounds: preliminary, middle, and final.",
-        "No electronic devices allowed.",
-        "Teams can consist of 3-5 participants."
+        "Team size: Max 4 members",
+        "First round based on time and accuracy of CAD drawings",
+        "Theme of the drawing announced at the start of the contest",
+        "Shortlisted teams from the first round move to the final round"
       ],
-      "student": "B. Kedareswari - 8688821379, Navya Sri - 9182462278",
-      "faculty": "A. Pallavi - 8790370145"
+      "student": [],
+      "faculty": [
+        "Mr. T.S.S.R.Krishna - 6303526702",
+        "Mr. Sk.Arief - 6305080838",
+        "Mr. K.Suchendra Kumar - 8367294989"
+      ]
     },
     {
-      "name": "Elocution",
-      "image": "elocution.jpg",
-      "caption": "Pharmaceutical Speech Competition",
-      "description": "Participants present speeches on selected pharmaceutical topics, showcasing their ability to articulate complex concepts clearly.",
+      "name": "Brainstorm Technical Challenge",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6w95xRlflrx5paSfjri5OqagdqYvULxpdjA&s",
+      "caption": "Technical Challenge Quiz",
+      "description": "A quiz-based competition featuring multiple-choice questions from Mechanical Engineering.",
       "rules": [
-        "Time limit: 3-5 minutes per participant.",
-        "Only English language allowed.",
-        "No multimedia aids permitted."
+        "Team size: 3 members (1st, 2nd, & 3rd-year students mandatory)",
+        "Questions are from Mechanical Engineering discipline only"
       ],
-      "student": "B. Kedareswari - 8688821379, Navya Sri - 9182462278",
-      "faculty": "Dr. M. Yamini - 9704791525"
-    },
-    {
-      "name": "Essay Writing",
-      "image": "essaywriting.jpg",
-      "caption": "Pharmaceutical Insights",
-      "description": "Participants express their thoughts and insights on various pharmaceutical topics through essay writing.",
-      "rules": [
-        "Word limit: 500-1000 words.",
-        "Duration: 25-30 minutes.",
-        "Essays must be written within the given timeframe without external references."
-      ],
-      "student": "B. Kedareswari - 8688821379, Navya Sri - 9182462278",
-      "faculty": "B. Vijayambica - 9059101446"
+      "student": [],
+      "faculty": [
+        "Mr. D.V.N.Prabhakar - 7013290220",
+        "Mr. M.Chaitanya - 9493008633",
+        "Mr. V.Ravi Kumar - 9885406640"
+      ]
     },
     {
       "name": "Poster Presentation",
-      "image": "poster.jpg",
-      "caption": "Pharmaceutical Visual Storytelling",
-      "description": "Students create posters on pharmaceutical technologies, drug formulations, and recent advances in drug therapy.",
+      "image": "https://d7c2r9g9.delivery.rocketcdn.me/wp-content/uploads/poster-presentation-example-powerpoint.png",
+      "caption": "Poster Design and Presentation",
+      "description": "A competition for designing and presenting posters on a technical subject.",
       "rules": [
-        "Make the poster visually appealing with colors, fonts, and images.",
-        "Balance text and visuals, avoiding overcrowding.",
-        "Stick to the allotted presentation time."
+        "Team size: 2 members",
+        "All team members must present",
+        "Poster size: A1 sheet or 3x4 feet flex",
+        "Time duration: 10 minutes for presentation, 3 minutes for questions"
       ],
-      "student": "B. Kedareswari - 8688821379, Navya Sri - 9182462278",
-      "faculty": "Dr. Y.B. Manjulatha - 8500700840"
+      "student": [],
+      "faculty": [
+        "Dr. K.Bala Subrahmanyam - 9985513184",
+        "Mr. M.D.Nagendra Prasad - 9494045671"
+      ]
     },
     {
-      "name": "Drawing",
-      "image": "drawing.jpg",
-      "caption": "Pharma-Themed Art",
-      "description": "Students create drawings or illustrations related to pharmaceutical themes such as drug molecules, healthcare innovations, or pharmaceutical practices.",
+      "name": "Paper Presentation",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj_a-AdjtRGo2Uoc_UhYDXEjU0art1dcWQhQ&s",
+      "caption": "Research Paper Presentation",
+      "description": "A platform for presenting research papers on mechanical engineering topics.",
       "rules": [
-        "All art materials are allowed (eco-friendly or recycled), but pre-made or store-bought crafts are not allowed.",
-        "The artwork must be original and created during the event (maximum 2 hours)."
+        "Team size: 2 members",
+        "All team members must present",
+        "Paper format: 10-13 slides, including Introduction, Methodology, Results, and Conclusion"
       ],
-      "student": "B. Kedareswari - 8688821379, Navya Sri - 9182462278",
-      "faculty": "P. Srinu - 9014649631"
+      "student": [],
+      "faculty": [
+        "Dr. D.Ashok - 9989026624",
+        "Mr. M.V.S.S.D.S.S.Pavan - 9000115586"
+      ]
     }
   ];
-  
 
   const handleRegister = () => {
-    navigate('/register/pharm');
+    navigate('/register/mech');
   };
 
   const openModal = (event) => {
@@ -107,8 +113,8 @@ const PHARM = () => {
   return (
     <div className={`min-h-screen ${isDarkMode ? 'bg-gradient-to-b from-gray-900 to-black' : 'bg-gradient-to-b from-white to-gray-200'} py-20 px-4`}>
       <div className="max-w-6xl mx-auto">
-        <h1 className={`text-4xl font-bold mb-12 text-center ${isDarkMode ? 'text-white' : 'text-black'}`}>Pharmaceutical Sciences</h1>
-        <p className={`text-lg mb-8 text-center ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>Welcome to the Pharmaceutical Sciences department page. Here are the events you can participate in:</p>
+        <h1 className={`text-4xl font-bold mb-12 text-center ${isDarkMode ? 'text-white' : 'text-black'}`}>Mechanical Engineering</h1>
+        <p className={`text-lg mb-8 text-center ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>Welcome to the Mechanical Engineering department page. Here are the events you can participate in:</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {events.map((event) => (
             <div key={event.name} className={`p-6 ${isDarkMode ? 'bg-gradient-to-br from-purple-900 to-black' : 'bg-gradient-to-br from-purple-200 to-white'} rounded-xl hover:from-purple-800 transition-all`}>
@@ -132,13 +138,13 @@ const PHARM = () => {
       </div>
 
       {selectedEvent && (
-        <Modal
-        isOpen={modalIsOpen}
-        onRequestClose={closeModal}
-        contentLabel="Event Details"
-        className={`modal ${isDarkMode ? 'bg-gradient-to-b from-gray-900 to-black text-white' : 'bg-gradient-to-b from-white to-gray-200 text-black'} p-8 rounded-lg shadow-lg max-w-lg mx-auto`}
-        overlayClassName="modal-overlay flex items-center justify-center fixed inset-0 bg-black bg-opacity-50"
-      >
+              <Modal
+              isOpen={modalIsOpen}
+              onRequestClose={closeModal}
+              contentLabel="Event Details"
+              className={`modal ${isDarkMode ? 'bg-gradient-to-b from-gray-900 to-black text-white' : 'bg-gradient-to-b from-white to-gray-200 text-black'} p-8 rounded-lg shadow-lg max-w-lg mx-auto z-50`}
+              overlayClassName="modal-overlay flex items-center justify-center fixed inset-0 bg-black bg-opacity-50 z-40"
+            >
           <h2 className="text-2xl font-bold mb-4">{selectedEvent.name}</h2>
           <p className="mb-2"><strong>Caption:</strong> {selectedEvent.caption}</p>
           <p className="mb-2"><strong>Description:</strong> {selectedEvent.description}</p>
@@ -148,10 +154,10 @@ const PHARM = () => {
               <li key={index}>{rule}</li>
             ))}
           </ul>
-          <p className="mb-2"><strong>Student Coordinator:</strong> {selectedEvent.studentCoordinator}</p>
+          <p className="mb-2"><strong>Student Coordinator:</strong> {selectedEvent.student.length > 0 ? selectedEvent.student.join(', ') : 'TBD'}</p>
           <p className="mb-2"><strong>Faculty Coordinator:</strong></p>
           <ul className="list-disc list-inside mb-4">
-            {selectedEvent.facultyCoordinator.map((coordinator, index) => (
+            {selectedEvent.faculty.map((coordinator, index) => (
               <li key={index}>{coordinator}</li>
             ))}
           </ul>
@@ -175,4 +181,4 @@ const PHARM = () => {
   );
 };
 
-export default PHARM;
+export default MECH;

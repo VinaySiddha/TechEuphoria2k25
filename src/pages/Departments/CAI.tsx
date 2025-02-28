@@ -123,13 +123,13 @@ const CAI = () => {
       </div>
 
       {selectedEvent && (
-        <Modal
-                  isOpen={modalIsOpen}
-                  onRequestClose={closeModal}
-                  contentLabel="Event Details"
-                  className={`modal ${isDarkMode ? 'bg-gradient-to-b from-gray-900 to-black text-white' : 'bg-gradient-to-b from-white to-gray-200 text-black'} p-8 rounded-lg shadow-lg max-w-lg mx-auto`}
-                  overlayClassName="modal-overlay flex items-center justify-center fixed inset-0 bg-black bg-opacity-50"
-                >
+             <Modal
+                       isOpen={modalIsOpen}
+                       onRequestClose={closeModal}
+                       contentLabel="Event Details"
+                       className={`modal ${isDarkMode ? 'bg-gradient-to-b from-gray-900 to-black text-white' : 'bg-gradient-to-b from-white to-gray-200 text-black'} p-8 rounded-lg shadow-lg max-w-lg mx-auto z-50`}
+                       overlayClassName="modal-overlay flex items-center justify-center fixed inset-0 bg-black bg-opacity-50 z-40"
+                     >
           <h2 className="text-2xl font-bold mb-4">{selectedEvent.name}</h2>
           <p className="mb-2"><strong>Caption:</strong> {selectedEvent.caption}</p>
           <p className="mb-2"><strong>Description:</strong> {selectedEvent.description}</p>
