@@ -12,7 +12,7 @@ const ECE = () => {
   const events = [
     {
       "name": "Py-Craft",
-      "image": "py_craft.jpg",
+      "image": "https://www.stationx.net/wp-content/uploads/2023/11/Hacking-with-Python-Unlocking-Pythons-Potential.png",
       "caption": "Hack with Python",
       "description": "A Python-based hackathon where participants solve coding challenges using Python.",
       "rules": [
@@ -31,7 +31,7 @@ const ECE = () => {
     },
     {
       "name": "InnoEX",
-      "image": "project_expo.jpg",
+      "image": "https://static.wixstatic.com/media/f1e6a3_0b279723673a4645be0e428729c45e6c~mv2.png/v1/fill/w_452,h_255,fp_0.50_0.50,lg_1,q_85,enc_auto/f1e6a3_0b279723673a4645be0e428729c45e6c~mv2.png",
       "caption": "Project Expo",
       "description": "A showcase of innovative projects where students present their ideas through models, charts, and demonstrations.",
       "rules": [
@@ -54,7 +54,7 @@ const ECE = () => {
     },
     {
       "name": "Circuithon",
-      "image": "circuit_building.jpg",
+      "image": "https://media.istockphoto.com/id/1354760412/vector/abstract-technology-circuit-board-background-futuristic-chip-processor-code-on-blue.jpg?s=612x612&w=0&k=20&c=3x2J_1cnFrPsSurMyVQ0Z9y_WPiJWTCmpqU_7ZL_OAM=",
       "caption": "Circuit Innovation & Building",
       "description": "A challenge where participants innovate and build electronic circuits using available components.",
       "rules": [
@@ -73,7 +73,7 @@ const ECE = () => {
     },
     {
       "name": "HackTrick",
-      "image": "hdl_design.jpg",
+      "image": "https://hacktrick-1.untapcompete.com/wp-content/uploads/sites/482/2022/01/HAcktrick-logo.png",
       "caption": "Design with HDL",
       "description": "A competition focused on designing and coding digital circuits using HDL (VHDL/Verilog).",
       "rules": [
@@ -92,7 +92,7 @@ const ECE = () => {
     },
     {
       "name": "Brain Storming",
-      "image": "quiz.jpg",
+      "image": "https://media.licdn.com/dms/image/v2/D4D12AQGOSPu2sVW3Mw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1677354761029?e=2147483647&v=beta&t=C-un24C4dR7w3LE6TPY5xUbpfvCiexl2paeb7WtTNUE",
       "caption": "Technical Quiz",
       "description": "A competitive quiz event testing participants' knowledge in various technical domains.",
       "rules": [

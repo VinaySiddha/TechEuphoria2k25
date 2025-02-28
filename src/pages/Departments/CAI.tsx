@@ -12,7 +12,7 @@ const CAI = () => {
   const events = [
     {
       "name": "AIMpact Challenge 2.0",
-      "image": "hackathon.jpg",
+      "image": "https://media.istockphoto.com/id/1321460515/video/hackathon-with-digital-technology-concept.jpg?s=640x640&k=20&c=w7uyTYchqQ43FuCF5ASi6bWW9dUDV-yQ1BXHSFxhQV0=",
       "caption": "Mini Hackathon",
       "description": "Event is completely related to the domain of ML & DS. The idea is to make teams collaborate and design a Recommendation Engine based on participants' preferred algorithms. The process includes dataset preparation, model development, and UI integration.",
       "rules": [
@@ -27,7 +27,7 @@ const CAI = () => {
     },
     {
       "name": "Glitch Hunt 2.0",
-      "image": "coding.jpg",
+      "image": "https://img.freepik.com/free-vector/realistic-vhs-effect-background_23-2150087307.jpg?t=st=1740718488~exp=1740722088~hmac=7374a72a5d461886bad80aeb6f3e33f0ba2dad9570a57fd6b277f2df07e1a493&w=1380",
       "caption": "Competitive Coding",
       "description": "An immersive coding competition designed to evaluate and enhance programming skills.",
       "rules": [
@@ -41,7 +41,7 @@ const CAI = () => {
     },
     {
       "name": "Battle of Minds",
-      "image": "quiz.jpg",
+      "image": "https://familynews.today/wp-content/uploads/2023/02/battle-of-mind.jpg",
       "caption": "Mind Games & Trivia",
       "description": "A competition testing participants' logical thinking, problem-solving, and mental agility.",
       "rules": [
@@ -54,7 +54,7 @@ const CAI = () => {
     },
     {
       "name": "NextZen AI",
-      "image": "ai_video.jpg",
+      "image": "https://img.freepik.com/free-vector/ai-futuristic-technology-background_53876-97391.jpg?t=st=1740719007~exp=1740722607~hmac=f174100d343d58594af77f938eb5882e81c47137d4367b7cd5d6343fe376e88b&w=1380",
       "caption": "AI-Generated Video & Photo",
       "description": "Participants use AI tools to create posters, generate stories, and develop AI-powered videos.",
       "rules": [
@@ -67,7 +67,7 @@ const CAI = () => {
     },
     {
       "name": "The Fun Fiesta",
-      "image": "fun_event.jpg",
+      "image": "https://bc-user-uploads.brandcrowd.com/public/media-Production/14e5bf27-7f37-49c3-9b70-caf43afcc7cd/3969705d-7291-4078-a09f-c2440c1cd661.png",
       "caption": "Interactive Fun Games",
       "description": "A mix of team-based and individual games to test participants' knowledge and quick thinking in a fun and engaging format.",
       "rules": [

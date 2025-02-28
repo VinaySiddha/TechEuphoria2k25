@@ -16,9 +16,9 @@ function EventsPage() {
       path: "/departments" // Navigate to Departments page
     },
     {
-      name: "Literary Events",
+      name: "College Events",
       description: "Showcase your literary talents",
-      image: "https://teleanalysis.com/wp-content/uploads/2023/09/Literary-Analysis.png",
+      image: "https://cdn.prod.website-files.com/5e6bef9160e290b99b7644b5/65f86b8b28150826d4590e4d_banner.png",
       time: "March 21, 2025, 11:00 AM",
       path: "/literary-events"
     },

@@ -12,7 +12,7 @@ const Civil = () => {
   const events = [
     {
       "name": "Light Power Challenge",
-      "image": "light_power.jpg",
+      "image": "https://www.shutterstock.com/image-illustration/business-man-casting-shadow-athlete-260nw-108406256.jpg",
       "caption": "Be Lite and Strong",
       "description": "A technical event where participants prepare a concrete mix design using lightweight materials. The cubes are tested for compressive strength, and the one with the highest strength and least weight wins.",
       "rules": [
@@ -32,7 +32,7 @@ const Civil = () => {
     },
     {
       "name": "Brick Blitz",
-      "image": "brick_blitz.jpg",
+      "image": "https://t4.ftcdn.net/jpg/09/27/42/51/240_F_927425170_Rhnm9F6vnYGrNt2t4iPIH9oI49hKEwXy.jpg",
       "caption": "Spot Event - Brick Arts",
       "description": "Participants are required to create a model using bricks. Guidelines and rules will be provided just before the event.",
       "rules": [
@@ -49,7 +49,7 @@ const Civil = () => {
     },
     {
       "name": "Unveiling Ideas",
-      "image": "unveiling_ideas.jpg",
+      "image": "https://www.shutterstock.com/shutterstock/photos/2489214713/display_1500/stock-photo-ai-glowing-chip-and-glowing-document-management-system-hologram-files-documents-or-smart-2489214713.jpg",
       "caption": "Applications of AI in Infrastructure",
       "description": "A poster presentation event focused on AI applications in infrastructure. Participants must create a well-structured and readable presentation.",
       "rules": [
@@ -73,7 +73,7 @@ const Civil = () => {
     },
     {
       "name": "STAAD Mastery",
-      "image": "staad_mastery.jpg",
+      "image": "https://www.researchgate.net/profile/Ramanand-Shukla-2/publication/322520401/figure/fig1/AS:583392483610625@1516103015899/Rendered-image-from-STAAD.png",
       "caption": "STAAD Pro Proficiency Test",
       "description": "A spot event to test participants' proficiency in STAAD Pro software. The challenge involves modeling, analysis, and design within a time limit.",
       "rules": [

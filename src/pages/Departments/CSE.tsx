@@ -12,7 +12,7 @@ const CSE = () => {
   const events = [
     {
       "name": "TechCine Mania",
-      "image": "techcine.jpg",
+      "image": "https://www.shutterstock.com/shutterstock/photos/590908535/display_1500/stock-photo-smart-technology-concept-with-global-logistics-partnership-and-transportation-of-container-cargo-590908535.jpg",
       "caption": "Technology and Cinema",
       "description": "TechCine Mania blends Technology and Cinema, creating an exciting competition for tech-savvy movie lovers. Participants solve cinematic tech challenges.",
       "rules": [
@@ -27,7 +27,7 @@ const CSE = () => {
     },
     {
       "name": "Memory Marathon",
-      "image": "memory.jpg",
+      "image": "https://media.istockphoto.com/id/1492377092/photo/magnifier-with-brainstorm-inside-to-smart-idea-creative-thinking-education-innovation-smart.jpg?s=612x612&w=0&k=20&c=OPlp7q4udogoliF4NaBhlzbubQ8k8WrwR1L8eN-fmts=",
       "caption": "Innovation and Problem Solving",
       "description": "Memory Marathon represents the fusion of innovation, coding, and memory-based problem-solving, fostering teamwork and creativity.",
       "rules": [
@@ -42,7 +42,7 @@ const CSE = () => {
     },
     {
       "name": "The Whimsical Warzone",
-      "image": "warzone.jpg",
+      "image": "https://previews.123rf.com/images/frescostudio/frescostudio2005/frescostudio200500071/147394115-vector-illustration-of-warzone-mascot-esport-design.jpg",
       "caption": "Creative Gaming Competition",
       "description": "A thrilling fusion of quirky games, vibrant chaos, and fun where creativity and competition collide.",
       "rules": [
@@ -57,7 +57,7 @@ const CSE = () => {
     },
     {
       "name": "Idea Sprint",
-      "image": "ideasprint.jpg",
+      "image": "https://axentia.co.uk/wp-content/uploads/2023/03/Design-Sprint.webp",
       "caption": "Tech Idea Brainstorming",
       "description": "A fast-paced brainstorming event where participants refine and collaborate on innovative tech ideas.",
       "rules": [
@@ -72,7 +72,7 @@ const CSE = () => {
     },
     {
       "name": "Unlock the Unknown",
-      "image": "unlock.jpg",
+      "image": "https://media.istockphoto.com/id/1469145905/photo/light-filtering-through-a-keyhole.jpg?s=612x612&w=0&k=20&c=xfQAe8gM7szaihW-12Gj-dKghP9LSpdMwI2bl_40Rj8=",
       "caption": "Tech Puzzles and Challenges",
       "description": "A two-round event where participants solve aptitude and technical puzzles.",
       "rules": [

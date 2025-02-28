@@ -12,7 +12,7 @@ const Mech = () => {
   const events = [
     {
       "name": "Lathe Skills Battle",
-      "image": "lathe_skills_battle.jpg",
+      "image": "https://media.istockphoto.com/id/1201167868/vector/isometric-heavy-industry-illustration.webp?s=2048x2048&w=is&k=20&c=cqT4dGDY0qb6yl0fpbA6uoV_va5bMQ0cwDgjr0mm_PM=",
       "caption": "Lathe operation competition",
       "description": "Test your lathe skills through written exams and practical challenges in a team-based competition.",
       "rules": [
@@ -29,7 +29,7 @@ const Mech = () => {
     },
     {
       "name": "CAD Clash",
-      "image": "cad_clash.jpg",
+      "image": "https://www.thecadroom.com/wp-content/uploads/2018/06/03_LOD_FIN_02_400R_resize.jpg",
       "caption": "CAD design competition",
       "description": "Demonstrate your CAD design skills in a system-provided environment using CAD software.",
       "rules": [
@@ -47,7 +47,7 @@ const Mech = () => {
     },
     {
       "name": "Brainstorm Technical Challenge",
-      "image": "brainstorm_technical_challenge.jpg",
+      "image": "https://conceptboard.com/wp-content/uploads/Header_brainstorming_Nov2020-01-2048x1434.png",
       "caption": "Mechanical Engineering technical quiz",
       "description": "Test your knowledge in a technical quiz focused on Mechanical Engineering concepts.",
       "rules": [
@@ -63,7 +63,7 @@ const Mech = () => {
     },
     {
       "name": "Poster Presentation",
-      "image": "poster_presentation.jpg",
+      "image": "https://www.theonlinescientist.com/wp-content/uploads/Poster-presentation-design-steps.jpg",
       "caption": "Creative poster competition",
       "description": "Present your research or project in a poster format and defend it in front of judges.",
       "rules": [
@@ -80,7 +80,7 @@ const Mech = () => {
     },
     {
       "name": "Paper Presentation",
-      "image": "paper_presentation.jpg",
+      "image": "https://nebulus.aitm.edu.in/wp-content/uploads/2016/03/Paper-Presentation.jpg",
       "caption": "Research paper presentation competition",
       "description": "Present your research paper with structured slides on key research elements.",
       "rules": [

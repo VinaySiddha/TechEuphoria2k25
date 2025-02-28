@@ -12,7 +12,7 @@ const EEE = () => {
   const events = [
     {
       "name": "Innovation Showcase",
-      "image": "innovation_showcase.jpg",
+      "image": "https://www.shutterstock.com/shutterstock/photos/2539242453/display_1500/stock-photo-computer-parts-close-up-computer-chip-technology-2539242453.jpg",
       "caption": "Project Competition",
       "description": "A project competition for Electrical and Electronics students to showcase their innovative ideas.",
       "rules": [
@@ -33,7 +33,7 @@ const EEE = () => {
     },
     {
       "name": "Escape Room",
-      "image": "escape_room.jpg",
+      "image": "https://media.istockphoto.com/id/1130957166/vector/escape-room-neon-sign-bright-signboard-light-banner-quest-room-logo-neon-emblem-vector.jpg?s=612x612&w=0&k=20&c=7TdV_w5rn2YWsZTlimQwVApkz8gvhb7VjZ6GjKfGd7c=",
       "caption": "Problem-Solving Challenge",
       "description": "A puzzle-based challenge where teams solve clues to escape within a time limit.",
       "rules": [
@@ -53,7 +53,7 @@ const EEE = () => {
     },
     {
       "name": "Battle of Brains",
-      "image": "battle_of_brains.jpg",
+      "image": "https://www.shutterstock.com/shutterstock/photos/393618904/display_1500/stock-vector-vector-illustration-of-brain-with-rays-on-the-chalkboard-these-are-iconic-representations-of-393618904.jpg",
       "caption": "Technical Quiz",
       "description": "A quiz competition testing knowledge in current affairs and electrical engineering.",
       "rules": [
@@ -72,7 +72,7 @@ const EEE = () => {
     },
     {
       "name": "Circuit Clash",
-      "image": "circuit_clash.jpg",
+      "image": "https://www.shutterstock.com/shutterstock/photos/1938156499/display_1500/stock-vector-portal-and-hologram-futuristic-neon-color-circle-elements-standard-podium-or-studio-futuristic-1938156499.jpg",
       "caption": "Circuit Troubleshooting",
       "description": "A hands-on circuit competition where participants debug and design circuits.",
       "rules": [
@@ -91,7 +91,7 @@ const EEE = () => {
     },
     {
       "name": "Word Sudoku",
-      "image": "word_sudoku.jpg",
+      "image": "https://www.shutterstock.com/shutterstock/photos/1254754036/display_1500/stock-vector-sudoku-kids-and-adult-mathematical-mosaic-magic-square-logic-puzzle-game-digital-rebus-vector-1254754036.jpg",
       "caption": "Logical Word Puzzle",
       "description": "A crossword and word sudoku event testing logic and vocabulary.",
       "rules": [
