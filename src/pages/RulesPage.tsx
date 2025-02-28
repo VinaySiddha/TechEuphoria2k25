@@ -27,7 +27,7 @@ function RulesPage() {
           </ul>
           <div className="mt-8">
             <p className={`text-lg ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-              For any queries, contact us at: <span className={`${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>support@techeuphoria2k25.com</span>
+             For any queries, contact us at: <span className={`${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}><a href="mailto:techeuphoria@srivasaviengg.ac.in">techeuphoria@srivasaviengg.ac.in</a></span>
             </p>
           </div>
         </div>

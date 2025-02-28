@@ -4,7 +4,8 @@ import { motion } from 'framer-motion';
 import '../index.css'; // Ensure you import your CSS file
 import { useTheme } from '../ThemeContext';
 import LoaderButton from '../components/LoaderButton';
-import img1 from '../assets/images/img1.jpeg';
+import video1 from '../assets/BackG.mp4';
+import img1 from '../assets/images/white.png';
 // import bgVideo from '../assets/videos/BackG.mp4'; // Import the background image
 
 const calculateTimeLeft = () => {
@@ -97,18 +98,15 @@ const HomePage = () => {
       </section>
 
       {/* Scrolling Image Section */}
-      <section className={`w-full overflow-hidden py-12 ${isDarkMode ? 'bg-gray-900' : 'bg-gray-100'}`}>
-        <h2 className="text-3xl font-bold text-center mb-8">Memories</h2>
-        <motion.div
-          className="flex space-x-6 w-max"
-          animate={{ x: ["0%", "-100%"] }}
-          transition={{ repeat: Infinity, duration: 50, ease: "linear" ,repeatType: "mirror" }}
-        >
-          <div className="flex flex-col items-center">
-            <img src={img1} alt="Event 1" className="h-64 rounded-lg" />
-            <span className="mt-2 text-center">Event 1</span>
-          </div>
-          <div className="flex flex-col items-center">
+      {/* <section className={`w-full overflow-hidden py-12 ${isDarkMode ? 'bg-gray-900' : 'bg-gray-100'}`}>
+      <h2 className="text-3xl font-bold text-center mb-8">Memories</h2>
+      <motion.div
+        className="flex space-x-6 w-max"
+        animate={{ x: ["0%", "-100%"] }}
+        transition={{ repeat: Infinity, duration: 50, ease: "linear", repeatType: "mirror" }}
+      >
+        
+        <div className="flex flex-col items-center">
             <img src={img1} alt="Event 2" className="h-64 rounded-lg" />
             <span className="mt-2 text-center">Event 2</span>
           </div>
@@ -120,40 +118,16 @@ const HomePage = () => {
             <img src={img1} alt="Event 4" className="h-64 rounded-lg" />
             <span className="mt-2 text-center">Event 4</span>
           </div>
-          <div className="flex flex-col items-center">
-            <img src={img1} alt="Event 5" className="h-64 rounded-lg" />
-            <span className="mt-2 text-center">Event 5</span>
-          </div>
+          
           <div className="flex flex-col items-center">
             <img src={img1} alt="Event 6" className="h-64 rounded-lg" />
             <span className="mt-2 text-center">Event 6</span>
           </div>
-          <div className="flex flex-col items-center">
-            <img src={img1} alt="Event 7" className="h-64 rounded-lg" />
-            <span className="mt-2 text-center">Event 7</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <img src={img1} alt="Event 8" className="h-64 rounded-lg" />
-            <span className="mt-2 text-center">Event 8</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <img src={img1} alt="Event 9" className="h-64 rounded-lg" />
-            <span className="mt-2 text-center">Event 9</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <img src={img1} alt="Event 10" className="h-64 rounded-lg" />
-            <span className="mt-2 text-center">Event 10</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <img src={img1} alt="Event 11" className="h-64 rounded-lg" />
-            <span className="mt-2 text-center">Event 11</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <img src={img1} alt="Event 12" className="h-64 rounded-lg" />
-            <span className="mt-2 text-center">Event 12</span>
-          </div>
-        </motion.div>
-      </section>
+       
+        
+        
+      </motion.div>
+    </section> */}
 
       {/* Sponsors Section */}
       <section className={`py-20 px-4 ${isDarkMode ? 'bg-black' : 'bg-white'}`}>

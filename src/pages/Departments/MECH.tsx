@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useTheme } from '../../ThemeContext';
 import Modal from 'react-modal';
 
-const Mech = () => {
+const PHARM = () => {
   const navigate = useNavigate();
   const { isDarkMode } = useTheme();
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -11,99 +11,87 @@ const Mech = () => {
 
   const events = [
     {
-      "name": "Lathe Skills Battle",
-      "image": "https://media.istockphoto.com/id/1201167868/vector/isometric-heavy-industry-illustration.webp?s=2048x2048&w=is&k=20&c=cqT4dGDY0qb6yl0fpbA6uoV_va5bMQ0cwDgjr0mm_PM=",
-      "caption": "Lathe operation competition",
-      "description": "Test your lathe skills through written exams and practical challenges in a team-based competition.",
+      "name": "Pharma Expo",
+      "image": "pharmaexpo.jpg",
+      "caption": "Pharmaceutical Innovations",
+      "description": "Students demonstrate new pharmaceutical technologies, including novel drug delivery systems, packaging innovations, and software applications used in the pharmaceutical industry.",
       "rules": [
-        "Teams of 5 members.",
-        "Best 5 teams selected after the first written test (MCQs, 10 marks).",
-        "Final competition will be conducted individually from the best team.",
-        "Winners will be announced from the final team."
+        "Use creative and innovative ideas through projects, objects, instruments, posters, or short videos.",
+        "Focus on a specific topic within pharma.",
+        "Speak clearly and concisely."
       ],
-      "studentCoordinator": "John Doe",
-      "facultyCoordinator": [
-        "1. Mr. S.Chandrasekhar – 8897805920",
-        "2. Mr. P.Mohanakrishna – 9603620513"
-      ]
+      "student": "B. Kedareswari - 8688821379, Navya Sri - 9182462278",
+      "faculty": "Dr. M. Srinivas - 9966759123"
     },
     {
-      "name": "CAD Clash",
-      "image": "https://www.thecadroom.com/wp-content/uploads/2018/06/03_LOD_FIN_02_400R_resize.jpg",
-      "caption": "CAD design competition",
-      "description": "Demonstrate your CAD design skills in a system-provided environment using CAD software.",
+      "name": "Pharma Quiz",
+      "image": "pharmaquiz.jpg",
+      "caption": "Pharmacy Knowledge Challenge",
+      "description": "A quiz competition covering drug discovery, pharmacology, formulations, pharmacy laws, and current trends in the pharmaceutical industry.",
       "rules": [
-        "Maximum 4 members per group.",
-        "Screening in the first round based on time and accuracy.",
-        "Theme of drawing announced at the contest start.",
-        "Final round for shortlisted teams."
+        "Multiple rounds: preliminary, middle, and final.",
+        "No electronic devices allowed.",
+        "Teams can consist of 3-5 participants."
       ],
-      "studentCoordinator": "Jane Smith",
-      "facultyCoordinator": [
-        "1. Mr. T.S.S.R.Krishna – 6303526702",
-        "2. Mr. Sk.Arief – 6305080838",
-        "3. Mr. K.Suchendra Kumar – 8367294989"
-      ]
+      "student": "B. Kedareswari - 8688821379, Navya Sri - 9182462278",
+      "faculty": "A. Pallavi - 8790370145"
     },
     {
-      "name": "Brainstorm Technical Challenge",
-      "image": "https://conceptboard.com/wp-content/uploads/Header_brainstorming_Nov2020-01-2048x1434.png",
-      "caption": "Mechanical Engineering technical quiz",
-      "description": "Test your knowledge in a technical quiz focused on Mechanical Engineering concepts.",
+      "name": "Elocution",
+      "image": "elocution.jpg",
+      "caption": "Pharmaceutical Speech Competition",
+      "description": "Participants present speeches on selected pharmaceutical topics, showcasing their ability to articulate complex concepts clearly.",
       "rules": [
-        "Team strength: 3 members (from 1st, 2nd, and 3rd year).",
-        "Questions will be multiple-choice, covering Mechanical Engineering topics."
+        "Time limit: 3-5 minutes per participant.",
+        "Only English language allowed.",
+        "No multimedia aids permitted."
       ],
-      "studentCoordinator": "Jane Smith",
-      "facultyCoordinator": [
-        "1. Mr. D.V.N.Prabhakar – 7013290220",
-        "2. Mr. M.Chaitanya – 9493008633",
-        "3. Mr. V.Ravi Kumar – 9885406640"
-      ]
+      "student": "B. Kedareswari - 8688821379, Navya Sri - 9182462278",
+      "faculty": "Dr. M. Yamini - 9704791525"
+    },
+    {
+      "name": "Essay Writing",
+      "image": "essaywriting.jpg",
+      "caption": "Pharmaceutical Insights",
+      "description": "Participants express their thoughts and insights on various pharmaceutical topics through essay writing.",
+      "rules": [
+        "Word limit: 500-1000 words.",
+        "Duration: 25-30 minutes.",
+        "Essays must be written within the given timeframe without external references."
+      ],
+      "student": "B. Kedareswari - 8688821379, Navya Sri - 9182462278",
+      "faculty": "B. Vijayambica - 9059101446"
     },
     {
       "name": "Poster Presentation",
-      "image": "https://www.theonlinescientist.com/wp-content/uploads/Poster-presentation-design-steps.jpg",
-      "caption": "Creative poster competition",
-      "description": "Present your research or project in a poster format and defend it in front of judges.",
+      "image": "poster.jpg",
+      "caption": "Pharmaceutical Visual Storytelling",
+      "description": "Students create posters on pharmaceutical technologies, drug formulations, and recent advances in drug therapy.",
       "rules": [
-        "Maximum 2 participants per team.",
-        "All team members must present.",
-        "Poster size: A1 or 3 x 4 feet for flex.",
-        "Presentation time: 10 minutes, with 3 minutes for questions."
+        "Make the poster visually appealing with colors, fonts, and images.",
+        "Balance text and visuals, avoiding overcrowding.",
+        "Stick to the allotted presentation time."
       ],
-      "studentCoordinator": "Jane Smith",
-      "facultyCoordinator": [
-        "1. Dr. K.Bala Subrahmanyam – 9985513184",
-        "2. Mr. M.D.Nagendra Prasad - 9494045671"
-      ]
+      "student": "B. Kedareswari - 8688821379, Navya Sri - 9182462278",
+      "faculty": "Dr. Y.B. Manjulatha - 8500700840"
     },
     {
-      "name": "Paper Presentation",
-      "image": "https://nebulus.aitm.edu.in/wp-content/uploads/2016/03/Paper-Presentation.jpg",
-      "caption": "Research paper presentation competition",
-      "description": "Present your research paper with structured slides on key research elements.",
+      "name": "Drawing",
+      "image": "drawing.jpg",
+      "caption": "Pharma-Themed Art",
+      "description": "Students create drawings or illustrations related to pharmaceutical themes such as drug molecules, healthcare innovations, or pharmaceutical practices.",
       "rules": [
-        "Maximum 2 participants per team.",
-        "All team members must present.",
-        "Paper structure: Paper ID, Title, Author's Name, Affiliation – 1 slide.",
-        "Introduction and Literature Survey – 2 slides.",
-        "Materials, Methodology, Experimentation – 3 to 4 slides.",
-        "Results and Discussion – 3 to 4 slides.",
-        "Conclusion – 1 slide.",
-        "Reference – 1 slide.",
-        "Total slides: 10 to 13 maximum."
+        "All art materials are allowed (eco-friendly or recycled), but pre-made or store-bought crafts are not allowed.",
+        "The artwork must be original and created during the event (maximum 2 hours)."
       ],
-      "studentCoordinator": "Jane Smith",
-      "facultyCoordinator": [
-        "1. Dr. D.Ashok – 9989026624",
-        "2. Mr. M.V.S.S.D.S.S.Pavan – 9000115586"
-      ]
+      "student": "B. Kedareswari - 8688821379, Navya Sri - 9182462278",
+      "faculty": "P. Srinu - 9014649631"
     }
   ];
+  
 
   const handleRegister = () => {
-    navigate('/register/mech');
+    navigate('/register/pharm');
   };
 
   const openModal = (event) => {
@@ -119,8 +107,8 @@ const Mech = () => {
   return (
     <div className={`min-h-screen ${isDarkMode ? 'bg-gradient-to-b from-gray-900 to-black' : 'bg-gradient-to-b from-white to-gray-200'} py-20 px-4`}>
       <div className="max-w-6xl mx-auto">
-        <h1 className={`text-4xl font-bold mb-12 text-center ${isDarkMode ? 'text-white' : 'text-black'}`}>Mechanical Engineering</h1>
-        <p className={`text-lg mb-8 text-center ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>Welcome to the Mechanical Engineering department page. Here are the events you can participate in:</p>
+        <h1 className={`text-4xl font-bold mb-12 text-center ${isDarkMode ? 'text-white' : 'text-black'}`}>Pharmaceutical Sciences</h1>
+        <p className={`text-lg mb-8 text-center ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>Welcome to the Pharmaceutical Sciences department page. Here are the events you can participate in:</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {events.map((event) => (
             <div key={event.name} className={`p-6 ${isDarkMode ? 'bg-gradient-to-br from-purple-900 to-black' : 'bg-gradient-to-br from-purple-200 to-white'} rounded-xl hover:from-purple-800 transition-all`}>
@@ -187,4 +175,4 @@ const Mech = () => {
   );
 };
 
-export default Mech;
+export default PHARM;
