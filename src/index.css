@@ -2,18 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Base Styles */
 @layer base {
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
-    @apply bg-black text-white;
     margin: 0;
-    overflow-x: hidden; /* Allow vertical scrolling */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    font-family: 'CustomFont', sans-serif;
   }
 }
 
+/* Custom Font Faces */
+@font-face {
+  font-family: 'Dune_Rise';
+  src: url('./assets/fonts/Dune_Rise.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'CustomFont';
+  src: url('./assets/fonts/UlagadiSans.ttf') format('truetype');
+}
+
+/* Utilities */
 @layer utilities {
   .bg-clip-text {
     -webkit-background-clip: text;
@@ -31,65 +44,50 @@
     }
   }
 
-  .grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 {
+  /* Responsive Grid */
+  .grid-cols-responsive {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
   @media (min-width: 768px) {
-    .grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 {
+    .grid-cols-responsive {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
 
   @media (min-width: 1024px) {
-    .grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 {
+    .grid-cols-responsive {
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
 
   .group {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @apply flex flex-col justify-center items-center;
   }
 }
 
-@font-face {
-  font-family: 'Dune_Rise';
-  src: url('./assets/fonts/Dune_Rise.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'CustomFont';
-  src: url('./assets/fonts/UlagadiSans.ttf') format('truetype');
-}
-
-body {
-  font-family: 'CustomFont', sans-serif;
-}
-
+/* Background Effects */
 .lines {
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, rgba(197, 8, 8, 0.822) 1px, transparent 1px), linear-gradient(rgba(18, 57, 215, 0.708) 1px, transparent 1px);
+  background: linear-gradient(90deg, rgba(197, 8, 8, 0.822) 1px, transparent 1px),
+              linear-gradient(rgba(18, 57, 215, 0.708) 1px, transparent 1px);
   background-size: 50px 50px;
   transform: translateZ(-1px) scale(2);
   pointer-events: none;
-  z-index: -1; /* Ensure it stays behind other content */
+  z-index: -1;
 }
 
 .graphics {
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
-  background: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') no-repeat center center;
+  /* background: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') */
+              /* no-repeat center center; */
   background-size: cover;
   transform: translateZ(-1px) scale(1.5);
   pointer-events: none;
@@ -98,9 +96,17 @@ body {
 }
 
 @keyframes moveBackground {
-  0% { transform: translate(0, 0) scale(1.5); }
-  50% { transform: translate(10px, 10px) scale(1.5); }
-  100% { transform: translate(0, 0) scale(1.5); }
+  0%, 100% {
+    transform: translate(0, 0) scale(1.5);
+  }
+  50% {
+    transform: translate(10px, 10px) scale(1.5);
+  }
+}
+
+/* Animations */
+.slide-in {
+  animation: slideIn 0.5s ease-out;
 }
 
 @keyframes slideIn {
@@ -114,60 +120,16 @@ body {
   }
 }
 
-.slide-in {
-  animation: slideIn 0.5s ease-out;
-}
-
-.slide-container {
-  position: relative;
-  width: 100%;
-  height: 50px;
-  background-color: #e0e0e0;
-  border-radius: 25px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.slide-button {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 150px;
-  height: 100%;
-  background-color: #407acb;
-  color: white;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.slide-button:hover {
-  transform: translateX(calc(100% - 150px));
-}
-
+/* Buttons */
 .learn-more-button,
 .register-button {
-  padding: 10px 20px;
+  @apply px-5 py-2 text-white font-bold rounded-full cursor-pointer transition-all shadow-lg;
   background: linear-gradient(135deg, #6b73ff 0%, #000dff 100%);
-  color: white;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  font-size: 16px;
-  font-weight: bold;
 }
 
 .learn-more-button:hover,
 .register-button:hover {
-  background: linear-gradient(135deg, #000dff 0%, #6b73ff 100%);
+  background: linear-gradient(135deg, #ff0000 0%, #ff0000 100%);
   transform: scale(1.05);
 }
 
@@ -176,21 +138,36 @@ body {
   transform: scale(0.95);
 }
 
-.home-page {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  /* background: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') no-repeat center center; */
-  /* background-size: cover; */
+/* Slide Button */
+.slide-container {
+  @apply relative w-full h-12 bg-gray-300 rounded-full flex items-center justify-center overflow-hidden;
 }
 
-.background-video {
+.slide-button {
+  @apply absolute left-0 top-0 w-36 h-full bg-blue-600 text-white flex items-center justify-center rounded-full cursor-pointer transition-transform;
+}
+
+.slide-button:hover {
+  transform: translateX(calc(100% - 150px));
+}
+
+/* Video Background */
+.video-background {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
+  min-width: 100%;
+  min-height: 100%;
   object-fit: cover;
   z-index: -1;
-  pointer-events: none;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-background {
+  background-image: url('/path/to/your-image.jpg');
+  background-size: cover;
+  background-position: center;
 }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
-import { Calendar, Home, Image, Users2, FileText, Sun, Moon, Instagram, Twitter, Github, Linkedin } from 'lucide-react';
+import { Calendar, Home, Image, Users2, FileText, Sun, Moon, Instagram, Twitter, Github, Linkedin, Code, Youtube, FileText as BrochureIcon, FileBadge2, BookOpenCheck, BookOpenIcon } from 'lucide-react';
 import HomePage from './pages/HomePage';
 import EventsPage from './pages/EventsPage';
 import RulesPage from './pages/RulesPage';
@@ -19,12 +19,15 @@ import LiteraryEventsPage from './pages/LiteraryEventsPage';
 import CulturalEventsPage from './pages/CulturalEventsPage';
 import SpotEventsPage from './pages/SpotEventsPage';
 import StallsPage from './pages/StallsPage';
+import BrochurePage from './pages/BrochurePage'; // Import the BrochurePage component
+import Badge from './components/Badge'; // Import the Badge component
 import { useTheme } from './ThemeContext';
 import darkModeLogo from './assets/images/white.png';
 import lightModeLogo from './assets/images/black.png';
-import lightModeLoaderGif from './assets/loaderB.gif'; // Import the dark mode loader GIF
-import  darkModeLoaderGif from './assets/LoaderW.gif'; // Import the light mode loader GIF
+import darkModeLoaderGif from './assets/loaderW.gif'; // Import the dark mode loader GIF
+import lightModeLoaderGif from './assets/LoaderB.gif'; // Import the light mode loader GIF
 import bgVideo from './assets/bg.mp4'; // Import the video file
+import bgImage from './assets/images/black.png'; // Import a fallback background image
 
 function AppContent() {
   const { isDarkMode, toggleTheme } = useTheme();
@@ -44,13 +47,11 @@ function AppContent() {
   const navItems = [
     { name: 'Home', icon: Home, path: '/' },
     { name: 'Events', icon: Calendar, path: '/events' },
-    { name: 'Rules', icon: FileText, path: '/rules' },
+    { name: 'Rules', icon: BookOpenIcon, path: '/rules' },
     { name: 'Gallery', icon: Image, path: '/gallery' },
     { name: 'Team', icon: Users2, path: '/team' },
+    { name: 'Brochure', icon: FileBadge2, path: '/brochure' }, // Added Brochure navigation item
   ];
-
-  // const darkModeLogo = 'darkModeLogo'; // Replace with your dark mode logo URL
-  // const lightModeLogo = './src/assets/images/black.png'; // Replace with your light mode logo URL
 
   return (
     <div className={`min-h-screen ${isDarkMode ? 'bg-black text-white' : 'bg-white text-black'}`}>
@@ -61,10 +62,13 @@ function AppContent() {
       )}
       {!loading && (
         <>
-          {/* <video autoPlay muted loop className="background-video">
-            <source src={bgVideo} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video> */}
+          <div className="background-container">
+            {/* <video autoPlay muted loop className="background-video">
+              <source src={bgVideo} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video> */}
+            <div className="background-fallback" style={{ backgroundImage: `url(${bgImage})` }}></div>
+          </div>
           {/* Desktop Navigation */}
           <nav className={`fixed w-full z-50 ${isDarkMode ? 'bg-black/90' : 'bg-white/90'} backdrop-blur-sm hidden md:block`}>
             <div className="max-w-6xl mx-auto px-4">
@@ -72,7 +76,7 @@ function AppContent() {
                 {/* Logo */}
                 <Link to="/" className="flex items-center">
                   <img src={isDarkMode ? darkModeLogo : lightModeLogo} alt="Tech Euphoria 2K25" className="h-16 mr-2" />
-                  <span className="text-2xl font-bold bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text">
+                  <span className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-green-500 text-transparent bg-clip-text">
                     TECH EUPHORIA 2K25
                   </span> 
                 </Link>
@@ -103,7 +107,7 @@ function AppContent() {
             <div className="flex justify-between items-center p-2">
               <Link to="/" className="flex items-center justify-center w-full">
                 <img src={isDarkMode ? darkModeLogo : lightModeLogo} alt="Tech Euphoria 2K25" className="h-16 mr-2" />
-                <span className="text-xl font-bold bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text">
+                <span className="text-xl font-bold bg-gradient-to-r from-blue-500 to-green-500 text-transparent bg-clip-text">
                   TECH EUPHORIA 2K25
                 </span>
               </Link>
@@ -120,7 +124,7 @@ function AppContent() {
                 <Link
                   key={item.name}
                   to={item.path}
-                  className={`flex flex-col items-center justify-center py-2 ${isDarkMode ? 'text-gray-400 hover:text-white' : 'text-gray-700 hover:text-black'} active:text-purple-500 transition-colors text-center`}
+                  className={`flex flex-col items-center justify-center py-2 ${isDarkMode ? 'text-gray-400 hover:text-white' : 'text-gray-700 hover:text-black'} active:text-blue-500 transition-colors text-center`}
                 >
                   <item.icon className="w-6 h-6 mb-1" />
                   <span className="text-xs">{item.name}</span>
@@ -130,7 +134,7 @@ function AppContent() {
           </nav>
 
           {/* Main Content */}
-          <main className="pt-16 md:pt-0">
+          <main className="pt-16 md:pt-0 pb-16 md:pb-0"> {/* Add padding to the bottom */}
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/events" element={<EventsPage />} />
@@ -150,37 +154,47 @@ function AppContent() {
               <Route path="/cultural-events" element={<CulturalEventsPage />} />
               <Route path="/spot-events" element={<SpotEventsPage />} />
               <Route path="/stalls" element={<StallsPage />} />
+              <Route path="/brochure" element={<BrochurePage />} /> {/* Add the Brochure route */}
             </Routes>
           </main>
 
           {/* Footer */}
-          <footer className={`py-12 px-4 mb-16 md:mb-0 ${isDarkMode ? 'bg-black/80 text-gray-400' : 'bg-white/80 text-gray-700'}`}>
+          <footer className={`py-12 px-4 ${isDarkMode ? 'bg-black/80 text-gray-400' : 'bg-white/80 text-gray-700'}`}>
             <div className="max-w-6xl mx-auto">
               <div className="flex flex-col md:flex-row justify-between items-center gap-8">
                 <div className="text-center md:text-left">
                   <h2 className="text-2xl font-bold mb-2">Tech Euphoria 2k25</h2>
-                  <p> A National level Technical and Cultural Symposium</p>
+                  <p>A National level Technical and Cultural Symposium</p>
                 </div>
                 <div className="flex gap-6">
-                  <a href="#" className="hover:text-purple-500 transition-colors">
+                  <a href="#" className="hover:text-blue-500 transition-colors">
                     <Instagram className="w-6 h-6" />
                   </a>
-                  <a href="#" className="hover:text-purple-500 transition-colors">
-                    <Twitter className="w-6 h-6" />
+                  <a href="#" className="hover:text-blue-500 transition-colors">
+                    <Youtube className="w-6 h-6" />
                   </a>
-                  <a href="#" className="hover:text-purple-500 transition-colors">
+                  <a href="#" className="hover:text-blue-500 transition-colors">
                     <Github className="w-6 h-6" />
                   </a>
-                  <a href="#" className="hover:text-purple-500 transition-colors">
+                  <a href="#" className="hover:text-blue-500 transition-colors">
                     <Linkedin className="w-6 h-6" />
                   </a>
                 </div>
               </div>
               <div className="mt-8 pt-8 border-t border-gray-300 text-center">
                 <p>© 2025 Tech Euphoria. All rights reserved.</p>
+                <p>Sri Vasavi Engineering College, Pedatadepalli, Tadepalligudem</p>
+                <div className="flex justify-center items-center mt-4">
+                  <Code className="w-6 h-6 mr-2" />
+                  <p>Developed by Vinay Siddha and S.G.Subhash</p>
+                </div>
+                <div className="mt-4">
+                  <p>For any queries, feel free to reach out to us at <a href="mailto:techeuphoria@srivasaviengg.ac.in" className="text-blue-500 hover:underline">techeuphoria@srivasaviengg.ac.in</a></p>
+                </div>
               </div>
             </div>
           </footer>
+          <Badge /> {/* Add the Badge component */}
         </>
       )}
     </div>

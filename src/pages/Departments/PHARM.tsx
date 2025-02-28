@@ -11,33 +11,84 @@ const PHARM = () => {
 
   const events = [
     {
-      name: 'Hackathon',
-      image: 'hackathon.jpg',
-      caption: '24-hour coding challenge',
-      description: 'Solve real-world problems in a 24-hour coding marathon.',
-      rules: '1. Team size: 2-4 members.\n2. No plagiarism.\n3. Use of any programming language is allowed.',
-      coordinator: 'John Doe',
-      phone: '123-456-7890'
+      "name": "Pharma Expo",
+      "image": "pharmaexpo.jpg",
+      "caption": "Pharmaceutical Innovations",
+      "description": "Students demonstrate new pharmaceutical technologies, including novel drug delivery systems, packaging innovations, and software applications used in the pharmaceutical industry.",
+      "rules": [
+        "Use creative and innovative ideas through projects, objects, instruments, posters, or short videos.",
+        "Focus on a specific topic within pharma.",
+        "Speak clearly and concisely."
+      ],
+      "student": "B. Kedareswari - 8688821379, Navya Sri - 9182462278",
+      "faculty": "Dr. M. Srinivas - 9966759123"
     },
     {
-      name: 'Project Expo',
-      image: 'project_expo.jpg',
-      caption: 'Showcase your innovative projects',
-      description: 'Present your innovative projects to a panel of judges.',
-      rules: '1. Individual or team participation.\n2. Projects must be original.\n3. Presentation time: 10 minutes.',
-      coordinator: 'Jane Smith',
-      phone: '987-654-3210'
+      "name": "Pharma Quiz",
+      "image": "pharmaquiz.jpg",
+      "caption": "Pharmacy Knowledge Challenge",
+      "description": "A quiz competition covering drug discovery, pharmacology, formulations, pharmacy laws, and current trends in the pharmaceutical industry.",
+      "rules": [
+        "Multiple rounds: preliminary, middle, and final.",
+        "No electronic devices allowed.",
+        "Teams can consist of 3-5 participants."
+      ],
+      "student": "B. Kedareswari - 8688821379, Navya Sri - 9182462278",
+      "faculty": "A. Pallavi - 8790370145"
     },
     {
-      name: 'Paper Presentation',
-      image: 'paper_presentation.jpg',
-      caption: 'Present your research papers',
-      description: 'Present your research papers on emerging technologies.',
-      rules: '1. Individual participation.\n2. Papers must be original.\n3. Presentation time: 15 minutes.',
-      coordinator: 'Alice Johnson',
-      phone: '555-123-4567'
+      "name": "Elocution",
+      "image": "elocution.jpg",
+      "caption": "Pharmaceutical Speech Competition",
+      "description": "Participants present speeches on selected pharmaceutical topics, showcasing their ability to articulate complex concepts clearly.",
+      "rules": [
+        "Time limit: 3-5 minutes per participant.",
+        "Only English language allowed.",
+        "No multimedia aids permitted."
+      ],
+      "student": "B. Kedareswari - 8688821379, Navya Sri - 9182462278",
+      "faculty": "Dr. M. Yamini - 9704791525"
     },
+    {
+      "name": "Essay Writing",
+      "image": "essaywriting.jpg",
+      "caption": "Pharmaceutical Insights",
+      "description": "Participants express their thoughts and insights on various pharmaceutical topics through essay writing.",
+      "rules": [
+        "Word limit: 500-1000 words.",
+        "Duration: 25-30 minutes.",
+        "Essays must be written within the given timeframe without external references."
+      ],
+      "student": "B. Kedareswari - 8688821379, Navya Sri - 9182462278",
+      "faculty": "B. Vijayambica - 9059101446"
+    },
+    {
+      "name": "Poster Presentation",
+      "image": "poster.jpg",
+      "caption": "Pharmaceutical Visual Storytelling",
+      "description": "Students create posters on pharmaceutical technologies, drug formulations, and recent advances in drug therapy.",
+      "rules": [
+        "Make the poster visually appealing with colors, fonts, and images.",
+        "Balance text and visuals, avoiding overcrowding.",
+        "Stick to the allotted presentation time."
+      ],
+      "student": "B. Kedareswari - 8688821379, Navya Sri - 9182462278",
+      "faculty": "Dr. Y.B. Manjulatha - 8500700840"
+    },
+    {
+      "name": "Drawing",
+      "image": "drawing.jpg",
+      "caption": "Pharma-Themed Art",
+      "description": "Students create drawings or illustrations related to pharmaceutical themes such as drug molecules, healthcare innovations, or pharmaceutical practices.",
+      "rules": [
+        "All art materials are allowed (eco-friendly or recycled), but pre-made or store-bought crafts are not allowed.",
+        "The artwork must be original and created during the event (maximum 2 hours)."
+      ],
+      "student": "B. Kedareswari - 8688821379, Navya Sri - 9182462278",
+      "faculty": "P. Srinu - 9014649631"
+    }
   ];
+  
 
   const handleRegister = () => {
     navigate('/register/pharm');

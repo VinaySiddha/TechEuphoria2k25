@@ -50,12 +50,12 @@ function EventsPage() {
   };
 
   return (
-    <div className={`min-h-screen ${isDarkMode ? 'bg-gradient-to-b from-black to-purple-900' : 'bg-gradient-to-b from-white to-gray-200'} py-20 px-4`}>
+    <div className={`min-h-screen ${isDarkMode ? 'bg-gradient-to-b from-black to-blue-900' : 'bg-gradient-to-b from-white to-blue-200'} py-20 px-4`}>
       <div className="max-w-6xl mx-auto">
         <h1 className={`text-4xl font-bold mb-12 text-center ${isDarkMode ? 'text-white' : 'text-black'}`}>Events</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {events.map((event) => (
-            <div key={event.name} className={`group p-6 ${isDarkMode ? 'bg-gradient-to-br from-purple-900/50 to-black' : 'bg-gradient-to-br from-purple-200/50 to-white'} rounded-xl hover:from-purple-800/50 transition-all`}>
+            <div key={event.name} className={`group p-6 ${isDarkMode ? 'bg-gradient-to-br from-blue-900/50 to-black' : 'bg-gradient-to-br from-blue-200/50 to-white'} rounded-xl hover:from-blue-800/50 transition-all`}>
               <img src={event.image} alt={event.name} className="w-full h-40 object-cover rounded-t-xl mb-4" />
               <h3 className={`text-xl font-semibold mb-3 ${isDarkMode ? 'text-white' : 'text-black'}`}>{event.name}</h3>
               <p className={`text-gray-400 mb-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>{event.description}</p>

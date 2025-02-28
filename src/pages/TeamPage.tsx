@@ -1,43 +1,30 @@
 import React from 'react';
+import { useTheme } from '../ThemeContext';
+import { Instagram } from 'lucide-react'; // Import Instagram icon
+
+const teamMembers = [
+  {
+    name: "John Doe",
+    role: "Team Lead",
+    image: "https://via.placeholder.com/150",
+    instagram: "https://instagram.com/johndoe"
+  },
+  {
+    name: "Jane Smith",
+    role: "Developer",
+    image: "https://via.placeholder.com/150",
+    instagram: "https://instagram.com/janesmith"
+  },
+  // Add more team members as needed
+];
 
 function TeamPage() {
-  const teamMembers = [
-    {
-      name: "Archana Manjunath",
-      role: "Vulcanzy Secretary",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-    },
-    {
-      name: "Gayathri Reddy",
-      role: "Cultural Secretary",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-    },
-    {
-      name: "Vishal Gokul",
-      role: "Sponsorship Secretary",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-    },
-    {
-      name: "Vikas Reddy",
-      role: "Technical Secretary",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-    },
-    {
-      name: "Nayeem",
-      role: "Web Dev Secretary",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-    },
-    {
-      name: "Surya Pavan",
-      role: "Promotion and PR Secretary",
-      image: "https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-    }
-  ];
+  const { isDarkMode } = useTheme();
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-black to-purple-900 py-20 px-4">
+    <div className={`min-h-screen ${isDarkMode ? 'bg-gradient-to-b from-black to-blue-900' : 'bg-gradient-to-b from-white to-blue-200'} py-20 px-4`}>
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl font-bold mb-12 text-center">Core Team</h1>
+        <h1 className={`text-4xl font-bold mb-12 text-center ${isDarkMode ? 'text-white' : 'text-black'}`}>Core Team</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {teamMembers.map((member) => (
             <div key={member.name} className="text-center">
@@ -48,8 +35,11 @@ function TeamPage() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="text-xl font-semibold">{member.name}</h3>
-              <p className="text-purple-500">{member.role}</p>
+              <h3 className={`text-xl font-semibold ${isDarkMode ? 'text-white' : 'text-black'}`}>{member.name}</h3>
+              <p className="text-blue-500">{member.role}</p>
+              <a href={member.instagram} target="_blank" rel="noopener noreferrer" className="inline-block mt-2">
+                <Instagram className={`w-6 h-6 ${isDarkMode ? 'text-white' : 'text-black'}`} />
+              </a>
             </div>
           ))}
         </div>

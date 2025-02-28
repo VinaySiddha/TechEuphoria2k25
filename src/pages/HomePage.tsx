@@ -1,12 +1,32 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Typewriter } from 'react-simple-typewriter';
-// import * as THREE from 'three';
-// import BIRDS from './vanta/dist/vanta.birds.min';
+import Typewriter from 'typewriter-effect';
+import { motion } from 'framer-motion';
 import '../index.css'; // Ensure you import your CSS file
 import { useTheme } from '../ThemeContext';
 import LoaderButton from '../components/LoaderButton';
+import img1 from '../assets/images/img1.jpeg';
+// import bgVideo from '../assets/videos/BackG.mp4'; // Import the background image
 
-function HomePage() {
+const calculateTimeLeft = () => {
+  const eventDate = new Date('March 20, 2025 10:00:00').getTime();
+  const now = new Date().getTime();
+  const difference = eventDate - now;
+
+  let timeLeft = {};
+
+  if (difference > 0) {
+    timeLeft = {
+      days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+      hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+      minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
+      seconds: Math.floor((difference % (1000 * 60)) / 1000),
+    };
+  }
+
+  return timeLeft;
+};
+
+const HomePage = () => {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
   const { isDarkMode } = useTheme();
   const vantaRef = useRef(null);
@@ -24,44 +44,29 @@ function HomePage() {
     return () => clearInterval(timer);
   }, []);
 
-  function calculateTimeLeft() {
-    const eventDate = new Date('March 20, 2025 10:00:00').getTime();
-    const now = new Date().getTime();
-    const difference = eventDate - now;
-
-    let timeLeft = {};
-
-    if (difference > 0) {
-      timeLeft = {
-        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-        minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
-        seconds: Math.floor((difference % (1000 * 60)) / 1000),
-      };
-    }
-
-    return timeLeft;
-  }
-
   return (
-    <div ref={vantaRef} className="home-page" id="vanta-bg">
+    
+    <div ref={vantaRef} className="home-page" id="vanta-bg" >
+      
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="relative z-10 text-center px-4">
-          <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 text-transparent bg-clip-text" style={{ fontFamily: 'Dune_Rise' }}>
-            <Typewriter
-              words={['TECH EUPHORIA 2K25']}
-              loop={100}
-              cursor
-              cursorStyle='_'
-              typeSpeed={70}
-              deleteSpeed={50}
-              delaySpeed={1000}
-            />
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 text-gray-300">
-            A National level Technical and Cultural Symposium
-          </p>
+      <section className="hero-background relative h-screen flex items-center justify-center overflow-hidden">
+  <div className="absolute inset-0 bg-black opacity-50"></div>
+  <div className="relative z-10 text-center px-4">
+    <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-yellow-300 via-orange-400 to-red-500 text-transparent bg-clip-text" style={{ fontFamily: 'Dune_Rise' }}>
+      <Typewriter
+        options={{
+          strings: ['TECH EUPHORIA 2K25'],
+          autoStart: true,
+          loop: true,
+          cursor: '||',
+          deleteSpeed: 50,
+          delaySpeed: 1000,
+        }}
+      />
+    </h1>
+    <p className="text-xl md:text-2xl mb-8 text-gray-300">
+      A National level Technical and Cultural Symposium
+    </p>
           {/* <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
             <LoaderButton
               path="/register"
@@ -77,24 +82,78 @@ function HomePage() {
             </LoaderButton>
           </div> */}
           <div className="mt-8 text-2xl text-white">
-            <span>{timeLeft.days}d </span>
-            <span>{timeLeft.hours}h </span>
-            <span>{timeLeft.minutes}m </span>
-            <span>{timeLeft.seconds}s</span>
+            {timeLeft.days !== undefined ? (
+              <div>
+                <span>{timeLeft.days}d </span>
+                <span>{timeLeft.hours}h </span>
+                <span>{timeLeft.minutes}m </span>
+                <span>{timeLeft.seconds}s </span>
+              </div>
+            ) : (
+              <span>Event has started!</span>
+            )}
           </div>
         </div>
       </section>
 
-      {/* Sponsors Section
-      <section className={`py-20 px-4 ${isDarkMode ? 'bg-black' : 'bg-white'}`}>
-        <div className="max-w-6xl mx-auto">
-          <h2 className={`text-4xl font-bold mb-12 text-center ${isDarkMode ? 'text-white' : 'text-black'}`}>Our Sponsors</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <span>{timeLeft.minutes}m </span>
-            <span>{timeLeft.seconds}s</span>
+      {/* Scrolling Image Section */}
+      <section className={`w-full overflow-hidden py-12 ${isDarkMode ? 'bg-gray-900' : 'bg-gray-100'}`}>
+        <h2 className="text-3xl font-bold text-center mb-8">Memories</h2>
+        <motion.div
+          className="flex space-x-6 w-max"
+          animate={{ x: ["0%", "-100%"] }}
+          transition={{ repeat: Infinity, duration: 50, ease: "linear" ,repeatType: "mirror" }}
+        >
+          <div className="flex flex-col items-center">
+            <img src={img1} alt="Event 1" className="h-64 rounded-lg" />
+            <span className="mt-2 text-center">Event 1</span>
           </div>
-        </div>
-      </section> */}
+          <div className="flex flex-col items-center">
+            <img src={img1} alt="Event 2" className="h-64 rounded-lg" />
+            <span className="mt-2 text-center">Event 2</span>
+          </div>
+          <div className="flex flex-col items-center">
+            <img src={img1} alt="Event 3" className="h-64 rounded-lg" />
+            <span className="mt-2 text-center">Event 3</span>
+          </div>
+          <div className="flex flex-col items-center">
+            <img src={img1} alt="Event 4" className="h-64 rounded-lg" />
+            <span className="mt-2 text-center">Event 4</span>
+          </div>
+          <div className="flex flex-col items-center">
+            <img src={img1} alt="Event 5" className="h-64 rounded-lg" />
+            <span className="mt-2 text-center">Event 5</span>
+          </div>
+          <div className="flex flex-col items-center">
+            <img src={img1} alt="Event 6" className="h-64 rounded-lg" />
+            <span className="mt-2 text-center">Event 6</span>
+          </div>
+          <div className="flex flex-col items-center">
+            <img src={img1} alt="Event 7" className="h-64 rounded-lg" />
+            <span className="mt-2 text-center">Event 7</span>
+          </div>
+          <div className="flex flex-col items-center">
+            <img src={img1} alt="Event 8" className="h-64 rounded-lg" />
+            <span className="mt-2 text-center">Event 8</span>
+          </div>
+          <div className="flex flex-col items-center">
+            <img src={img1} alt="Event 9" className="h-64 rounded-lg" />
+            <span className="mt-2 text-center">Event 9</span>
+          </div>
+          <div className="flex flex-col items-center">
+            <img src={img1} alt="Event 10" className="h-64 rounded-lg" />
+            <span className="mt-2 text-center">Event 10</span>
+          </div>
+          <div className="flex flex-col items-center">
+            <img src={img1} alt="Event 11" className="h-64 rounded-lg" />
+            <span className="mt-2 text-center">Event 11</span>
+          </div>
+          <div className="flex flex-col items-center">
+            <img src={img1} alt="Event 12" className="h-64 rounded-lg" />
+            <span className="mt-2 text-center">Event 12</span>
+          </div>
+        </motion.div>
+      </section>
 
       {/* Sponsors Section */}
       <section className={`py-20 px-4 ${isDarkMode ? 'bg-black' : 'bg-white'}`}>
