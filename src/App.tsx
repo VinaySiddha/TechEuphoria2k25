@@ -24,8 +24,8 @@ import Badge from './components/Badge'; // Import the Badge component
 import { useTheme } from './ThemeContext';
 import darkModeLogo from './assets/images/white.png';
 import lightModeLogo from './assets/images/black.png';
-import darkModeLoaderGif from './assets/loaderW.gif'; // Import the dark mode loader GIF
-import lightModeLoaderGif from './assets/LoaderB.gif'; // Import the light mode loader GIF
+import darkModeLoaderGif from '../src/assets/loaderW.gif'; // Import the dark mode loader GIF
+import lightModeLoaderGif from '../src/assets/loaderB.gif'; // Import the light mode loader GIF
 import bgVideo from './assets/bg.mp4'; // Import the video file
 import bgImage from './assets/images/black.png'; // Import a fallback background image
 import { ThemeProvider } from './pages/ThemeContext'; // Adjust the path as needed
