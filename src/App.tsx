@@ -21,13 +21,12 @@ import SpotEventsPage from './pages/SpotEventsPage';
 import StallsPage from './pages/StallsPage';
 import BrochurePage from './pages/BrochurePage'; // Import the BrochurePage component
 import Badge from './components/Badge'; // Import the Badge component
-import { useTheme } from './ThemeContext';
+import { useTheme, ThemeProvider } from './ThemeContext';
 import darkModeLogo from './assets/images/white.png';
 import lightModeLogo from './assets/images/black.png';
 import darkModeLoaderGif from './assets/loaderW.gif'; // Import the dark mode loader GIF
 import lightModeLoaderGif from './assets/LoaderB.gif'; // Import the light mode loader GIF
-import bgVideo from './assets/bg.mp4'; // Import the video file
-import bgImage from './assets/images/black.png'; // Import a fallback background image
+import bgVideo from './assets/bg.mp4'; // Correct the path
 
 function AppContent() {
   const { isDarkMode, toggleTheme } = useTheme();
@@ -63,11 +62,10 @@ function AppContent() {
       {!loading && (
         <>
           <div className="background-container">
-            {/* <video autoPlay muted loop className="background-video">
+            <video autoPlay muted loop playsInline className="background-video">
               <source src={bgVideo} type="video/mp4" />
               Your browser does not support the video tag.
-            </video> */}
-            <div className="background-fallback" style={{ backgroundImage: `url(${bgImage})` }}></div>
+            </video>
           </div>
           {/* Desktop Navigation */}
           <nav className={`fixed w-full z-50 ${isDarkMode ? 'bg-black/90' : 'bg-white/90'} backdrop-blur-sm hidden md:block`}>
@@ -134,7 +132,7 @@ function AppContent() {
           </nav>
 
           {/* Main Content */}
-          <main className="pt-16 md:pt-0 pb-16 md:pb-0"> {/* Add padding to the bottom */}
+          <main className="pt-16 md:pt-0 pb-16 md:pb-0 relative z-10"> {/* Add padding to the bottom */}
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/events" element={<EventsPage />} />
@@ -159,7 +157,7 @@ function AppContent() {
           </main>
 
           {/* Footer */}
-          <footer className={`py-12 px-4 ${isDarkMode ? 'bg-black/80 text-gray-400' : 'bg-white/80 text-gray-700'}`}>
+          <footer className={`py-12 px-4 ${isDarkMode ? 'bg-black/80 text-gray-400' : 'bg-white/80 text-gray-700'} relative z-10`}>
             <div className="max-w-6xl mx-auto">
               <div className="flex flex-col md:flex-row justify-between items-center gap-8">
                 <div className="text-center md:text-left">
@@ -167,16 +165,16 @@ function AppContent() {
                   <p>A National level Technical and Cultural Symposium</p>
                 </div>
                 <div className="flex gap-6">
-                  <a href="#" className="hover:text-blue-500 transition-colors">
+                  <a href="https://www.instagram.com/techeuphoria_svec?igsh=MWRscGZtZ21rN25hMg==" className="hover:text-blue-500 transition-colors">
                     <Instagram className="w-6 h-6" />
                   </a>
-                  <a href="#" className="hover:text-blue-500 transition-colors">
+                  <a href="https://www.youtube.com/@srivasaviengineeringcolleg8758" className="hover:text-blue-500 transition-colors">
                     <Youtube className="w-6 h-6" />
                   </a>
-                  <a href="#" className="hover:text-blue-500 transition-colors">
-                    <Github className="w-6 h-6" />
+                  <a href="https://x.com/sves_official_" className="hover:text-blue-500 transition-colors">
+                    <Twitter className="w-6 h-6" />
                   </a>
-                  <a href="#" className="hover:text-blue-500 transition-colors">
+                  <a href="https://www.linkedin.com/school/sri-vasavi/" className="hover:text-blue-500 transition-colors">
                     <Linkedin className="w-6 h-6" />
                   </a>
                 </div>
@@ -186,9 +184,9 @@ function AppContent() {
                 <p>Sri Vasavi Engineering College, Pedatadepalli, Tadepalligudem</p>
                 <div className="flex justify-center items-center mt-4">
                   <Code className="w-6 h-6 mr-2" />
-                  <p>Developed by Vinay Siddha and S.G.Subhash</p>
+                  <p>Developed by Vinay Siddha and M.G.Subhash</p>
                 </div>
-                <div className="mt-4">
+                <div className="mt-4 mb-16"> {/* Add margin-bottom to create space */}
                   <p>For any queries, feel free to reach out to us at <a href="mailto:techeuphoria@srivasaviengg.ac.in" className="text-blue-500 hover:underline">techeuphoria@srivasaviengg.ac.in</a></p>
                 </div>
               </div>
@@ -203,9 +201,11 @@ function AppContent() {
 
 function App() {
   return (
-    <Router>
-      <AppContent />
-    </Router>
+    <ThemeProvider>
+      <Router>
+        <AppContent />
+      </Router>
+    </ThemeProvider>
   );
 }
 

@@ -1,19 +1,20 @@
 import React from 'react';
 import { useTheme } from '../ThemeContext';
 import { Instagram } from 'lucide-react'; // Import Instagram icon
+import img from '../assets/images/team2.jpg'; // Import the image
 
 const teamMembers = [
   {
-    name: "John Doe",
-    role: "Team Lead",
-    image: "https://via.placeholder.com/150",
-    instagram: "https://instagram.com/johndoe"
+    name: "Vinay Siddha",
+    role: "Web Developer",
+    image: "https://media.licdn.com/dms/image/v2/D5603AQFpDkLJdYFphQ/profile-displayphoto-shrink_400_400/B56ZPPuO8NG4Ao-/0/1734356824688?e=1746057600&v=beta&t=f94SUSG2I6N1LOWtRrl48hwWaRPrTpjzIUgXHFuvQrE",
+    instagram: "https://instagram.com/vinay.siddha"
   },
   {
-    name: "Jane Smith",
-    role: "Developer",
-    image: "https://via.placeholder.com/150",
-    instagram: "https://instagram.com/janesmith"
+    name: "M.Govardhana Subhash",
+    role: "Web Developer",
+    image: img,
+    instagram: "https://instagram.com/govardhana_subhash"
   },
   // Add more team members as needed
 ];
