@@ -12,7 +12,7 @@ const MBA = () => {
   const events = [
     {
       "name": "YUKTI - A Business Quiz",
-      "image": "yukti_quiz.jpg",
+      "image": "https://blogassets.leverageedu.com/media/uploads/2023/05/22190011/Business-Quiz-for-Students-1.jpg",
       "caption": "Business Knowledge Challenge",
       "description": "A quiz competition testing participants' knowledge of business concepts, current affairs, and industry trends.",
       "rules": [
@@ -32,7 +32,7 @@ const MBA = () => {
     },
     {
       "name": "BUDDING LEADER - Young Manager",
-      "image": "budding_leader.jpg",
+      "image": "https://www.simonstapleton.com/wp-content/smush-webp/2024/01/Young-Manager-1.jpg.webp",
       "caption": "Managerial Skills Test",
       "description": "An event designed to identify students with leadership and management skills.",
       "rules": [
@@ -51,7 +51,7 @@ const MBA = () => {
     },
     {
       "name": "CARBON COPY – Simulation Game",
-      "image": "carbon_copy.jpg",
+      "image": "https://theithacan.org/wp-content/uploads/2019/03/the-division-2-screen-03-ps4-us-20jun18-e1553526825573.jpeg",
       "caption": "Business Simulation",
       "description": "A real-world business simulation where teams handle organizational challenges.",
       "rules": [
@@ -70,7 +70,7 @@ const MBA = () => {
     },
     {
       "name": "DALAL STREET - The Game of Bulls and Bears",
-      "image": "dalal_street.jpg",
+      "image": "https://akm-img-a-in.tosshub.com/businesstoday/images/story/202209/stock-market-2_0-sixteen_nine.jpg?size=948:533",
       "caption": "Stock Market Simulation",
       "description": "A stock market trading simulation where participants manage portfolios and maximize wealth.",
       "rules": [
@@ -89,7 +89,7 @@ const MBA = () => {
     },
     {
       "name": "MASTER MINDS - Market Makers",
-      "image": "master_minds.jpg",
+      "image": "https://as1.ftcdn.net/v2/jpg/02/77/85/84/1000_F_277858436_9osMOzxMZZEHZanfRw4992P7KIJHVPkV.jpg",
       "caption": "Marketing Strategy Challenge",
       "description": "A marketing competition where teams create and present strategies based on the 4Ps of marketing.",
       "rules": [
