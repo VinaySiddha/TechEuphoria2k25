@@ -2,15 +2,15 @@ import React from 'react';
 import { useTheme } from '../ThemeContext';
 
 // Import your images from src/assets/images
-import image1 from '../assets/images/image1.jpg';
-import image2 from '../assets/images/image2.jpg';
-import image3 from '../assets/images/image3.jpg';
-import image4 from '../assets/images/image4.jpg';
-import image5 from '../assets/images/image5.jpg';
-import image6 from '../assets/images/image6.jpg';
-import image7 from '../assets/images/image7.jpg';
-import image8 from '../assets/images/image8.jpg';
-import image9 from '../assets/images/image9.jpg';
+import image1 from '../assets/images/image1.png';
+import image2 from '../assets/images/image2.png';
+import image3 from '../assets/images/image3.png';
+import image4 from '../assets/images/image4.png';
+import image5 from '../assets/images/image5.png';
+import image6 from '../assets/images/image6.png';
+import image7 from '../assets/images/image7.png';
+import image8 from '../assets/images/image8.png';
+import image9 from '../assets/images/image9.png';
 
 function GalleryPage() {
   const { isDarkMode } = useTheme();

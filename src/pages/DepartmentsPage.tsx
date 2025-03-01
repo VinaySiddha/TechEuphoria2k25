@@ -11,13 +11,13 @@ function DepartmentsPage() {
 
   const departments = [
     // { name: 'Artificial Intelligence & Machine Learning', description: 'Learn about AI and ML.', image: 'https://static.vecteezy.com/system/resources/previews/009/150/016/non_2x/aim-logo-aim-letter-aim-letter-logo-design-initials-aim-logo-linked-with-circle-and-uppercase-monogram-logo-aim-typography-for-technology-business-and-real-estate-brand-vector.jpg', path: '/departments/aiml' },
+    { name: 'Computer Science with Artificial Intelligence', description: 'Learn about computer science with AI.', image: 'https://i.pinimg.com/736x/3d/7b/5a/3d7b5ab723384d8d46a8531842c8858e.jpg', path: '/departments/cai' },
     { name: 'Civil Engineering', description: 'Learn about civil engineering.', image: 'https://www.fantastick.in/cdn/shop/files/PREN003_1024x1024.jpg?v=1695292213', path: '/departments/civil' },
     { name: 'Computer Science Engineering', description: 'Learn about computer science.', image: 'https://static.vecteezy.com/system/resources/previews/009/116/692/large_2x/cse-logo-cse-letter-cse-letter-logo-design-initials-cse-logo-linked-with-circle-and-uppercase-monogram-logo-cse-typography-for-technology-business-and-real-estate-brand-vector.jpg', path: '/departments/cse' },
-    { name: 'Computer Science with Artificial Intelligence', description: 'Learn about computer science with AI.', image: 'https://i.pinimg.com/736x/3d/7b/5a/3d7b5ab723384d8d46a8531842c8858e.jpg', path: '/departments/cai' },
     { name: 'Electronics and Communication Engineering', description: 'Learn about electronics and communication.', image: 'https://as2.ftcdn.net/v2/jpg/05/48/65/99/1000_F_548659945_i9QSx59orL39GlYn5CCEWknPogLOXiZG.jpg', path: '/departments/ece' },
-    { name: 'Electrical and Electronics Engineering', description: 'Learn about electrical engineering.', image: 'https://krce.ac.in/blog/wp-content/uploads/2024/04/7fb5b63c34cf82142319b728d58716d0.jpg', path: '/departments/eee' },
-    { name: 'Mechanical Engineering', description: 'Learn about mechanical engineering.', image: 'https://i.pinimg.com/736x/00/f6/02/00f602fe67d3b51d2a1316f9650ed862.jpg', path: '/departments/mech' },
+    { name: 'Electrical and Electronics Engineering', description: 'Learn about electrical engineering.', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvaPgVErS2XO92ky7NTq3NJcoyaIQyp2FijVnwiOip0uPN8VtdUFz2_f7bA6g-5WW3JM0&usqp=CAU', path: '/departments/eee' },
     { name: 'Master of Business Administration', description: 'Learn about business administration.', image: 'https://i.pinimg.com/736x/ec/b2/6f/ecb26f7c3f6b7956bec90495c15c1a87.jpg', path: '/departments/mba' },
+    { name: 'Mechanical Engineering', description: 'Learn about mechanical engineering.', image: 'https://i.pinimg.com/736x/00/f6/02/00f602fe67d3b51d2a1316f9650ed862.jpg', path: '/departments/mech' },
     {name:'Pharmaceutical science',description:'Learn about Pharmaceutical science.' ,image:'https://as2.ftcdn.net/jpg/02/76/69/43/1000_F_276694328_7eeiKPIDOGR4LaSYhKBGjEmC7ERexPxv.webp',path:'/departments/pharm'},
     // { name: 'Master of Business Administration', description: 'Learn about business administration.', image: 'https://i.pinimg.com/736x/ec/b2/6f/ecb26f7c3f6b7956bec90495c15c1a87.jpg', path: '/department/mba' },
 
