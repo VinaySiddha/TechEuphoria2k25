@@ -51,7 +51,7 @@ const HomePage = () => {
       
       {/* Hero Section */}
       <section className="hero-background relative h-screen flex items-center justify-center overflow-hidden">
-  <div className="absolute inset-0 bg-black opacity-50"></div>
+  {/* <div className="absolute inset-0 bg-black opacity-50"></div> */}
   <div className="relative z-10 text-center px-4">
     <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-yellow-300 via-orange-400 to-red-500 text-transparent bg-clip-text" style={{ fontFamily: 'Dune_Rise' }}>
       <Typewriter
