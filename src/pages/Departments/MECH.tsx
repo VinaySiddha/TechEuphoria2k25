@@ -97,7 +97,7 @@ const MECH = () => {
   ];
 
   const handleRegister = () => {
-    navigate('/register/mech');
+    window.location.href = 'https://forms.gle/NbELnyd8N1Sc3xTq7';
   };
 
   const openModal = (event) => {

@@ -26,7 +26,7 @@ import darkModeLogo from './assets/images/white.png';
 import lightModeLogo from './assets/images/black.png';
 import darkModeLoaderGif from '../src/assets/loaderW.gif'; // Import the dark mode loader GIF
 import lightModeLoaderGif from '../src/assets/loaderB.gif'; // Import the light mode loader GIF
-import bgVideo from './assets/bg.mp4'; // Import the video file
+import bgVideo from './assets/bg2.mp4'; // Import the video file
 import bgImage from './assets/images/black.png'; // Import a fallback background image
 import { ThemeProvider } from './pages/ThemeContext'; // Adjust the path as needed
 
@@ -185,13 +185,13 @@ function AppContent() {
               <div className="mt-4 pt-4 border-t border-gray-300 text-center"> {/* Adjusted margin-top and padding-top */}
                 <p>© 2025 Tech Euphoria. All rights reserved.</p>
                 <p>Sri Vasavi Engineering College, Pedatadepalli, Tadepalligudem</p>
-                <div className="flex flex-col items-center mt-2"> {/* Adjusted for better visibility on mobile */}
+                <div className="flex flex-col items-center mt-2 mb-16"> {/* Adjusted for better visibility on mobile */}
                   <div className="flex items-center">
                     <Code className="w-6 h-6 mr-1" />
                     <p>Developed by</p>
                   </div>
                   <p>Vinay Siddha and Govardhana Subhash M</p>
-                  <p>Feel free to contact us.</p>
+                  {/* <p>Feel free to contact us.</p> */}
                 </div>
               </div>
             </div>

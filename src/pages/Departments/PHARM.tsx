@@ -129,7 +129,7 @@ const Pharm = () => {
   
 
   const handleRegister = () => {
-    navigate('/register/pharm');
+    window.location.href = 'https://forms.gle/NbELnyd8N1Sc3xTq7';
   };
 
   const openModal = (event: React.SetStateAction<null>) => {
