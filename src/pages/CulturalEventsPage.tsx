@@ -114,7 +114,7 @@ const CulturalEventsPage = () => {
   ];
 
   const handleRegister = () => {
-    navigate('/register/literary');
+    window.location.href = 'https://forms.gle/5geoLJurZ86dj8ti9';
   };
 
   const openModal = (event) => {

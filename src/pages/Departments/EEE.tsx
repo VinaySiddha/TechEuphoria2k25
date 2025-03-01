@@ -112,7 +112,7 @@ const EEE = () => {
   
   
   const handleRegister = () => {
-    navigate('/register/eee');
+    window.location.href = 'https://forms.gle/NbELnyd8N1Sc3xTq7';
   };
 
   const openModal = (event) => {

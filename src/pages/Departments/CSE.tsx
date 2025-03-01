@@ -88,7 +88,7 @@ const CSE = () => {
   ];
 
   const handleRegister = () => {
-    navigate('/register/cse');
+    window.location.href = 'https://forms.gle/NbELnyd8N1Sc3xTq7';
   };
 
   const openModal = (event) => {

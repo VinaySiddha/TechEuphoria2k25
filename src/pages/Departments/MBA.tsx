@@ -108,7 +108,7 @@ const MBA = () => {
   ];
 
   const handleRegister = () => {
-    navigate('/register/mba');
+    window.location.href = 'https://forms.gle/NbELnyd8N1Sc3xTq7';
   };
 
   const openModal = (event) => {

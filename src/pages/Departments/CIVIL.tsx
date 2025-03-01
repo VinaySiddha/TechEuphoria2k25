@@ -93,7 +93,7 @@ const Civil = () => {
   ];
   
   const handleRegister = () => {
-    navigate('/register/civil');
+    window.location.href = 'https://forms.gle/NbELnyd8N1Sc3xTq7';
   };
 
   const openModal = (event) => {

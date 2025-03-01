@@ -1,7 +1,9 @@
 import React from 'react';
 import { useTheme } from '../ThemeContext';
 import { Instagram } from 'lucide-react'; // Import Instagram icon
-import img from '../assets/images/team2.jpg'; // Import the image
+import img from '../assets/images/team2.jpg';
+import img1 from '../assets/images/team3.png'; 
+import img2 from '../assets/images/team4.png';
 
 const teamMembers = [
   {
@@ -15,6 +17,18 @@ const teamMembers = [
     role: "Web Developer",
     image: img,
     instagram: "https://instagram.com/govardhana_subhash"
+  },
+  {
+    name: "Jagadeesh Sai Kumar Bommidi",
+    role: "Designer",
+    image: img1,
+    instagram: "hhttps://www.instagram.com/jagadeesh_01s/"
+  },
+  {
+    name: "Srinivas Oduri",
+    role: "App Developer",
+    image: img2,
+    instagram: "https://www.instagram.com/born_looser_19/"
   },
   // Add more team members as needed
 ];
