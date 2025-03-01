@@ -1,0 +1,15 @@
+{
+
+  "rewrites": [
+
+    {
+
+      "source": "/(.*)", 
+
+      "destination": "/"
+
+    }
+
+  ]
+
+}
