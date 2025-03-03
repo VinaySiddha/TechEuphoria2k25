@@ -1,6 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('../src/assets/fonts/Dune_Rise.ttf');
+@import url('../src/assets/fonts/UlagadiSans.ttf');
+
 
 /* Base Styles */
 @layer base {

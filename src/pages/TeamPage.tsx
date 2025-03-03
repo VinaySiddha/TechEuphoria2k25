@@ -2,8 +2,8 @@ import React from 'react';
 import { useTheme } from '../ThemeContext';
 import { Instagram } from 'lucide-react'; // Import Instagram icon
 import {Contact} from 'lucide-react'; // Import Contact icon
-import img from '../assets/images/team3.png';// Import the image
-import img1 from '../assets/images/team4.png';
+// import img from '../assets/images/team3.png';// Import the image
+// import img1 from '../assets/images/team4.png';
 
 const teamMembers = [
   {
@@ -23,13 +23,13 @@ const teamMembers = [
   {
     name: "Jagadeesh Sai Kumar Bommidi",
     role: "Designer",
-    image: img,
+    image: 'https://media.licdn.com/dms/image/v2/D5622AQFE6rjT2uMdJg/feedshare-shrink_800/B56ZVa4tj3GQAo-/0/1740986572300?e=1743638400&v=beta&t=za30BlCRQ9lptPuUNGyzKBr9E35ARv6NNqZP7ajSddQ',
     instagram: "hhttps://www.instagram.com/jagadeesh_01s/"
   },
   {
     name: "Srinivas Oduri",
     role: "App Developer",
-    image: img1,
+    image: "https://media.licdn.com/dms/image/v2/D5622AQGonV89B33toA/feedshare-shrink_800/B56ZVa4tj2HsAg-/0/1740986571730?e=1743638400&v=beta&t=upqLIaHk-6jbbItJFqF67sVgNTuRtEj-m6Ov2We_GW8",
     instagram: "https://www.instagram.com/born_looser_19/"
   },
   // Add more team members as needed

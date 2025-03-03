@@ -22,13 +22,21 @@ import StallsPage from './pages/StallsPage';
 import BrochurePage from './pages/BrochurePage'; // Import the BrochurePage component
 import Badge from './components/Badge'; // Import the Badge component
 import { useTheme } from './ThemeContext';
-import darkModeLogo from './assets/images/white.png';
-import lightModeLogo from './assets/images/black.png';
-import darkModeLoaderGif from '../src/assets/loaderW.gif'; // Import the dark mode loader GIF
-import lightModeLoaderGif from '../src/assets/loaderB.gif'; // Import the light mode loader GIF
+// import darkModeLogo from './assets/images/white.png';
+// import lightModeLogo from './assets/images/light.png'; // Adjust the path as needed
+// import darkModeLoaderGif from '../src/assets/loaderW.gif'; // Import the dark mode loader GIF
+// import lightModeLoaderGif from '../src/assets/loaderB.gif'; // Import the light mode loader GIF
+import  lightModeLoaderGif from '../src/assets/images/black.png'; // Import the dark mode loader GIF
+import darkModeLoaderGif from '../src/assets/images/white.png'; //Import the light mode loader GIF
 import bgVideo from './assets/bg2.mp4'; // Import the video file
 import bgImage from './assets/images/black.png'; // Import a fallback background image
 import { ThemeProvider } from './pages/ThemeContext'; // Adjust the path as needed
+import "./assets/fonts/Dune_Rise.ttf";
+import "./assets/fonts/UlagadiSans.ttf"
+
+
+const lightModeLogo = 'https://media.licdn.com/dms/image/v2/D5622AQFcdhSm2wXIUA/feedshare-shrink_800/B56ZVawV20HEAg-/0/1740984377405?e=1743638400&v=beta&t=tncKRNV91Cxk9WCQgs2WhCnHs_zoOGIwhgn6ScpSMFA'
+const darkModeLogo = 'https://media.licdn.com/dms/image/v2/D5622AQGjoHUq0upchw/feedshare-shrink_800/B56ZVa2OxFHsAg-/0/1740985922088?e=1743638400&v=beta&t=JB8qtH2yCQSjk5nMc_IxefMoGyTwowmnyLKfEsVC6uQ'
 
 function AppContent() {
   const { isDarkMode, toggleTheme } = useTheme();
@@ -40,7 +48,7 @@ function AppContent() {
     const handleComplete = () => setLoading(false);
 
     handleStart();
-    const timer = setTimeout(handleComplete, 2000); // Simulate a delay for the loader
+    const timer = setTimeout(handleComplete, 1000); // Simulate a delay for the loader
 
     return () => clearTimeout(timer);
   }, [location]);
