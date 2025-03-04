@@ -66,7 +66,7 @@ const HomePage = () => {
       />
     </h1>
     <p className="text-xl md:text-2xl mb-8 text-gray-300">
-      A National level Technical and Cultural Symposium
+      A National level Techno Cultural Symposium
     </p>
           {/* <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
             <LoaderButton

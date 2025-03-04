@@ -22,21 +22,18 @@ import StallsPage from './pages/StallsPage';
 import BrochurePage from './pages/BrochurePage'; // Import the BrochurePage component
 import Badge from './components/Badge'; // Import the Badge component
 import { useTheme } from './ThemeContext';
-// import darkModeLogo from './assets/images/white.png';
-// import lightModeLogo from './assets/images/light.png'; // Adjust the path as needed
-// import darkModeLoaderGif from '../src/assets/loaderW.gif'; // Import the dark mode loader GIF
-// import lightModeLoaderGif from '../src/assets/loaderB.gif'; // Import the light mode loader GIF
-import  lightModeLoaderGif from '../src/assets/images/black.png'; // Import the dark mode loader GIF
-import darkModeLoaderGif from '../src/assets/images/white.png'; //Import the light mode loader GIF
+import darkModeLogo from './assets/images/white.png';
+import lightModeLogo from './assets/images/black.png'; // Adjust the path as needed
+import darkModeLoaderGif from '../src/assets/loaderW.gif'; // Import the dark mode loader GIF
+import lightModeLoaderGif from '../src/assets/loaderB.gif'; // Import the light mode loader GIF
+// import  lightModeLoaderGif from '../src/assets/images/black.png'; // Import the dark mode loader GIF
+// import darkModeLoaderGif from '../src/assets/images/white.png'; //Import the light mode loader GIF
 import bgVideo from './assets/bg2.mp4'; // Import the video file
 import bgImage from './assets/images/black.png'; // Import a fallback background image
 import { ThemeProvider } from './pages/ThemeContext'; // Adjust the path as needed
 import "./assets/fonts/Dune_Rise.ttf";
 import "./assets/fonts/UlagadiSans.ttf"
 
-
-const lightModeLogo = 'https://media.licdn.com/dms/image/v2/D5622AQFcdhSm2wXIUA/feedshare-shrink_800/B56ZVawV20HEAg-/0/1740984377405?e=1743638400&v=beta&t=tncKRNV91Cxk9WCQgs2WhCnHs_zoOGIwhgn6ScpSMFA'
-const darkModeLogo = 'https://media.licdn.com/dms/image/v2/D5622AQGjoHUq0upchw/feedshare-shrink_800/B56ZVa2OxFHsAg-/0/1740985922088?e=1743638400&v=beta&t=JB8qtH2yCQSjk5nMc_IxefMoGyTwowmnyLKfEsVC6uQ'
 
 function AppContent() {
   const { isDarkMode, toggleTheme } = useTheme();
@@ -76,7 +73,7 @@ function AppContent() {
               <source src={bgVideo} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-            <div className="background-fallback" style={{ backgroundImage: `url(${bgImage})` }}></div>
+            <div className="background-fallback" ></div>
           </div>
           {/* Desktop Navigation */}
           <nav className={`fixed w-full z-50 ${isDarkMode ? 'bg-black/90' : 'bg-white/90'} backdrop-blur-sm hidden md:block`}>
@@ -172,8 +169,8 @@ function AppContent() {
             <div className="max-w-6xl mx-auto">
               <div className="flex flex-col md:flex-row justify-between items-center gap-8">
                 <div className="text-center md:text-left">
-                  <h2 className="text-2xl font-bold mb-2">Tech Euphoria 2k25</h2>
-                  <p>A National level Technical and Cultural Symposium</p>
+                  <h2 className="text-2xl font-bold mb-2">Tech Euphoria 2K25</h2>
+                  <p>A National level Techno Cultural Symposium</p>
                 </div>
                 <div className="flex gap-6">
                   <a href="https://www.instagram.com/techeuphoria_svec?igsh=MWRscGZtZ21rN25hMg==" className="hover:text-blue-500 transition-colors">

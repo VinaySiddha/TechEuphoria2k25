@@ -5,12 +5,18 @@ function RulesPage() {
   const { isDarkMode } = useTheme();
 
   const rules = [
-    "All participants must register online.",
     "Participants must adhere to the event schedule.",
+    "A fee of Rs.200/- per head needs to be paid to participate in department and college level events.",
+    "A maximum of 04 events can be participated in with the payment made.",
+    "A maximum of 03 department level events and 01 college level event (or) 02 department level and 02 college level events (or) 01 department level and 03 college level events can be participated in.",
     "Any form of cheating will result in disqualification.",
+    "Separate registrations are required to participate in cultural competitions.",
+    "A fee of Rs.100/- per head needs to be paid for cultural competitions.",
+    "Winners and runners-up awards are given for technical and cultural competitions.",
+    "All participants should wear the identity “BAND” provided to you.",
     "Respect fellow participants and organizers.",
+    "Have fun and enjoy the event!",
     "Follow the instructions given by the event coordinators.",
-    "Have fun and enjoy the event!"
   ];
 
   return (
