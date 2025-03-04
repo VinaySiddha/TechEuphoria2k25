@@ -12,6 +12,7 @@ function RulesPage() {
     "Any form of cheating will result in disqualification.",
     "Separate registrations are required to participate in cultural competitions.",
     "A fee of Rs.100/- per head needs to be paid for cultural competitions.",
+    "For Instance a Total of 05 Members are participating in a group dance then , Rs.500/- ( 100/- per head) to be paid to perform",
     "Winners and runners-up awards are given for technical and cultural competitions.",
     "All participants should wear the identity “BAND” provided to you.",
     "Respect fellow participants and organizers.",
