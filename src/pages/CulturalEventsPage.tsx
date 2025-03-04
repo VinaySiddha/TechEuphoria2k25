@@ -22,8 +22,13 @@ const CulturalEventsPage = () => {
         "Only instrumental performances (no vocals)",
         "Any genre allowed"
       ],
-      "student": "TBD",
-      "faculty": "TBD"
+      "faculty": [
+        "Mr. KCS Vyasa Krishna",
+        "T.V.N.L Aswini",
+        "R.L.R Lokesh Babu",
+        "Santhi Rupa",
+        "J.N.V Indu Sekhar"
+      ]
     },
     {
       "name": "Singing (Solo/Group)",
@@ -36,8 +41,13 @@ const CulturalEventsPage = () => {
         "Participants must bring their own tracks",
         "Judged on song selection, voice quality, and clarity"
       ],
-      "student": "TBD",
-      "faculty": "TBD"
+      "faculty": [
+        "Mr. KCS Vyasa Krishna",
+        "T.V.N.L Aswini",
+        "R.L.R Lokesh Babu",
+        "Santhi Rupa",
+        "J.N.V Indu Sekhar"
+      ]
     },
     {
       "name": "Stand-up Comedy",
@@ -51,8 +61,13 @@ const CulturalEventsPage = () => {
         "No offensive or obscene content",
         "Languages allowed: Telugu, English, Hindi"
       ],
-      "student": "TBD",
-      "faculty": "TBD"
+      "faculty": [
+        "Mr. KCS Vyasa Krishna",
+        "T.V.N.L Aswini",
+        "R.L.R Lokesh Babu",
+        "Santhi Rupa",
+        "J.N.V Indu Sekhar"
+      ]
     },
     {
       "name": "Classical Dance (Solo/Group)",
@@ -65,8 +80,13 @@ const CulturalEventsPage = () => {
         "Props allowed with prior approval",
         "Appropriate costumes required"
       ],
-      "student": "TBD",
-      "faculty": "TBD"
+      "faculty": [
+        "Mr. KCS Vyasa Krishna",
+        "T.V.N.L Aswini",
+        "R.L.R Lokesh Babu",
+        "Santhi Rupa",
+        "J.N.V Indu Sekhar"
+      ]
     },
     {
       "name": "Western Dance (Solo/Group)",
@@ -79,8 +99,13 @@ const CulturalEventsPage = () => {
         "Props allowed with prior approval",
         "Costumes must be appropriate"
       ],
-      "student": "TBD",
-      "faculty": "TBD"
+      "faculty": [
+        "Mr. KCS Vyasa Krishna",
+        "T.V.N.L Aswini",
+        "R.L.R Lokesh Babu",
+        "Santhi Rupa",
+        "J.N.V Indu Sekhar"
+      ]
     },
     {
       "name": "Mime (Group)",
@@ -93,8 +118,13 @@ const CulturalEventsPage = () => {
         "No dialogues or lip-syncing allowed",
         "Clear actions and expressions required"
       ],
-      "student": "TBD",
-      "faculty": "TBD"
+      "faculty": [
+        "Mr. KCS Vyasa Krishna",
+        "T.V.N.L Aswini",
+        "R.L.R Lokesh Babu",
+        "Santhi Rupa",
+        "J.N.V Indu Sekhar"
+      ]
     },
     {
       "name": "Skit",
@@ -108,8 +138,13 @@ const CulturalEventsPage = () => {
         "No vulgarity, religious, or political content",
         "Judged on script, expressions, props usage, and performance"
       ],
-      "student": "TBD",
-      "faculty": "TBD"
+      "faculty": [
+        "Mr. KCS Vyasa Krishna",
+        "T.V.N.L Aswini",
+        "R.L.R Lokesh Babu",
+        "Santhi Rupa",
+        "J.N.V Indu Sekhar"
+      ]
     }
   ];
 
@@ -171,8 +206,12 @@ const CulturalEventsPage = () => {
               <li key={index}>{rule}</li>
             ))}
           </ul>
-          <p className="mb-2"><strong>Student Coordinator:</strong> {selectedEvent.student}</p>
-          <p className="mb-2"><strong>Faculty Coordinator:</strong> {selectedEvent.faculty}</p>
+          <p className="mb-2"><strong>Faculty Coordinators:</strong></p>
+          <ul className="list-disc list-inside mb-4">
+            {selectedEvent.faculty.map((coordinator, index) => (
+              <li key={index}>{coordinator}</li>
+            ))}
+          </ul>
           <div className="flex justify-end mt-4">
             <button
               onClick={handleRegister}

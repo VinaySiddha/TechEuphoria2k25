@@ -96,6 +96,8 @@ const Pharm = () => {
       "caption": "Pharmaceutical Visual Storytelling",
       "description": "Students create posters on pharmaceutical technologies, drug formulations, and recent advances in drug therapy.",
       "rules": [
+        "Poster Dimensions: 3x4 feet.",
+        "Only 2-3 participants per team.",
         "Make the poster visually appealing with colors, fonts, and images.",
         "Balance text and visuals, avoiding overcrowding.",
         "Stick to the allotted presentation time."
@@ -105,7 +107,7 @@ const Pharm = () => {
         "Navya Sri - 9182462278"
       ],
       "faculty": [
-        "Dr. Y.B. Manjulatha - 8500700840"
+        "Mrs.A.Pallavi - "
       ]
     },
     {
