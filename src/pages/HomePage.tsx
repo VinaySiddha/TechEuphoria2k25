@@ -214,7 +214,7 @@ const HomePage = () => {
                   alt={sponsor.name} 
                   className="w-full h-40 mx-auto mb-4 rounded-lg object-cover"
                 />
-                <h3 className="text-xl font-semibold">{sponsor.name}</h3>
+                <h3 className="text-xl font-semib4old">{sponsor.name}</h3>
                 <p className="text-white">{sponsor.type}</p>
               </div>
             ))}
