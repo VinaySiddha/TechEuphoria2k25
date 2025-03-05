@@ -13,7 +13,7 @@ function DepartmentsPage() {
 
   const departments = [
     // { name: 'Artificial Intelligence & Machine Learning', description: 'Learn about AI and ML.', image: 'https://static.vecteezy.com/system/resources/previews/009/150/016/non_2x/aim-logo-aim-letter-aim-letter-logo-design-initials-aim-logo-linked-with-circle-and-uppercase-monogram-logo-aim-typography-for-technology-business-and-real-estate-brand-vector.jpg', path: '/departments/aiml' },
-    { name: 'Artificial Intelligence & Machine Learning', description: 'Learn about computer science with AI.', image: ai, path: '/departments/cai' },
+    { name: 'Artificial Intelligence & Machine Learning', description: 'Learn about AI & ML.', image: ai, path: '/departments/cai' },
     { name: 'Civil Engineering', description: 'Learn about civil engineering.', image: 'https://www.fantastick.in/cdn/shop/files/PREN003_1024x1024.jpg?v=1695292213', path: '/departments/civil' },
     { name: 'Computer Science Engineering', description: 'Learn about computer science.', image: 'https://static.vecteezy.com/system/resources/previews/009/116/692/large_2x/cse-logo-cse-letter-cse-letter-logo-design-initials-cse-logo-linked-with-circle-and-uppercase-monogram-logo-cse-typography-for-technology-business-and-real-estate-brand-vector.jpg', path: '/departments/cse' },
     { name: 'Electronics and Communication Engineering', description: 'Learn about electronics and communication.', image: 'https://as2.ftcdn.net/v2/jpg/05/48/65/99/1000_F_548659945_i9QSx59orL39GlYn5CCEWknPogLOXiZG.jpg', path: '/departments/ece' },
