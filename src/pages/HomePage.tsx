@@ -1,12 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Typewriter from 'typewriter-effect';
-import { motion } from 'framer-motion';
+import Slider from 'react-slick';
 import '../index.css'; // Ensure you import your CSS file
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import { useTheme } from '../ThemeContext';
-import LoaderButton from '../components/LoaderButton';
-import video1 from '../assets/BackG.mp4';
-import img1 from '../assets/images/white.png';
-// import bgVideo from '../assets/videos/BackG.mp4'; // Import the background image
+
+import silver1 from '../assets/images/silver1.jpg';
+import silver2 from '../assets/images/silver2.jpeg';
+import silver3 from '../assets/images/silver3.jpg';
 
 const calculateTimeLeft = () => {
   const eventDate = new Date('March 20, 2025 10:00:00').getTime();
@@ -31,11 +33,31 @@ const HomePage = () => {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
   const { isDarkMode } = useTheme();
   const vantaRef = useRef(null);
-  const sponsors = [
-    { name: 'Sponsor 1', logo: 'logo1.png', type: 'Gold' },
-    { name: 'Sponsor 2', logo: 'logo2.png', type: 'Silver' },
-    { name: 'Sponsor 3', logo: 'logo3.png', type: 'Bronze' },
-  ];
+  const sponsors = {
+    title: [
+      { name: 'NK Agro', logo: silver1, type: 'Silver' },
+      { name: 'Priyanka Skin Clinic', logo: silver2, type: 'Silver' },
+      { name: '32 Dentals', logo: silver3, type: 'Silver' },
+    ],
+    coTitle: [
+      { name: 'NK Agro', logo: silver1, type: 'Silver' },
+      { name: 'Priyanka Skin Clinic', logo: silver2, type: 'Silver' },
+      { name: '32 Dentals', logo: silver3, type: 'Silver' },
+    ],
+    platinum: [
+      { name: 'Platinum Sponsor 1', logo: 'platinum_logo1.png', type: 'Platinum' },
+      { name: 'Platinum Sponsor 2', logo: 'platinum_logo2.png', type: 'Platinum' },
+    ],
+    gold: [
+      { name: 'Gold Sponsor 1', logo: 'gold_logo1.png', type: 'Gold' },
+      { name: 'Gold Sponsor 2', logo: 'gold_logo2.png', type: 'Gold' },
+    ],
+    silver: [
+      { name: 'NK Agro', logo: silver1, type: 'Silver' },
+      { name: 'Priyanka Skin Clinic', logo: silver2, type: 'Silver' },
+      { name: '32 Dentals', logo: silver3, type: 'Silver' },
+    ],
+  };
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -45,43 +67,64 @@ const HomePage = () => {
     return () => clearInterval(timer);
   }, []);
 
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 1000,
+    responsive: [
+      {
+        breakpoint: 768, // Mobile breakpoint
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
+  const titleSettings = {
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 1000,
+    responsive: [
+      {
+        breakpoint: 768, // Mobile breakpoint
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
   return (
-    
-    <div ref={vantaRef} className="home-page" id="vanta-bg" >
-      
+    <div ref={vantaRef} className="home-page" id="vanta-bg">
       {/* Hero Section */}
       <section className="hero-background relative h-screen flex items-center justify-center overflow-hidden">
-  {/* <div className="absolute inset-0 bg-black opacity-50"></div> */}
-  <div className="relative z-10 text-center px-4">
-    <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-yellow-300 via-orange-400 to-red-500 text-transparent bg-clip-text" style={{ fontFamily: 'Dune_Rise' }}>
-      <Typewriter
-        options={{
-          strings: ['TECH EUPHORIA 2K25'],
-          autoStart: true,
-          loop: true,
-          cursor: '||',
-          deleteSpeed: 50,
-          delaySpeed: 1000,
-        }}
-      />
-    </h1>
-    <p className="text-xl md:text-2xl mb-8 text-gray-300">
-      A National level Techno Cultural Symposium
-    </p>
-          {/* <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
-            <LoaderButton
-              path="/register"
-              className="px-8 py-3 bg-gradient-to-r from-blue-600 to-green-600 rounded-full hover:from-blue-700 hover:to-green-700 transition-all"
-            >
-              Register Now
-            </LoaderButton>
-            <LoaderButton
-              path="/events"
-              className="px-8 py-3 border-2 border-white rounded-full hover:bg-white hover:text-black transition-all"
-            >
-              View Events
-            </LoaderButton>
-          </div> */}
+        <div className="relative z-10 text-center px-4">
+          <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-yellow-300 via-orange-400 to-red-500 text-transparent bg-clip-text" style={{ fontFamily: 'Dune_Rise' }}>
+            <Typewriter
+              options={{
+                strings: ['TECH EUPHORIA 2K25'],
+                autoStart: true,
+                loop: true,
+                cursor: '||',
+                deleteSpeed: 50,
+                delaySpeed: 1000,
+              }}
+            />
+          </h1>
+          <p className="text-xl md:text-2xl mb-8 text-gray-300">
+            A National level Techno Cultural Symposium
+          </p>
           <div className="mt-8 text-2xl text-white">
             {timeLeft.days !== undefined ? (
               <div>
@@ -97,55 +140,85 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Scrolling Image Section */}
-      {/* <section className={`w-full overflow-hidden py-12 ${isDarkMode ? 'bg-gray-900' : 'bg-gray-100'}`}>
-      <h2 className="text-3xl font-bold text-center mb-8">Memories</h2>
-      <motion.div
-        className="flex space-x-6 w-max"
-        animate={{ x: ["0%", "-100%"] }}
-        transition={{ repeat: Infinity, duration: 50, ease: "linear", repeatType: "mirror" }}
-      >
-        
-        <div className="flex flex-col items-center">
-            <img src={img1} alt="Event 2" className="h-64 rounded-lg" />
-            <span className="mt-2 text-center">Event 2</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <img src={img1} alt="Event 3" className="h-64 rounded-lg" />
-            <span className="mt-2 text-center">Event 3</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <img src={img1} alt="Event 4" className="h-64 rounded-lg" />
-            <span className="mt-2 text-center">Event 4</span>
-          </div>
-          
-          <div className="flex flex-col items-center">
-            <img src={img1} alt="Event 6" className="h-64 rounded-lg" />
-            <span className="mt-2 text-center">Event 6</span>
-          </div>
-       
-        
-        
-      </motion.div>
-    </section> */}
-
       {/* Sponsors Section */}
       <section className={`py-20 px-4 ${isDarkMode ? 'bg-black' : 'bg-white'}`}>
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto space-y-12">
           <h2 className={`text-4xl font-bold mb-12 text-center ${isDarkMode ? 'text-white' : 'text-black'}`}>Our Sponsors</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {sponsors.map((sponsor) => (
-              <div key={sponsor.name} className={`rounded-xl p-8 text-center ${isDarkMode ? 'bg-gradient-to-br from-blue-900/50 to-black text-white' : 'bg-gradient-to-br from-blue-200/50 to-white text-black'}`}>
+          
+          {/* <h3 className="text-3xl font-semibold mb-6 text-center text-blue-500">Title Sponsor</h3>
+          <Slider {...titleSettings} className="gap-4">
+            {sponsors.title.map((sponsor) => (
+              <div key={sponsor.name} className={`rounded-xl p-8 text-center bg-blue-500 bg-opacity-50 backdrop-filter backdrop-blur-lg border border-blue-300 ${isDarkMode ? 'text-white' : 'text-black'} m-4`}>
                 <img 
                   src={sponsor.logo} 
                   alt={sponsor.name} 
-                  className="w-32 h-32 mx-auto mb-4 rounded-full object-cover"
+                  className="w-full h-40 mx-auto mb-4 rounded-lg object-cover"
                 />
                 <h3 className="text-xl font-semibold">{sponsor.name}</h3>
-                <p className="text-blue-500">{sponsor.type}</p>
+                <p className="text-white">{sponsor.type}</p>
               </div>
             ))}
-          </div>
+          </Slider>
+
+          <h3 className="text-3xl font-semibold mb-6 text-center text-green-500">Co-Title Sponsors</h3>
+          <Slider {...titleSettings} className="gap-4">
+            {sponsors.coTitle.map((sponsor) => (
+              <div key={sponsor.name} className={`rounded-xl p-8 text-center bg-green-500 bg-opacity-50 backdrop-filter backdrop-blur-lg border border-green-300 ${isDarkMode ? 'text-white' : 'text-black'} m-4`}>
+                <img 
+                  src={sponsor.logo} 
+                  alt={sponsor.name} 
+                  className="w-full h-40 mx-auto mb-4 rounded-lg object-cover"
+                />
+                <h3 className="text-xl font-semibold">{sponsor.name}</h3>
+                <p className="text-white">{sponsor.type}</p>
+              </div>
+            ))}
+          </Slider>
+
+          <h3 className="text-3xl font-semibold mb-6 text-center text-purple-500">Platinum Sponsors</h3>
+          <Slider {...settings} className="gap-4">
+            {sponsors.platinum.map((sponsor) => (
+              <div key={sponsor.name} className={`rounded-xl p-8 text-center bg-purple-500 bg-opacity-50 backdrop-filter backdrop-blur-lg border border-purple-300 ${isDarkMode ? 'text-white' : 'text-black'} m-4`}>
+                <img 
+                  src={sponsor.logo} 
+                  alt={sponsor.name} 
+                  className="w-full h-40 mx-auto mb-4 rounded-lg object-cover"
+                />
+                <h3 className="text-xl font-semibold">{sponsor.name}</h3>
+                <p className="text-white">{sponsor.type}</p>
+              </div>
+            ))}
+          </Slider>
+
+          <h3 className="text-3xl font-semibold mb-6 text-center text-yellow-500">Gold Sponsors</h3>
+          <Slider {...settings} className="gap-4">
+            {sponsors.gold.map((sponsor) => (
+              <div key={sponsor.name} className={`rounded-xl p-8 text-center bg-yellow-500 bg-opacity-50 backdrop-filter backdrop-blur-lg border border-yellow-300 ${isDarkMode ? 'text-white' : 'text-black'} m-4`}>
+                <img 
+                  src={sponsor.logo} 
+                  alt={sponsor.name} 
+                  className="w-full h-40 mx-auto mb-4 rounded-lg object-cover"
+                />
+                <h3 className="text-xl font-semibold">{sponsor.name}</h3>
+                <p className="text-white">{sponsor.type}</p>
+              </div>
+            ))}
+          </Slider> */}
+
+          <h3 className="text-3xl font-semibold mb-6 text-center text-gray-500">Silver Sponsors</h3>
+          <Slider {...settings} className="gap-4">
+            {sponsors.silver.map((sponsor) => (
+              <div key={sponsor.name} className={`rounded-xl p-8 text-center bg-gray-500 bg-opacity-50 backdrop-filter backdrop-blur-lg border border-gray-300 ${isDarkMode ? 'text-white' : 'text-black'} m-4`}>
+                <img 
+                  src={sponsor.logo} 
+                  alt={sponsor.name} 
+                  className="w-full h-40 mx-auto mb-4 rounded-lg object-cover"
+                />
+                <h3 className="text-xl font-semibold">{sponsor.name}</h3>
+                <p className="text-white">{sponsor.type}</p>
+              </div>
+            ))}
+          </Slider>
         </div>
       </section>
     </div>
