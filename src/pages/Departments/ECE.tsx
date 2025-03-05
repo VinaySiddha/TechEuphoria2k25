@@ -148,6 +148,7 @@ const ECE = () => {
           <button className="px-8 py-3 bg-gradient-to-r from-blue-600 to-green-600 text-white rounded-full hover:from-blue-700 hover:to-green-700 transition-all" onClick={handleRegister}>
             Register
           </button>
+          </div>
           {/* Coordinators section */}
         <div className="mt-8 flex justify-between items-center">
           <div className="flex flex-col items-start">
@@ -162,7 +163,7 @@ const ECE = () => {
           </div>
         </div>
       </div>
-      </div>
+      
 
       {selectedEvent && (
         <Modal

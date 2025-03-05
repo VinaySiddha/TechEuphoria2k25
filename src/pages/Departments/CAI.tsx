@@ -36,7 +36,7 @@ const CAI = () => {
         "No plagiarism",
         "Any programming language can be used"
       ],
-      "student": "K.Jithendra - 83090 42235",
+      "student": "M. Lavanya -  7075291677",
       "faculty": "Mr. V Rama Narayana -  "
     },
     {
@@ -81,7 +81,6 @@ const CAI = () => {
     }
   ];
   
-  
   const handleRegister = () => {
     window.location.href = 'https://forms.gle/NbELnyd8N1Sc3xTq7';
   };
@@ -120,6 +119,7 @@ const CAI = () => {
           <button className="px-8 py-3 bg-gradient-to-r from-blue-600 to-green-600 text-white rounded-full hover:from-blue-700 hover:to-green-700 transition-all" onClick={handleRegister}>
             Register
           </button>
+          </div>
           {/* Coordinators section */}
         <div className="mt-8 flex justify-between items-center">
           <div className="flex flex-col items-start">
@@ -133,7 +133,7 @@ const CAI = () => {
             <p>Mr.RL Phani kumar 9966966752</p>
           </div>
         </div>
-      </div>
+      
       </div>
 
       {selectedEvent && (
