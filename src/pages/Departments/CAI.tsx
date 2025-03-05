@@ -36,21 +36,8 @@ const CAI = () => {
         "No plagiarism",
         "Any programming language can be used"
       ],
-      "student": "M. Lavanya -  7075291677",
+      "student": "K.Jithendra - 83090 42235",
       "faculty": "Mr. V Rama Narayana -  "
-    },
-    {
-      "name": "Battle of Minds",
-      "image": "https://familynews.today/wp-content/uploads/2023/02/battle-of-mind.jpg",
-      "caption": "Mind Games & Trivia",
-      "description": "A competition testing participants' logical thinking, problem-solving, and mental agility.",
-      "rules": [
-        "Every round is an elimination round",
-        "Participants must adhere to time limits",
-        "No external help is allowed"
-      ],
-      "student": "E. Tirupati Rao - 7569119235",
-      "faculty": "Mrs. M Kiranmai - 8310643105"
     },
     {
       "name": "NextZen AI",
@@ -64,6 +51,19 @@ const CAI = () => {
       ],
       "student": "K. Poojitha - 7671968916",
       "faculty": "Mr. P V V Satyanarayana - 9491556136"
+    },
+    {
+      "name": "Battle of Minds",
+      "image": "https://familynews.today/wp-content/uploads/2023/02/battle-of-mind.jpg",
+      "caption": "Mind Games & Trivia",
+      "description": "A competition testing participants' logical thinking, problem-solving, and mental agility.",
+      "rules": [
+        "Every round is an elimination round",
+        "Participants must adhere to time limits",
+        "No external help is allowed"
+      ],
+      "student": "E. Tirupati Rao - 7569119235",
+      "faculty": "Mrs. M Kiranmai - 8310643105"
     },
     {
       "name": "The Fun Fiesta",
