@@ -81,6 +81,7 @@ const CAI = () => {
     }
   ];
   
+  
   const handleRegister = () => {
     window.location.href = 'https://forms.gle/NbELnyd8N1Sc3xTq7';
   };
@@ -98,7 +99,7 @@ const CAI = () => {
   return (
     <div className={`min-h-screen ${isDarkMode ? 'bg-gradient-to-b from-gray-900 to-black' : 'bg-gradient-to-b from-white to-gray-200'} py-20 px-4`}>
       <div className="max-w-6xl mx-auto">
-        <h1 className={`text-4xl font-bold mb-12 text-center ${isDarkMode ? 'text-white' : 'text-black'}`}>Artifical Intelligence & Machine Learning</h1>
+        <h1 className={`text-4xl font-bold mb-12 text-center ${isDarkMode ? 'text-white' : 'text-black'}`}>Artificial Intelligence & Machine Learning</h1>
         <p className={`text-lg mb-8 text-center ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>Welcome to the CSE(AI) & AIML department page. Here are the events you can participate in:</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {events.map((event) => (
@@ -115,21 +116,34 @@ const CAI = () => {
             </div>
           ))}
         </div>
-        <div className="flex justify-center items-center mt-8">
+        <div className="flex  justify-center items-center mt-8">
           <button className="px-8 py-3 bg-gradient-to-r from-blue-600 to-green-600 text-white rounded-full hover:from-blue-700 hover:to-green-700 transition-all" onClick={handleRegister}>
             Register
           </button>
+          {/* Coordinators section */}
+        <div className="mt-8 flex justify-between items-center">
+          <div className="flex flex-col items-start">
+            <h3 className="text-lg font-semibold">Student Coordinators</h3>
+            <p>D.Varun 8309352741</p>
+            <p>S.Anjaneya Karthik7396351571</p>
+          </div>
+          <div className="flex flex-col items-end">
+            <h3 className="text-lg font-semibold">Faculty&nbsp;Coordinator</h3>
+            <p>Dr. K. Srinivasa Rao 9866901020</p>
+            <p>Mr.RL Phani kumar 9966966752</p>
+          </div>
         </div>
+      </div>
       </div>
 
       {selectedEvent && (
-             <Modal
-                       isOpen={modalIsOpen}
-                       onRequestClose={closeModal}
-                       contentLabel="Event Details"
-                       className={`modal ${isDarkMode ? 'bg-gradient-to-b from-gray-900 to-black text-white' : 'bg-gradient-to-b from-white to-gray-200 text-black'} p-8 rounded-lg shadow-lg max-w-lg mx-auto z-50`}
-                       overlayClassName="modal-overlay flex items-center justify-center fixed inset-0 bg-black bg-opacity-50 z-40"
-                     >
+        <Modal
+          isOpen={modalIsOpen}
+          onRequestClose={closeModal}
+          contentLabel="Event Details"
+          className={`modal ${isDarkMode ? 'bg-gradient-to-b from-gray-900 to-black text-white' : 'bg-gradient-to-b from-white to-gray-200 text-black'} p-8 rounded-lg shadow-lg max-w-lg mx-auto z-50`}
+          overlayClassName="modal-overlay flex items-center justify-center fixed inset-0 bg-black bg-opacity-50 z-40"
+        >
           <h2 className="text-2xl font-bold mb-4">{selectedEvent.name}</h2>
           <p className="mb-2"><strong>Caption:</strong> {selectedEvent.caption}</p>
           <p className="mb-2"><strong>Description:</strong> {selectedEvent.description}</p>

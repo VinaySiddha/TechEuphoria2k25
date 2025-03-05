@@ -121,11 +121,24 @@ const CSE = () => {
             </div>
           ))}
         </div>
-        <div className="flex justify-center items-center mt-8">
+        <div className="flex  justify-center items-center mt-8">
           <button className="px-8 py-3 bg-gradient-to-r from-blue-600 to-green-600 text-white rounded-full hover:from-blue-700 hover:to-green-700 transition-all" onClick={handleRegister}>
             Register
           </button>
+         {/* Coordinators section */}
+        <div className="mt-8 flex justify-between items-center">
+          <div className="flex flex-col items-start">
+            <h3 className="text-lg font-semibold">Student Coordinators</h3>
+            <p>ch .Vishnu vardhan 8919758517</p>
+            <p> P.G.V Prasasd 6304852672</p>
+          </div>
+          <div className="flex flex-col items-end">
+            <h3 className="text-lg font-semibold">Faculty&nbsp;Coordinator</h3>
+            <p>N. Hiran Mayee 7893046608</p>
+            <p>D.S.L Manikanteswari 8977599856</p>
+          </div>
         </div>
+      </div>
       </div>
 
       {selectedEvent && (

@@ -134,6 +134,20 @@ const MECH = () => {
           <button className="px-8 py-3 bg-gradient-to-r from-blue-600 to-green-600 text-white rounded-full hover:from-blue-700 hover:to-green-700 transition-all" onClick={handleRegister}>
             Register
           </button>
+         {/* Coordinators section */}
+        <div className="mt-8 flex justify-between items-center">
+          <div className="flex flex-col items-start">
+            <h3 className="text-lg font-semibold">Student Coordinators</h3>
+            <p>G.Satya Narayana 6301751110</p>
+            <p>J.Venkatesh 7670877467</p>
+          </div>
+          <div className="flex flex-col items-end">
+            <h3 className="text-lg font-semibold">Faculty &nbsp;Coordinator</h3>
+            <p>K.S.B.S.V.S Sastry 9440141319</p>
+            <p>K.Sri Ram Murthy 9951373443</p>
+          </div>
+        </div>
+    
         </div>
       </div>
 

@@ -128,13 +128,12 @@ const Pharm = () => {
       ]
     }
   ];
-  
 
   const handleRegister = () => {
-    window.location.href = 'https://forms.gle/NbELnyd8N1Sc3xTq7';
+    window.location.href = 'https://forms.gle/your_form_link';
   };
 
-  const openModal = (event: React.SetStateAction<null>) => {
+  const openModal = (event) => {
     setSelectedEvent(event);
     setModalIsOpen(true);
   };
@@ -145,14 +144,15 @@ const Pharm = () => {
   };
 
   return (
-      <div className={`min-h-screen ${isDarkMode ? 'bg-gradient-to-b from-gray-900 to-black' : 'bg-gradient-to-b from-white to-gray-200'} py-20 px-4`}>
-        <div className="max-w-6xl mx-auto">
-          <h1 className={`text-4xl font-bold mb-12 text-center ${isDarkMode ? 'text-white' : 'text-black'}`}>Pharmaceutical Sciences</h1>
-          <p className={`text-lg mb-8 text-center ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>Welcome to the Pharmaceutical Sciences department page. Here are the events you can participate in:</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {events.map((event) => (
-              <div key={event.name} className={`p-6 ${isDarkMode ? 'bg-gradient-to-br from-purple-900 to-black' : 'bg-gradient-to-br from-purple-200 to-white'} rounded-xl hover:from-purple-800 transition-all`}>
-                <img src={event.image} alt={event.name} className="w-full h-48 object-cover rounded-lg mb-4" />
+    <div className={`min-h-screen ${isDarkMode ? 'bg-gradient-to-b from-gray-900 to-black' : 'bg-gradient-to-b from-white to-gray-200'} py-20 px-4`}>
+      <div className="max-w-6xl mx-auto">
+        <h1 className={`text-4xl font-bold mb-12 text-center ${isDarkMode ? 'text-white' : 'text-black'}`}>Pharmacy Department</h1>
+        <p className={`text-lg mb-8 text-center ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>Explore the exciting events organized by the Pharmacy Department:</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {events.map((event) => (
+            <div key={event.name} className={`p-6 ${isDarkMode ? 'bg-gradient-to-br from-purple-900 to-black' : 'bg-gradient-to-br from-purple-200 to-white'} rounded-xl hover:from-purple-800 transition-all`}>
+              <img src={event.image} alt={event.name} className="w-full h-48 object-cover rounded-lg mb-4" />
+              <h3 className={`text-xl font-semibold mb-3 ${isDarkMode ? 'text-white' : 'text-black'}`}>{event.name}</h3>
                 <h3 className={`text-xl font-semibold mb-3 ${isDarkMode ? 'text-white' : 'text-black'}`}>{event.name}</h3>
                 <p className={`text-gray-400 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>{event.caption}</p>
                 <button
@@ -169,6 +169,19 @@ const Pharm = () => {
               Register
             </button>
           </div>
+          {/* Coordinators section */}
+        <div className="mt-8 flex justify-between items-center">
+          <div className="flex flex-col items-start">
+            <h3 className="text-lg font-semibold">Student Coordinators</h3>
+            <p>B.Kedareswari 8688821379</p>
+            <p>K.Renuka Priya  7729919549</p>
+          </div>
+          <div className="flex flex-col items-end">
+            <h3 className="text-lg font-semibold">Faculty &nbsp; Coordinators</h3>
+            <p>Mr.J.N.B Indusekhar 9949540544</p>
+            <p>Dr.N.SivaKumar  8500702983</p>
+          </div>
+        </div>
         </div>
   
         {selectedEvent && (

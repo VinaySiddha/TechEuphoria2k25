@@ -141,11 +141,25 @@ const MBA = () => {
             </div>
           ))}
         </div>
-        <div className="flex justify-center items-center mt-8">
+        <div className="flex  justify-center items-center mt-8">
           <button className="px-8 py-3 bg-gradient-to-r from-blue-600 to-green-600 text-white rounded-full hover:from-blue-700 hover:to-green-700 transition-all" onClick={handleRegister}>
             Register
           </button>
+          
+        {/* Coordinators section */}
+        <div className="mt-8 flex justify-between items-center">
+          <div className="flex flex-col items-start">
+            <h3 className="text-lg font-semibold">Student Coordinators</h3>
+            <p>K.R.Satyanarayana 7893400771</p>
+            <p>T.Javali 9885378448</p>
+          </div>
+          <div className="flex flex-col items-end">
+            <h3 className="text-lg font-semibold">Faculty &nbsp;Coordinator</h3>
+            <p>Dr.Pullarao kota 9290671768</p>
+            <p>V.Sandhya 9492567563</p>
+          </div>
         </div>
+      </div>
       </div>
 
       {selectedEvent && (
