@@ -145,12 +145,26 @@ const EEE = () => {
             </div>
           ))}
         </div>
-        <div className="flex justify-center items-center mt-8">
+        <div className="flex  justify-center items-center mt-8">
           <button className="px-8 py-3 bg-gradient-to-r from-blue-600 to-green-600 text-white rounded-full hover:from-blue-700 hover:to-green-700 transition-all" onClick={handleRegister}>
             Register
           </button>
+          </div>
+        {/* Coordinators section */}
+        <div className="mt-8 flex justify-between items-center">
+          <div className="flex flex-col items-start">
+            <h3 className="text-lg font-semibold">Student Coordinators</h3>
+            <p>S.JNSRK Reddy 9502279449</p>
+            <p>B.Leela Vinodini 8121696433</p>
+          </div>
+          <div className="flex flex-col items-end">
+            <h3 className="text-lg font-semibold">Faculty&nbsp;Coordinator</h3>
+            <p>Dr.D.J.Krishna Kishore 9966446646</p>
+            <p>Mr.N.Sankar 8978618576</p>
+          </div>
         </div>
       </div>
+     
 
       {selectedEvent && (
         <Modal

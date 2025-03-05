@@ -22,8 +22,8 @@ const CSE = () => {
         "Electronic gadgets not allowed in Rounds 1 and 2",
         "Mobile phones allowed in Round 3"
       ],
-      "student": "K.V.S.P.Vasavi - 22A81A0594",
-      "faculty": "Ms. G. Nagavallika"
+      "student": "K.V.S.P.Vasavi - 7981879511 ,P.Y.V.S.Sai - 9989379211",
+      "faculty": "Ms. G. Nagavallika - 9705518545"
     },
     {
       "name": "Memory Marathon",
@@ -37,8 +37,8 @@ const CSE = () => {
         "Team formation based on Round 2 results",
         "Report as per schedule"
       ],
-      "student": "U. Deepthi - 22A81A05J4",
-      "faculty": "Mrs. Ch. N. P. Latha"
+      "student": "U. Deepthi - 8143163882 ,E.Tejaswini - 9392418489",
+      "faculty": "Mrs. Ch. N. P. Latha - 7036506334"
     },
     {
       "name": "The Whimsical Warzone",
@@ -52,8 +52,8 @@ const CSE = () => {
         "Teams formed after Round 1",
         "Carry identity card and stationery"
       ],
-      "student": "P. Sai Meghana - 22A81A05H5",
-      "faculty": "Mrs. A. Nagajyothi"
+      "student": "P. Sai Meghana - 9618692300 ,P.V.Sandeep - 8688213171",
+      "faculty": "Mrs. A. Nagajyothi - 7893454684"
     },
     {
       "name": "Idea Sprint",
@@ -67,8 +67,8 @@ const CSE = () => {
         "Carry identity card and abstract of the project",
         "Complete tasks within the specified time"
       ],
-      "student": "N. Lahari - 22A81A0541",
-      "faculty": "Mr. M. Nageswara Rao"
+      "student": "N. Lahari - 9989334599, T.Shanmukh - 8712248783",
+      "faculty": "Mr. M. Nageswara Rao - 9949388386"
     },
     {
       "name": "Unlock the Unknown",
@@ -82,8 +82,8 @@ const CSE = () => {
         "Round 2 conducted for qualified teams",
         "Report as per schedule"
       ],
-      "student": "Y. Sabdha - 22A81A0666",
-      "faculty": "Mr. N.V. Ratnakishor Gade"
+      "student": "Y. Sabdha - 8317569500, A.Uma Sahithi - 9346344262",
+      "faculty": "Mr. N.V. Ratnakishor Gade - 9849519071"
     }
   ];
 
@@ -121,12 +121,26 @@ const CSE = () => {
             </div>
           ))}
         </div>
-        <div className="flex justify-center items-center mt-8">
+        <div className="flex  justify-center items-center mt-8">
           <button className="px-8 py-3 bg-gradient-to-r from-blue-600 to-green-600 text-white rounded-full hover:from-blue-700 hover:to-green-700 transition-all" onClick={handleRegister}>
             Register
           </button>
+          </div>
+         {/* Coordinators section */}
+        <div className="mt-8 flex justify-between items-center">
+          <div className="flex flex-col items-start">
+            <h3 className="text-lg font-semibold">Student Coordinators</h3>
+            <p>ch .Vishnu vardhan 8919758517</p>
+            <p> P.G.V Prasasd 6304852672</p>
+          </div>
+          <div className="flex flex-col items-end">
+            <h3 className="text-lg font-semibold">Faculty&nbsp;Coordinator</h3>
+            <p>N. Hiran Mayee 7893046608</p>
+            <p>D.S.L Manikanteswari 8977599856</p>
+          </div>
         </div>
       </div>
+      
 
       {selectedEvent && (
        <Modal

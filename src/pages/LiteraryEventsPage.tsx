@@ -38,13 +38,23 @@ const LiteraryEventsPage = () => {
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjSvmDZ2tF-mzqbPBGlLwETo_ZxBZJ-lmIlA&s",
       "caption": "Photography During Event",
       "description": "Participants capture moments from various events of Tech Euphoria-2K25.",
-      "rules": [
-        "Participants must register on www.techeuphoria.in",
-        "Up to 6 photos per participant",
-        "Photos must be original and unedited",
-        "No watermarks, signatures, or identifiable marks",
-        "Only JPEG or PNG formats allowed"
-      ],
+   "rules": [
+    "Participants must register for the event through www.techeuphoria.in website",
+    "Each participant can submit a limited number of entries (06 photos per participant). Entries should be submitted via GOOGLE DRIVE link",
+    "Photos must be original and should be taken by the participant",
+    "Submissions of edited and manipulated photos are summarily rejected",
+    "Watermarks, signatures, or any identifiable marks should not be included on submitted images",
+    "Participants should adhere to ethical photography practices (e.g., no harm to animals or people, respect for privacy, no offensive content causing damage to the reputation of people or their family or assets)",
+    "Acceptable file formats: JPEG or PNG",
+    "Maximum and minimum file size (e.g., 5MB - 20MB per photo)",
+    "Photos should have a minimum resolution of 1920x1080 pixels or higher",
+    "Submission must include a title and brief description of the theme of the photography",
+    "Photos must not infringe on any copyrights or intellectual property rights",
+    "Ensure that AI-generated or stolen images result in immediate disqualification",
+    "Only photos of various events of Tech Euphoria-2K25 should be taken",
+    "Judges’ decisions are final and binding"
+],
+
       "student": "B Ravi Teja - 8500333459, M Siva Sai Krishna - 9346912475",
       "faculty": "JNBV Chandra Sekhar - 9331961864"
     },
@@ -53,13 +63,20 @@ const LiteraryEventsPage = () => {
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqziOyEnSgKGq4jWHGow6PURj6UsMmMxuuzw&s",
       "caption": "Short Film Competition",
       "description": "A competition for short films showcasing creative storytelling within a 3-15 minute timeframe.",
-      "rules": [
-        "Participants must register on www.techeuphoria.in",
-        "Films must be original and free of unauthorized content",
-        "Duration: 3–15 minutes",
-        "Accepted formats: MP4, MOV, MKV, AVI",
-        "No offensive, political, or explicit content"
-      ],
+    "rules": [
+    "Participants must register for the event through www.techeuphoria.in website",
+    "All submissions must be original work. Plagiarism or unauthorized content (music, footage, etc.) will lead to disqualification. Films must not contain offensive, discriminatory, violent, nude, political or explicit content. It should not cause damage to the reputation of any individual, artificial persons, entities, families, or assets of anyone",
+    "Entries should be submitted via PEN DRIVE at the event venue",
+    "Filthy/Messy language is not entertained and leads to immediate disqualification",
+    "Each participant is allowed to submit only ONE ENTRY",
+    "Duration of short films should be between 3–15 minutes",
+    "Accepted formats include MP4, MOV, MKV, or AVI",
+    "Submit a brief synopsis of the film (100-200 words) and a film poster",
+    "AI Generated content is not accepted",
+    "Content violating guidelines may be removed without notice",
+    "Judges’ decisions are final and binding"
+],
+
       "student": "P Mounika - 8374611254, B Divya - 8978095929",
       "faculty": "Yesu Sekharam - 9949947033"
     },
@@ -68,13 +85,19 @@ const LiteraryEventsPage = () => {
       "image": "https://static.semrush.com/blog/uploads/files/14/f4/14f404f5ba76158301c6fe6e825641c6/how-to-make-an-ad_(1).svg",
       "caption": "Ad Making Competition",
       "description": "A creative ad-making competition where teams create original advertisements on given themes.",
-      "rules": [
-        "Participants must register on www.techeuphoria.in",
-        "Only one entry per team",
-        "Ads should be between 30 seconds to 2 minutes",
-        "No offensive, discriminatory, or explicit content",
-        "Accepted formats: MP4, MOV, MKV, AVI"
-      ],
+    "rules": [
+    "Participants must register for the event through www.techeuphoria.in website",
+    "Each team is allowed to submit only ONE ENTRY",
+    "Advertisements must be original and not copied from existing campaigns. Plagiarism or use of unlicensed material will lead to disqualification",
+    "Filthy/Messy language is not entertained and leads to immediate disqualification",
+    "Participants must create an AD based on the given theme",
+    "Ads should be between 30 seconds to 2 minutes",
+    "Entries should be submitted via PEN DRIVE at the event venue",
+    "No offensive, discriminatory, or explicit content. No political or religious promotions. Must be suitable for general audiences",
+    "Accepted formats include MP4, MOV, MKV, or AVI",
+    "Ads violating guidelines may be removed without notice",
+    "Judges’ decisions are final and binding"
+],
       "student": "K Lohitha Sri Vasavi - 9392988064, PMSD Naga Sree - 8247523131",
       "faculty": "K Pasipalana Rao - 9494985984"
     },
@@ -83,13 +106,17 @@ const LiteraryEventsPage = () => {
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9PJ34G0HAxuAhK7HNMa6jqMN1fd_FlDBpyg&s",
       "caption": "Painting Competition",
       "description": "A painting competition where participants create artworks based on on-the-spot themes.",
-      "rules": [
-        "Participants must register in advance",
-        "Entry can be individual or team-based (max 2 members)",
-        "Time limit: 2 hours",
-        "Participants must bring their own materials",
-        "No offensive, political, or inappropriate content"
-      ],
+    "rules": [
+    "Students must register in advance through www.techeuphoria.in or at the event venue. Entry can be individual or team-based (Team consisting of not more than 2 members)",
+    "Theme will be given on the spot by the organizing committee",
+    "Participants can use Watercolors, Acrylic, Oil Paints, Poster Colors, or Mixed Media",
+    "Standard size of the palette (A3 or bigger)",
+    "Time Limit is 02 hours",
+    "Participants are required to bring their own materials including brushes, drawing sheets, and other necessary supplies",
+    "Participants must maintain decorum and respect time limits",
+    "Judges’ decisions are final and binding",
+    "No offensive, political, or inappropriate content in artworks is permitted"
+],
       "student": "N Satya Sravani - 6302016982, S Durga Prasad - 9618483981",
       "faculty": "CH Mutyala Rao - 7780210619"
     }

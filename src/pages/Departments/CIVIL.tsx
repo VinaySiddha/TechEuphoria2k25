@@ -130,7 +130,21 @@ const Civil = () => {
           <button className="px-8 py-3 bg-gradient-to-r from-blue-600 to-green-600 text-white rounded-full hover:from-blue-700 hover:to-green-700 transition-all" onClick={handleRegister}>
             Register
           </button>
+          </div>
+        {/* Coordinators section */}
+        <div className="mt-8 flex justify-between items-center">
+          <div className="flex flex-col items-start">
+            <h3 className="text-lg font-semibold">Student Coordinators</h3>
+            <p> B.Ravi Teja 7095337142</p>
+            <p>M.Sindusha 7337586784</p>
+          </div>
+          <div className="flex flex-col items-end">
+            <h3 className="text-lg font-semibold">Faculty&nbsp;Coordinator</h3>
+            <p>J. Vijaya Chandra 8096041195</p>
+            <p>K.Gowtham Kumar 9059500989</p>
+          </div>
         </div>
+     
       </div>
 
       {selectedEvent && (
@@ -169,6 +183,7 @@ const Civil = () => {
             >
               Register
             </button>
+            
             <button
               onClick={closeModal}
               className="px-4 py-2 ml-4 bg-gradient-to-r from-red-600 to-pink-600 text-white rounded-full hover:from-red-700 hover:to-pink-700 transition-all"
