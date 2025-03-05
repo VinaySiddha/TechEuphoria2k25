@@ -22,11 +22,10 @@ const ECE = () => {
         "Violation of any rules will lead to elimination",
         "Evaluator's decision is final"
       ],
-      "student": "Not mentioned",
-      "faculty": [
-        "Dr. M. Thamarai",
-        "Dr. S. Kamesh",
-        "Dr. B. Murali Krishna"
+      "faculty": "Dr. M. Thamarai",
+      "student": [
+        "D.Dinesh Vardhan - 9014310778",
+        "Alim Baig - 8096973660"
       ]
     },
     {
@@ -42,14 +41,10 @@ const ECE = () => {
         "All team members must be from the same college",
         "Complete registration before the deadline"
       ],
-      "student": "Not mentioned",
-      "faculty": [
-        "Dr. K. N. H. Srinivas",
-        "Dr. T. D. N. S. S. Sarveswara Rao",
-        "Sri M. Venkata Suman",
-        "Sri P. V. V. Rajesh",
-        "Sri V. Anil Kumar",
-        "Sri B. Chanti"
+      "faculty": "Dr. K. N. H. Srinivas",
+      "student": [
+        "G.Pavan -7995113027",
+        "K.lalithaMalleswari - 9951033135"
       ]
     },
     {
@@ -63,12 +58,10 @@ const ECE = () => {
         "Participants should maintain integrity and respect fellow participants",
         "Judges' decisions are final"
       ],
-      "student": "Not mentioned",
-      "faculty": [
-        "Dr. Purnima K Sharma",
-        "Sri T. Sreenivasu",
-        "Smt. M. Neelima",
-        "Dr. B. Ashok Kumar"
+      "faculty": "Dr. Purnima K Sharma",
+      "student": [
+        "K.Santha Kumar - 7093776366",
+        "M.Lokesh - 7569939852"
       ]
     },
     {
@@ -82,12 +75,10 @@ const ECE = () => {
         "Malpractice will lead to disqualification",
         "Evaluator's decision is final"
       ],
-      "student": "Not mentioned",
-      "faculty": [
-        "Dr. S. V. V. S. Satyanarayana",
-        "Smt. Y. Sujatha",
-        "Sri P. Gopala Reddy",
-        "Sri K. Naga Raju"
+      "faculty": "Dr. S. V. V. S. Satyanarayana",
+      "student": [
+        "Siva - 9908519199",
+        "V.Satya Puja Sri - 7386740744"
       ]
     },
     {
@@ -100,12 +91,10 @@ const ECE = () => {
         "Preferably 1 member from each year, with no more than 2 members from the same year",
         "Complete registration before the deadline"
       ],
-      "student": "Not mentioned",
-      "faculty": [
-        "Dr. K. Baboji",
-        "Sri R. Ram Prasad",
-        "Sri P. Naga Raju",
-        "Sri Ch. V. Naga Bhaskar"
+      "faculty": "Dr. K. Baboji",
+      "student": [
+        "A.Sai Venkatesh -0 9573940133",
+        "V.Lakshmi - 9989152327"
       ]
     }
   ];
@@ -182,13 +171,13 @@ const ECE = () => {
               <li key={index}>{rule}</li>
             ))}
           </ul>
-          <p className="mb-2"><strong>Faculty Coordinator:</strong></p>
+          <p className="mb-2"><strong>Student Coordinator:</strong></p>
           <ul className="list-disc list-inside mb-4">
-            {selectedEvent.faculty.map((faculty, index) => (
-              <li key={index}>{faculty}</li>
+            {selectedEvent.student.map((student, index) => (
+              <li key={index}>{student}</li>
             ))}
           </ul>
-          <p className="mb-2"><strong>Student Coordinator:</strong> {selectedEvent.student}</p>
+          <p className="mb-2"><strong>Faculty Coordinator:</strong> {selectedEvent.faculty}</p>
           <div className="flex justify-end mt-4">
             <button
               onClick={handleRegister}

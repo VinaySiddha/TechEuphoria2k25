@@ -57,7 +57,10 @@ const MBA = () => {
       "rules": [
         "Team size: 3 members",
         "Abstract submission required (max 1000 words)",
-        "Presentation time: 10 minutes"
+        "Presentation time: 10 minutes",
+        "The Abstract must be send to this mail Id ",
+        "Mail Id: lalithabhavani.mba@srivasaviengg.ac.in",
+        "Before 18-03-2025 evening 5pm"
       ],
       "student": [
         "K. Lakshmi Durga - 88856 45402",
