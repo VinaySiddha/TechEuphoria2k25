@@ -6,6 +6,8 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { useTheme } from '../ThemeContext';
 
+import title1 from '../assets/images/title1.jpg'
+
 import silver1 from '../assets/images/silver1.jpg';
 import silver2 from '../assets/images/silver2.jpeg';
 import silver3 from '../assets/images/silver3.jpg';
@@ -35,9 +37,9 @@ const HomePage = () => {
   const vantaRef = useRef(null);
   const sponsors = {
     title: [
-      { name: 'NK Agro', logo: silver1, type: 'Silver' },
-      { name: 'Priyanka Skin Clinic', logo: silver2, type: 'Silver' },
-      { name: '32 Dentals', logo: silver3, type: 'Silver' },
+      { name: 'Arya Customisations', logo: title1, type: 'Title' },
+      { name: 'To Be Declared', logo: 'https://static.vecteezy.com/system/resources/previews/008/971/918/non_2x/tbd-logo-tbd-letter-tbd-letter-logo-design-initials-tbd-logo-linked-with-circle-and-uppercase-monogram-logo-tbd-typography-for-technology-business-and-real-estate-brand-vector.jpg', type: 'title' },
+      { name: 'To Be Declared', logo: 'https://static.vecteezy.com/system/resources/previews/008/971/918/non_2x/tbd-logo-tbd-letter-tbd-letter-logo-design-initials-tbd-logo-linked-with-circle-and-uppercase-monogram-logo-tbd-typography-for-technology-business-and-real-estate-brand-vector.jpg', type: 'title' },
     ],
     coTitle: [
       { name: 'NK Agro', logo: silver1, type: 'Silver' },
@@ -145,7 +147,7 @@ const HomePage = () => {
         <div className="max-w-6xl mx-auto space-y-12">
           <h2 className={`text-4xl font-bold mb-12 text-center ${isDarkMode ? 'text-white' : 'text-black'}`}>Our Sponsors</h2>
           
-          {/* <h3 className="text-3xl font-semibold mb-6 text-center text-blue-500">Title Sponsor</h3>
+          <h3 className="text-3xl  font-semibold mb-6 text-center text-blue-500">Title Sponsor</h3>
           <Slider {...titleSettings} className="gap-4">
             {sponsors.title.map((sponsor) => (
               <div key={sponsor.name} className={`rounded-xl p-8 text-center bg-blue-500 bg-opacity-50 backdrop-filter backdrop-blur-lg border border-blue-300 ${isDarkMode ? 'text-white' : 'text-black'} m-4`}>
@@ -159,7 +161,7 @@ const HomePage = () => {
               </div>
             ))}
           </Slider>
-
+{/* 
           <h3 className="text-3xl font-semibold mb-6 text-center text-green-500">Co-Title Sponsors</h3>
           <Slider {...titleSettings} className="gap-4">
             {sponsors.coTitle.map((sponsor) => (
