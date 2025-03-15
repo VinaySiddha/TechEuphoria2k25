@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Typewriter from 'typewriter-effect';
 import Slider from 'react-slick';
+import Modal from '../components/Modal'; // Import the Modal component
 import '../index.css'; // Ensure you import your CSS file
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -45,6 +46,8 @@ const HomePage = () => {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
   const { isDarkMode } = useTheme();
   const vantaRef = useRef(null);
+  const [isModalOpen, setIsModalOpen] = useState(true); // State to control the modal
+
   const sponsors = {
     title: [
       { name: 'Arya Customisations', logo: title1, type: 'Title' },
@@ -126,6 +129,12 @@ const HomePage = () => {
 
   return (
     <div ref={vantaRef} className="home-page" id="vanta-bg">
+      {/* Modal */}
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        <h2 className="text-xl font-bold">Important Information</h2>
+        <p>Visitors are allowed to visit before 11 AM.<br></br>No one wil be Allowed to visit after 11 AM</p>
+      </Modal>
+
       {/* Hero Section */}
       <section className="hero-background relative h-screen flex items-center justify-center overflow-hidden">
         <div className="relative z-10 text-center px-4">
@@ -165,13 +174,6 @@ const HomePage = () => {
           <a href="https://forms.gle/sdtCBfkTG5yZEkjF8" className="text-link">Register Now for Alankrutha</a>
         </div>
       </section>
-
-      {/* Moving Image Line
-      <section className="moving-image-section">
-        <a href="https://www.example.com">
-          <img src="https://via.placeholder.com/150" alt="Moving Image" className="moving-image" />
-        </a>
-      </section> */}
 
       {/* Moving Line */}
       <marquee className="moving-line bg-gradient-to-r from-blue-500 to-green-500 text-white text-center py-2 cursor-pointer z-50" onClick={handleRedirect}>
