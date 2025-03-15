@@ -6,11 +6,21 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { useTheme } from '../ThemeContext';
 
-import title1 from '../assets/images/title1.jpg'
+import title1 from '../assets/images/title1.png'
+import title2 from '../assets/images/title2.jpg'
+// import title3 from '../assets/images/title3.jpg'
+
+import gold1 from '../assets/images/gold1.jpg';
+import gold2 from '../assets/images/gold2.png';
+import gold3 from '../assets/images/gold3.png';
+
+import platinum1 from '../assets/images/platinum1.png';
+import platinum2 from '../assets/images/platinum2.png';
 
 import silver1 from '../assets/images/silver1.jpg';
 import silver2 from '../assets/images/silver2.jpeg';
 import silver3 from '../assets/images/silver3.jpg';
+import silver4 from '../assets/images/silver4.jpg';
 
 const calculateTimeLeft = () => {
   const eventDate = new Date('March 20, 2025 10:00:00').getTime();
@@ -38,7 +48,7 @@ const HomePage = () => {
   const sponsors = {
     title: [
       { name: 'Arya Customisations', logo: title1, type: 'Title' },
-      { name: 'To Be Declared', logo: 'https://static.vecteezy.com/system/resources/previews/008/971/918/non_2x/tbd-logo-tbd-letter-tbd-letter-logo-design-initials-tbd-logo-linked-with-circle-and-uppercase-monogram-logo-tbd-typography-for-technology-business-and-real-estate-brand-vector.jpg', type: 'title' },
+      { name: 'KC Overseas', logo: title2, type: 'Title' },
       { name: 'To Be Declared', logo: 'https://static.vecteezy.com/system/resources/previews/008/971/918/non_2x/tbd-logo-tbd-letter-tbd-letter-logo-design-initials-tbd-logo-linked-with-circle-and-uppercase-monogram-logo-tbd-typography-for-technology-business-and-real-estate-brand-vector.jpg', type: 'title' },
     ],
     coTitle: [
@@ -47,14 +57,17 @@ const HomePage = () => {
       { name: '32 Dentals', logo: silver3, type: 'Silver' },
     ],
     platinum: [
-      { name: 'Platinum Sponsor 1', logo: 'platinum_logo1.png', type: 'Platinum' },
-      { name: 'Platinum Sponsor 2', logo: 'platinum_logo2.png', type: 'Platinum' },
+      { name: 'TBR Group', logo: platinum1, type: 'Platinum' },
+      { name: 'Srinivasa Enterprises', logo: platinum2, type: 'Platinum' },
+      { name: 'To Be Declared', logo: 'https://static.vecteezy.com/system/resources/previews/008/971/918/non_2x/tbd-logo-tbd-letter-tbd-letter-logo-design-initials-tbd-logo-linked-with-circle-and-uppercase-monogram-logo-tbd-typography-for-technology-business-and-real-estate-brand-vector.jpg', type: 'Platinum' }
     ],
     gold: [
-      { name: 'Gold Sponsor 1', logo: 'gold_logo1.png', type: 'Gold' },
-      { name: 'Gold Sponsor 2', logo: 'gold_logo2.png', type: 'Gold' },
+      { name: 'Universal Print Systems', logo: gold1, type: 'Gold' },
+      { name: 'Green Asia', logo: gold2, type: 'Gold' },
+      { name: 'Sri Suryandra Car Driving School', logo: gold3, type: 'Gold' },
     ],
     silver: [
+      { name: 'Mobile Hub', logo: silver4, type: 'Silver' },
       { name: 'NK Agro', logo: silver1, type: 'Silver' },
       { name: 'Priyanka Skin Clinic', logo: silver2, type: 'Silver' },
       { name: '32 Dentals', logo: silver3, type: 'Silver' },
@@ -107,6 +120,10 @@ const HomePage = () => {
     ],
   };
 
+  const handleRedirect = () => {
+    window.location.href = 'https://www.example.com';
+  };
+
   return (
     <div ref={vantaRef} className="home-page" id="vanta-bg">
       {/* Hero Section */}
@@ -142,6 +159,25 @@ const HomePage = () => {
         </div>
       </section>
 
+      {/* Moving Text Line */}
+      <section className="moving-text-section">
+        <div className="moving-text">
+          <a href="https://forms.gle/sdtCBfkTG5yZEkjF8" className="text-link">Register Now for Alankrutha</a>
+        </div>
+      </section>
+
+      {/* Moving Image Line
+      <section className="moving-image-section">
+        <a href="https://www.example.com">
+          <img src="https://via.placeholder.com/150" alt="Moving Image" className="moving-image" />
+        </a>
+      </section> */}
+
+      {/* Moving Line */}
+      <marquee className="moving-line bg-gradient-to-r from-blue-500 to-green-500 text-white text-center py-2 cursor-pointer z-50" onClick={handleRedirect}>
+        Click here for more information!
+      </marquee>
+
       {/* Sponsors Section */}
       <section className={`py-20 px-4 ${isDarkMode ? 'bg-black' : 'bg-white'}`}>
         <div className="max-w-6xl mx-auto space-y-12">
@@ -154,22 +190,7 @@ const HomePage = () => {
                 <img 
                   src={sponsor.logo} 
                   alt={sponsor.name} 
-                  className="w-full h-40 mx-auto mb-4 rounded-lg object-cover"
-                />
-                <h3 className="text-xl font-semibold">{sponsor.name}</h3>
-                <p className="text-white">{sponsor.type}</p>
-              </div>
-            ))}
-          </Slider>
-{/* 
-          <h3 className="text-3xl font-semibold mb-6 text-center text-green-500">Co-Title Sponsors</h3>
-          <Slider {...titleSettings} className="gap-4">
-            {sponsors.coTitle.map((sponsor) => (
-              <div key={sponsor.name} className={`rounded-xl p-8 text-center bg-green-500 bg-opacity-50 backdrop-filter backdrop-blur-lg border border-green-300 ${isDarkMode ? 'text-white' : 'text-black'} m-4`}>
-                <img 
-                  src={sponsor.logo} 
-                  alt={sponsor.name} 
-                  className="w-full h-40 mx-auto mb-4 rounded-lg object-cover"
+                  className="w-full h-40 mx-auto mb-4 rounded-lg object-cover sponsor-logo"
                 />
                 <h3 className="text-xl font-semibold">{sponsor.name}</h3>
                 <p className="text-white">{sponsor.type}</p>
@@ -184,7 +205,7 @@ const HomePage = () => {
                 <img 
                   src={sponsor.logo} 
                   alt={sponsor.name} 
-                  className="w-full h-40 mx-auto mb-4 rounded-lg object-cover"
+                  className="w-full h-40 mx-auto mb-4 rounded-lg object-cover sponsor-logo"
                 />
                 <h3 className="text-xl font-semibold">{sponsor.name}</h3>
                 <p className="text-white">{sponsor.type}</p>
@@ -199,24 +220,24 @@ const HomePage = () => {
                 <img 
                   src={sponsor.logo} 
                   alt={sponsor.name} 
-                  className="w-full h-40 mx-auto mb-4 rounded-lg object-cover"
+                  className="w-full h-40 mx-auto mb-4 rounded-lg object-cover sponsor-logo"
                 />
                 <h3 className="text-xl font-semibold">{sponsor.name}</h3>
                 <p className="text-white">{sponsor.type}</p>
               </div>
             ))}
-          </Slider> */}
+          </Slider> 
 
           <h3 className="text-3xl font-semibold mb-6 text-center text-gray-500">Silver Sponsors</h3>
           <Slider {...settings} className="gap-4">
             {sponsors.silver.map((sponsor) => (
               <div key={sponsor.name} className={`rounded-xl p-8 text-center bg-gray-500 bg-opacity-50 backdrop-filter backdrop-blur-lg border border-gray-300 ${isDarkMode ? 'text-white' : 'text-black'} m-4`}>
                 <img 
-                  src={sponsor.logo} 
+                  src={sponsor.logo}
                   alt={sponsor.name} 
-                  className="w-full h-40 mx-auto mb-4 rounded-lg object-cover"
+                  className="w-full h-40 mx-auto mb-4 rounded-lg object-cover sponsor-logo"
                 />
-                <h3 className="text-xl font-semib4old">{sponsor.name}</h3>
+                <h3 className="text-xl font-semibold">{sponsor.name}</h3>
                 <p className="text-white">{sponsor.type}</p>
               </div>
             ))}

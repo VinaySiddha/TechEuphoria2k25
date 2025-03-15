@@ -43,7 +43,7 @@ const ECE = () => {
       ],
       "faculty": "Dr. K. N. H. Srinivas",
       "student": [
-        "G.Pavan -7995113027",
+        "P. Yesu Ratnam - 9848313689",
         "K.lalithaMalleswari - 9951033135"
       ]
     },

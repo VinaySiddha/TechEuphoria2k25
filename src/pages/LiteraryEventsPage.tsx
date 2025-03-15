@@ -119,11 +119,31 @@ const LiteraryEventsPage = () => {
 ],
       "student": "N Satya Sravani - 6302016982, S Durga Prasad - 9618483981",
       "faculty": "CH Mutyala Rao - 7780210619"
+    },
+    {
+      "name": "Alankrutha",
+      "image": "https://media.licdn.com/dms/image/v2/D5622AQEGco9y_ur-gA/feedshare-shrink_2048_1536/B56ZVareJMHoAo-/0/1740983123998?e=1743638400&v=beta&t=ygXooHRNrP8xmB_38kef_wLBsqCZuZj0WQBEBkAbqig",
+      "caption": "Fashion Show (Exclusively for Vasavians)",
+      "description": "A fashion show where participants showcase their creativity through themed outfits and accessories.",
+      "rules": [
+        "No Registration Fee",
+        "Students should come with his/her preparation to showcase their presence ",
+        "In Round - 1 : Culture Related to any Indian State  should be presented",
+        "In Round - 2:  Western Culture Should be Presented",
+        "45 Mins Gap will be given Between both round to change your Costumes ",
+        "Judges Decision is Final in awarding Mr.Euphoria and Ms.Euphoria Titles"
+    ],
+      "student": "",
+      "faculty": ""
     }
   ];
 
   const handleRegister = () => {
     window.location.href = 'https://forms.gle/NbELnyd8N1Sc3xTq7';
+  };
+
+  const handleRegisterAlankrutha = () => {
+    window.location.href = 'https://forms.gle/sdtCBfkTG5yZEkjF8';
   };
 
   const openModal = (event) => {
@@ -156,11 +176,6 @@ const LiteraryEventsPage = () => {
             </div>
           ))}
         </div>
-        <div className="flex justify-center items-center mt-8">
-          <button className="px-8 py-3 bg-gradient-to-r from-blue-600 to-green-600 text-white rounded-full hover:from-blue-700 hover:to-green-700 transition-all" onClick={handleRegister}>
-            Register
-          </button>
-        </div>
       </div>
 
       {selectedEvent && (
@@ -189,7 +204,7 @@ const LiteraryEventsPage = () => {
           </ul>
           <div className="flex justify-end mt-4">
             <button
-              onClick={handleRegister}
+              onClick={selectedEvent.name === "Alankrutha" ? handleRegisterAlankrutha : handleRegister}
               className="px-4 py-2 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-full hover:from-green-700 hover:to-blue-700 transition-all"
             >
               Register

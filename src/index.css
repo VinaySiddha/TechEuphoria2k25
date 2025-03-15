@@ -121,6 +121,79 @@
   }
 }
 
+.moving-line {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+  animation: moveLeftToRight 10s linear infinite;
+}
+
+@keyframes moveLeftToRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.moving-image-section {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 100px; /* Adjust height as needed */
+  margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+.moving-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100px; /* Adjust height as needed */
+  animation: moveImage 10s linear infinite;
+}
+
+@keyframes moveImage {
+  0% {
+    left: -150px; /* Adjust based on image width */
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.moving-text-section {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 50px; /* Adjust height as needed */
+  margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+.moving-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  animation: moveText 20s linear infinite;
+}
+
+@keyframes moveText {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+.text-link {
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
 /* Buttons */
 .learn-more-button,
 .register-button {
@@ -194,4 +267,13 @@
 
 .home-page section.bg-gray-100-50 {
   background-color: rgba(255, 255, 255, 0.5); /* Adjust the transparency as needed */
+}
+
+/* Sponsor Logo */
+.sponsor-logo {
+  transition: transform 0.3s ease-in-out;
+}
+
+.sponsor-logo:hover {
+  transform: scale(1.1);
 }
