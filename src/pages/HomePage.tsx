@@ -9,7 +9,7 @@ import { useTheme } from '../ThemeContext';
 
 import title1 from '../assets/images/title1.png'
 import title2 from '../assets/images/title2.jpg'
-// import title3 from '../assets/images/title3.jpg'
+import title3 from '../assets/images/title3.jpg'
 
 import gold1 from '../assets/images/gold1.jpg';
 import gold2 from '../assets/images/gold2.png';
@@ -52,7 +52,7 @@ const HomePage = () => {
     title: [
       { name: 'Arya Customisations', logo: title1, type: 'Title' },
       { name: 'KC Overseas', logo: title2, type: 'Title' },
-      { name: 'To Be Declared', logo: 'https://static.vecteezy.com/system/resources/previews/008/971/918/non_2x/tbd-logo-tbd-letter-tbd-letter-logo-design-initials-tbd-logo-linked-with-circle-and-uppercase-monogram-logo-tbd-typography-for-technology-business-and-real-estate-brand-vector.jpg', type: 'title' },
+      { name: 'Oppo', logo: title3 , type: 'Title' },
     ],
     coTitle: [
       { name: 'NK Agro', logo: silver1, type: 'Silver' },
