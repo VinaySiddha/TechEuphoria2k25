@@ -114,6 +114,53 @@ const SpotEventsPage = () => {
           ))}
         </div>
       </div>
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        contentLabel="Event Details"
+        className={`max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-6 ${isDarkMode ? 'bg-gray-800 text-white' : 'bg-white text-black'}`}
+        overlayClassName="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"
+      >
+        {selectedEvent && (
+          <div>
+            <h2 className="text-2xl font-bold mb-4">{selectedEvent.name}</h2>
+            <img
+              src={selectedEvent.image}
+              alt={selectedEvent.name}
+              className="w-full h-64 object-cover rounded-lg mb-4"
+            />
+            <p className="mb-4">{selectedEvent.description}</p>
+            <h3 className="text-xl font-semibold mb-2">Rules:</h3>
+            <ul className="list-disc list-inside mb-4">
+              {selectedEvent.rules.map((rule, index) => (
+                <li key={index}>{rule}</li>
+              ))}
+            </ul>
+            {selectedEvent.student && (
+              <p className="mb-2">
+                <strong>Student Coordinators:</strong> {selectedEvent.student}
+              </p>
+            )}
+            {selectedEvent.faculty && (
+              <p className="mb-4">
+                <strong>Faculty Coordinators:</strong> {selectedEvent.faculty}
+              </p>
+            )}
+            <button
+              onClick={handleRegister}
+              className="px-4 py-2 bg-gradient-to-r from-blue-600 to-green-600 text-white rounded-full hover:from-blue-700 hover:to-green-700 transition-all mr-4"
+            >
+              Register
+            </button>
+            <button
+              onClick={closeModal}
+              className="px-4 py-2 bg-gray-400 text-white rounded-full hover:bg-gray-500 transition-all"
+            >
+              Close
+            </button>
+          </div>
+        )}
+      </Modal>
     </div>
   );
 };
