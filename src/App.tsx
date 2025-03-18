@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { SpeedInsights } from "@vercel/speed-insights/react"
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import { Calendar, Home, Image, Users2, FileText, Sun, Moon, Instagram, Twitter, Github, Linkedin, Code, Youtube, FileText as BrochureIcon, FileBadge2, BookOpenCheck, BookOpenIcon } from 'lucide-react';
 import HomePage from './pages/HomePage';
@@ -66,6 +67,7 @@ function AppContent() {
           <img src={isDarkMode ? darkModeLoaderGif : lightModeLoaderGif} alt="Loading..." className="w-24 h-24" />
         </div>
       )}
+      <SpeedInsights />
       {!loading && (
         <>
           <div className="background-container">
