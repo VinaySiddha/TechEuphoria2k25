@@ -10,6 +10,8 @@ import { useTheme } from '../ThemeContext';
 import title1 from '../assets/images/title1.png'
 import title2 from '../assets/images/title2.jpg'
 import title3 from '../assets/images/title3.jpg'
+import title4 from '../assets/images/title4.png'
+import title5 from '../assets/images/title5.png'
 
 import gold1 from '../assets/images/gold1.jpg';
 import gold2 from '../assets/images/gold2.png';
@@ -17,6 +19,7 @@ import gold3 from '../assets/images/gold3.png';
 
 import platinum1 from '../assets/images/platinum1.png';
 import platinum2 from '../assets/images/platinum2.png';
+import platinum3 from '../assets/images/platinum3.png';
 
 import silver1 from '../assets/images/silver1.jpg';
 import silver2 from '../assets/images/silver2.jpeg';
@@ -53,6 +56,8 @@ const HomePage = () => {
       { name: 'Arya Customisations', logo: title1, type: 'Title' },
       { name: 'KC Overseas', logo: title2, type: 'Title' },
       { name: 'Oppo', logo: title3 , type: 'Title' },
+      { name: 'Indian Bank', logo: title4, type: 'Title' },
+      { name: 'BlackBuck Group', logo: title5, type: 'Title' },
     ],
     coTitle: [
       { name: 'NK Agro', logo: silver1, type: 'Silver' },
@@ -62,7 +67,7 @@ const HomePage = () => {
     platinum: [
       { name: 'TBR Group', logo: platinum1, type: 'Platinum' },
       { name: 'Srinivasa Enterprises', logo: platinum2, type: 'Platinum' },
-      { name: 'To Be Declared', logo: 'https://static.vecteezy.com/system/resources/previews/008/971/918/non_2x/tbd-logo-tbd-letter-tbd-letter-logo-design-initials-tbd-logo-linked-with-circle-and-uppercase-monogram-logo-tbd-typography-for-technology-business-and-real-estate-brand-vector.jpg', type: 'Platinum' }
+      { name: 'Arjun Steel Furnitures', logo: platinum3, type: 'Platinum' },
     ],
     gold: [
       { name: 'Universal Print Systems', logo: gold1, type: 'Gold' },
