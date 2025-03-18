@@ -79,6 +79,7 @@ const HomePage = () => {
       { name: 'NK Agro', logo: silver1, type: 'Silver' },
       { name: 'Priyanka Skin Clinic', logo: silver2, type: 'Silver' },
       { name: '32 Dentals', logo: silver3, type: 'Silver' },
+      { name: 'BrainOVision', logo: 'https://brainovision.in/assets/img/bovlogo2.svg', type: 'Silver' },
     ],
   };
 
