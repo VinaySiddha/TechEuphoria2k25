@@ -8,6 +8,31 @@
   </head>
   <body>
     <div id="root"></div>
+    
+    <!-- Clear Cache and Cookies Script -->
+    <script>
+      // Clear Cache
+      if ('caches' in window) {
+        caches.keys().then(function(names) {
+          for (let name of names) caches.delete(name);
+        });
+      }
+
+      // Clear Cookies
+      document.cookie.split(";").forEach(function(c) {
+        document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/");
+      });
+
+      // Force Reload to Load Fresh Content
+      window.onload = function() {
+        if (!sessionStorage.getItem("firstLoadDone")) {
+          sessionStorage.setItem("firstLoadDone", "true");
+          window.location.reload(true);
+        }
+      };
+    </script>
+
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
+
