@@ -1,15 +1,9 @@
 {
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "headers": [
+  "redirects": [
     {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "s-maxage=0, max-age=0, must-revalidate"
-        }
-      ]
+      "source": "https://tech-euphoria2k25.vercel.app/",
+      "destination": "https://tech-euphoria2k25.vercel.app/",
+      "permanent": true
     }
   ]
 }
