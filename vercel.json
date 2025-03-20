@@ -1,11 +1,15 @@
 {
-  "redirects": [
+
+  "rewrites": [
+
     {
-      "source": "/",
-      "destination": "https://techeuphoria.in",
-      "permanent": true
+
+      "source": "/(.*)", 
+
+      "destination": "/"
+
     }
+
   ]
+
 }
-
-
