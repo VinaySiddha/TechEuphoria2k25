@@ -1,7 +1,7 @@
 {
   "redirects": [
     {
-      "source": "https://techeuphoria2k25-seven.vercel.app/",
+      "source": "/",
       "destination": "https://tech-euphoria2k25.vercel.app/",
       "permanent": true
     }
